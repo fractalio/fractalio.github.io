@@ -1,7 +1,7 @@
-Freelancer Jekyll theme
+Fractalio Jekyll theme
 =========================
 
-Jekyll theme based on [Freelancer bootstrap theme ](http://startbootstrap.com/templates/freelancer/)
+Jekyll theme based on [Fractalio bootstrap theme ](http://startbootstrap.com/templates/freelancer/)
 
 ## How to use
  - Place a image in `/img/portoflio/`
