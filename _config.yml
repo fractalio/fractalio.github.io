@@ -1,8 +1,8 @@
 # Site wide configuration
 
-title: Site Title
+title: Fractalio Data
 locale: en_US
-description: Describe your website here.
+description: Affordable and Scalable High Performance Storage
 logo: site-logo.png
 search: true
 url: 
@@ -31,7 +31,7 @@ exclude: ["lib", "config.rb", "Capfile", "config", "log", "Rakefile", "Rakefile.
 
 # Site owner
 owner:
-  name: Your Name
+  name: Fractalio Data
   avatar: bio-photo.jpg
   email: you@email.com
   disqus-shortname:
