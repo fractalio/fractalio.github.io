@@ -78,6 +78,7 @@ span + .entry-title {
 
 .entry-wrapper {
 	@include outer-container;
+        max-width: 75%;
 	margin-top: 0;
 	margin-bottom: 3em;
 	padding-right: $gutter;
@@ -196,7 +197,7 @@ span + .entry-title {
 #home,
 #page {
 	.entry-wrapper {
-		max-width: em(760);
+		max-width: 75%; 
 	}
 	.entry-title {
 		text-align: center;

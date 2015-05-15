@@ -1,7 +1,7 @@
 ---
 layout: page
-title: About the Jekyll Theme
-excerpt: "So Simple is a responsive Jekyll theme for your words and images."
+title: about fractalio 
+excerpt: "about fractalio"
 modified: 2014-08-08T19:44:38.564948-04:00
 image:
   feature: 
@@ -9,18 +9,9 @@ image:
   creditlink: 
 ---
 
-Looking for a simple, responsive, theme for your Jekyll powered blog? Well look no further. Here be **So Simple Theme**, the follow up to [**Minimal Mistakes**](http://mmistakes.github.io/minimal-mistakes) --- by designer slash illustrator [Michael Rose](http://mademistakes.com).
+Fractalio Data was conceived in response to the challenge of reliably managing the exploding volumes of data that IT enabled organizations of all sizes are experiencing. Reclaiming simplicity, our design mitigates the complexity, costs and limited lifespan of traditional data storage infrastructure, to deliver enduring value through a single solution spanning data storage and information management services.
 
-## So Simple Theme is all about:
+Founded in early 2014, Fractalio currently maintains offices in Bangalore, Magadi & New Delhi.
 
-* Responsive templates. Looking good on mobile, tablet, and desktop.
-* Gracefully degrading in older browsers. Compatible with Internet Explorer 9+ and all modern browsers.
-* Minimal embellishments and subtle animations.
-* Optional large feature images for posts and pages.
-* [Custom 404 page]({{ site.url }}/404.html) to get you started.
-* [Simple site search](https://github.com/christian-fei/Simple-Jekyll-Search)
-* Support for Disqus Comments
+Our products are architected for reliability, fault resilience and scalability of both performance & capacity, while our modular design ensures that even the smallest of customers can affordably deploy our solutions. Led by a team of storage industry veterans spanning technology, engineering and business, Fractalio Data is the first and only Indian company to design and deliver solutions that address the full spectrum of “datalifecycle” requirements - from data storage, through archival, retrieval and elimination and from in-premise to the cloud. Building on our long experience in data storage, our strategic focus is to design and deliver solutions that address the pain-points of businesses and organisations in India, before expanding into the wider global market.
 
-<a markdown="0" href="{{ site.url }}/theme-setup" class="btn">Install So Simple Theme</a>
-
-[^1]: Example: *domain.com/category-name/post-title*
