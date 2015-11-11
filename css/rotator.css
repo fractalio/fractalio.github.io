@@ -1,0 +1,31 @@
+/* 
+ *    jQuery Rotator v0.2.1 BETA - 2014-09-16
+ * 
+ *    Copyright (c) 2014 Lukasz Lelek
+ *    http://ht2.pl/scripts/rotator/
+ *    
+ *    Licensed MIT 
+ */
+
+body {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+.rotate-arena {
+    display: inline-block;
+}
+
+.demo1 {
+    font-weight: 300;
+}
+.demo2 {
+    text-align: center;
+    font-weight: 300;
+    text-transform: uppercase;
+}
+.demo2 span {
+    width: 150px;
+    font-weight: 600;
+    color: #fff;
+}
