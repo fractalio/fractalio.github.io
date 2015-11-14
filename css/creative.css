@@ -702,3 +702,9 @@ text-align:left;
 .margin-left-minus-2 {
   margin-left: -2%;
 }
+
+/*Input Form Focus Custom css */
+.form-control:focus {
+    border-color: #F05F40;
+    outline: 0px none;
+    box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.075) inset, 0px 0px 8px rgba(240, 95, 64, 0.6);
