@@ -25,6 +25,8 @@
         <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
     <![endif]-->
     <link href="css/rotator.css" rel="stylesheet">
+		<!-- Timeline dependencies -->
+ 		<link rel="stylesheet" type="text/css" href="css/timeline.css">
 </head>
 
 <body id="page-top">
@@ -93,7 +95,7 @@
                     <div class="service-box">
                         <i class="fa fa-2x fa-diamond wow bounceIn text-primary"></i>
                         <h3>Forever-incremental upgrades & maintenance</h3>
-                        <p style="text-align:left;">
+                        <p class="text-left">
                             Our modular architecture eliminates the necessity for over-provisioned storage, and allows you to start with only as much capacity and performance
                             as you really need.<br /><br />
                             At the same time, it also provides the ability to seamlessly enhance capacity or performance, in lock-step increments, whenever
@@ -106,7 +108,7 @@
                     <div class="service-box">
                         <i class="fa fa-2x fa-cogs wow bounceIn text-primary" data-wow-delay=".1s"></i>
                         <h3>Architecture</h3><br />
-                        <p class=""style="text-align:left;">
+                        <p class="text-left">
                             The IntegralStor framework uses, by-design small, modular & energy-efficient hardware building-blocks to deliver a scalable, high-performance,
                             fault-resilient and easy-to-manage storage solution.<br /><br />
                             IntegralView, our browser driven single-dashboard storage manager, aggregates and virtualizes multiple disks into storage pools, and multiple
@@ -120,7 +122,7 @@
                     <div class="service-box">
                         <i class="fa fa-2x fa-cubes wow bounceIn text-primary" data-wow-delay=".2s"></i>
                         <h3>Commodity hardware + open software = Lowest lifetime cost</h3>
-                        <p style="text-align:left;">
+                        <p class="text-left">
                             Our use of commodity hardware eliminates vendor-lock-in and liberates you from the risk of unreasonable maintenance costs, and the expensive
                             and wasteful, but industry-prevalent practice of planned obsolesence.<br /><br />
                             Together with our base of open software, this allows you to always remain in control your data.<br /><br />
@@ -194,10 +196,10 @@
         <hr class="light"/>
         <div class="container">
             <div class="row">
-                <div class="col-lg-8 col-lg-offset-2 text-center" style="margin-bottom:-50px;">
+                <div class="col-lg-8 col-lg-offset-2 text-center margin-botton-minus-50">
                     <p>In the decade and more that we've been immersed in data storage, we've had a ringside view of several generations of
-                    data storage solutions, from multiple vendors, attempting to address the challenge of persistent & durable electronic data storage.<br /><br />
-                    But aside from capacity and peformance, in terms of data durability, nothing very significant has really changed.</p>
+                    data storage solutions, from multiple vendors, attempting to address the challenge of electronic data storage.<br /><br />
+                    While there have been massive advances and improvements in capacity and peformance, in terms of <i>data durability</i>, nothing very significant has really changed.</p>
                     <h4><strong>Until now...</strong></h4>
                 </div>
             </div>
@@ -211,9 +213,8 @@
                         <i class="fa fa-2x fa-hourglass-start wow bounceIn text-primary"></i>
                         <h3>Data Integrity & Durability</h3>
                         <p class="text-left">
-                            The challenge of decoupling content integrity and data durablity from the underlying hardware remains.<br /><br />
-                            While the cloud has abstracted away some of the hardware dependency, it has come at the cost of security and privacy; and yet,
-                            does not deliver true hardware-decoupled data durability.
+                            The key to data integrity and durability is, to decouple data content from the underlying hardware<br /><br />
+                            While the cloud has abstracted away some of the hardware dependency, it comes at the cost of security and privacy; and yet, still does not deliver true hardware-decoupled data storage.
                         </p>
                     </div>
                 </div>
@@ -231,8 +232,8 @@
                     <div class="service-box">
                         <i class="fa fa-2x fa-object-group wow bounceIn text-primary" data-wow-delay=".2s"></i>
                         <h3>Algorithmic Data Representation</h3>
-                        <p class="text-left">
-                           Our patent-pending algorithmic data representation and storage system is a fundamentally new, future-proof approach to information storage.<br /><br />
+                        	<p class="text-left">
+                          	 Our patent-pending algorithmic data representation and storage system is a fundamentally new, future-proof approach to information storage.<br /><br />
                            Deployable as a private or public, internet-scale framework, it guarantees data durability, content integrity, security & privacy, as well as hitherto
                            unprecedented levels of efficiency in data footprint optimization, transmission and archival.<br /><br />
                         </p>
@@ -240,62 +241,91 @@
                 </div>
             </div>
         </div>
-        <div><h4 style="text-align:center;"><strong><a href="#contact">Please contact us for evaluation or more information on AlephStor.</a></strong></h4></div>
+        <div><h4 class="text-center"><strong><a href="#contact">Please contact us for evaluation or more information on AlephStor.</a></strong></h4></div>
     </section>
-    <section class="bg-primary" id="about">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-8 col-lg-offset-2 text-center">
-                    <li class="fa fa-2x fa-history"></li>
-                    <h2 class="section-heading">(Hi)story</h2>
-                    <div id="rotate-demo2" class="rotate" data-rotate-interval="6000" data-rotate-animate="easeIn">
-                            <h2 class="demo2" style="font-s"></5><span class="rotate-arena"></span> </h2>
-                            <ul>
-                                <li>2000</li>
-                                <li>2012-2014</li>
-                                <li>Today</li>
-                            </ul>
-                        </div>
-                    <section>
-                        <!-- start: Section1  -->
-                        <!-- end: Section 1  -->
-                        <!-- start: Section 2  -->
-                        <div style="height:320px; width:100%; text-align:justify;" id="rotate-demo1" class="rotate margin-top-minus-5" data-rotate-interval="6000" data-rotate-animate="easeIn">
-                            <span class="rotate-arena"></span>
-                            <ul>
-                                <li>
-                                     Our engagement with all things relating to data storage goes back over decade, to the year 2000, when Datalifecycle was incorporated
-                                     as an independent system builder of data storage solutions.<br /><br />
-                                     Using hardware and software building blocks from a number of innovative vendors from across the world, for several years now, we have
-                                     been building independent data storage solutions spanning the lifecycle of data from storage, protection & archival to dispsal.<br /><br />
-                                     Our solutions have found acceptance with a wide range of reputed customers across different verticals including manufacturing, financial
-                                     services, media & entertainment, government, IT services, etc.<br /><br />
-                                     Over many years, while we were been able to adapt commodity hardware for data storage fairly early, for a much longer time, we have
-                                     been working with third-party vendors, usually proprietary, and some open, for storage software.<br /><br />
-                                     By the end of the decade, it was aparent to us, that in order to deliver durable customer value we should be truly independent, and
-                                     and build our own storage software.
-                                </li>
-                                <li>
-                                    Sometime in 2012, we started evaluating different candidate open source projects and commodity hardware designs, that could serve
-                                    as the base for our development effort, and in 2014, we decided to take the logical, and perhaps inevitable, step of backward
-                                    integration, to develop our own storage platform using a base of several different source projects that we had validated.<br/><br />
-                                    For strategic reasons, this initiative was forked into a new company, and Fractalio Data was born.
-                                </li>
-                                <li>
-                                    Hooray, the first version of IntegralStor for unified and scale out storage is ready....and, we have our first customers!<br /><br />
-                                    Call us now to discuss your data storage requirements, or stay tuned for more information, as we move towards our design objective
-                                    of a single framework for data storage and information management.
-                                </li>
-                            </ul>
-                        </div>
-                        </p>
-                        <a class="btn btn-default btn-xl page-scroll" data-toggle="modal" data-target="#aboutFractalio">More about us</a>
-                        <!-- end: Section 2  -->
-                        <hr />
-                    </section>
-                </div>
+    <section class="bg-primary padding-30" id="about">
+			<div class="container">
+				<div class="text-center">
+					<li class="fa fa-2x fa-history"></li>
+				</div>
+    		<h2 class="text-center">Hi(story)</h2><hr class="light"/><br />
+  			<ul class="timeline">
+    			<li><div class="tldate">2000</div></li>
+    
+    		<li>
+      		<div class="tl-circ"></div>
+      		<div class="timeline-panel">
+        		<div class="tl-heading">
+          		<h4>Genesis</h4><br />
+        		</div>
+        		<div class="tl-body">
+          		<p> Our engagement with data storage, goes back over a decade, to the year 2000, when The Datalifecycle Company was incorporated as an independent system builder of data storage solutions.<br><br>
+Using hardware and software building blocks from a number of vendors across the world, we have been building independent data storage solutions spanning the lifecycle of data; from storage, to protection, archival and disposal.
+						</p>
+        		</div>
+      		</div>
+    		</li>
+		
+      	<li class="timeline-inverted">
+        	<div class="tl-circ"></div>
+        	<div class="timeline-panel">
+          	<div class="tl-heading">
+            	<h4>Commitment & Focus</h4><br />
+          	</div>
+          	<div class="tl-body">
+						<p>Over several years, Datalifecycle's storage solutions have found acceptance with a wide range of customers across different verticals including manufacturing, financial services, media & entertainment, government, IT services, etc.<br><br>
+However, by the end of the decade, it was aparent, that in order to deliver durable customer value we needed to be truly independent, and build our own storage platform.</p>
+          	</div>
+        	</div>
+      	</li>
+
+      	<li><div class="tldate">2012</div></li>
+    		<li>
+      		<div class="tl-circ"></div>
+      		<div class="timeline-panel">
+        		<div class="tl-heading">
+          		<h4>Incubation</h4><br />
+        		</div>
+        		<div class="tl-body">
+          		<p> Sometime in 2012, we began evaluating a number of candidate open source projects and commodity hardware designs, that could serve as the base for our data storage platform.</p>
+        		</div>
+      		</div>
+    		</li>
+
+				 <li><div class="tldate">2014</div></li>
+        <li class="timeline-inverted">
+          <div class="tl-circ"></div>
+          <div class="timeline-panel">
+            <div class="tl-heading">
+              <h4>Fractalio Data is born</h4><br />
             </div>
-        </div>
+            <div class="tl-body">
+							<p>In 2014, this initiative was forked into a new company - Fractalio Data.</p>
+            </div>
+          </div>
+        </li>
+      	<li>
+        	<div class="tl-circ"></div>
+        	<div class="timeline-panel" >
+          	<div class="tl-heading">
+            	<h4>Integralstor</h4><br />
+          	</div>
+          	<div class="tl-body">
+							<p><strong>Hooray!</strong> The first version of IntegralStor for unified and scale out storage is ready....and, we have our first customers!
+ </p>
+						<li><div class="tldate">Now</div></li>
+          	</div>
+        	</div>
+      	</li>
+			</div><br />
+		<div class="row">
+			<div class="col-md-2 col-lg-2 col-sm-2 col-xs-2"></div>
+			<div class="col-md-8 col-lg-8 col-sm-12 col-xs-12 text-center">
+         <p> Call us now to discuss your data storage requirements, or stay tuned for more information, as we move towards our design objective of a single framework for data storage and information management.</p>
+					<a class="btn btn-default btn-xl page-scroll" data-toggle="modal" data-target="#aboutFractalio">What makes us tick?</a><br /><br />
+       </div>
+			<div class="col-md-2 col-lg-2 col-sm-2 col-xs-2"></div>
+		</div>
     </section>
 
     <section id="contact">
@@ -375,9 +405,9 @@
      <!-- FULLSCREEN MODAL CODE (.fullscreen) -->
     <div class="modal fade fullscreen" id="aboutFractalio"  tabindex="-1" role="dialog" aria-labelledby="fractalioinfo" aria-hidden="true">
         <div class="modal-dialog">
-            <div class="modal-content" style="color:#fff;">
-                <div class="modal-header" style="border:0;">
-                        <button type="button" class="close btn btn-link" data-dismiss="modal" aria-hidden="true"><i class="fa fa-close fa-4x" style="color:#999;"></i></button>
+            <div class="modal-content">
+                <div class="modal-header border-0">
+                        <button type="button" class="close btn btn-link" data-dismiss="modal" aria-hidden="true"><i class="fa fa-close fa-4x"></i></button>
                         <h4 class="modal-title text-center"><span class="sr-only">main navigation</span></h4>
                 </div>
                 <div class="modal-body text-left black container-fluid">
@@ -401,15 +431,15 @@
      <!-- FULLSCREEN MODAL CODE (.fullscreen) -->
     <div class="modal fade fullscreen" id="aboutUnicell"  tabindex="-1" role="dialog" aria-labelledby="unicellinfo" aria-hidden="true">
         <div class="modal-dialog">
-            <div class="modal-content" style="color:#fff;">
-                <div class="modal-header" style="border:0;">
+            <div class="modal-content">
+                <div class="modal-header border-0">
                       <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 col-lg-offset-4 col-md-offset-3">
                            <img src="img/lined.jpg" class="img-responsive" width="70%">
                       </div>
-                        <button type="button" class="close btn btn-link" data-dismiss="modal" aria-hidden="true"><i class="fa fa-close fa-4x" style="color:#999;"></i></button>
+                        <button type="button" class="close btn btn-link" data-dismiss="modal" aria-hidden="true"><i class="fa fa-close fa-4x"></i></button>
                         <h4 class="modal-title text-center"><span class="sr-only">main navigation</span></h4>
                 </div>
-                <div class="modal-body text-center black container margin-top-6" style="text-align:justify; font-size:18px;" >
+                <div class="modal-body text-center black container margin-top-6 text-justify" >
                    UNICell is a high-performance, feature-rich & affordable unified storage platform for a wide range of business applications.<br /><br />
                    With block & file access in a single appliance, as well as support for a wide range of services and protocols, UNICell is a versatile
                    general purpose data storage platform.<br /><br />
@@ -422,7 +452,7 @@
                                 <div class="service-box">
                                     <i class="fa fa-2x fa-arrows-alt text-primary" ></i>
                                     <h3>Features</h3>
-                                    <p class="text-left" style="font-size:15px;">
+                                    <p class="text-left">
                                         - Unified file & block storage<br />
                                       - Single dashboard webUI<br />
                                       - RAID protection against disk failures<br />
@@ -437,7 +467,7 @@
                                 <div class="service-box">
                                     <i class="fa fa-2x fa-stop text-primary"></i>
                                     <h2>UNICell</h2>
-                                    <p class="text-left" style="font-size:15px;">
+                                    <p class="text-left">
                                       The UNICell consists of a storage controller and only as many disks as necessary, to ensure a well balanced controller:spindle:network
                                         bandwidth, packaged into a compact, energy-efficient rack enclosure.<br /><br />
                                         Rightsized IO pipelines within each UNICell eliminate internal bottlenecks and ensure that full IO and system bandwidth of each UNICell
@@ -452,7 +482,7 @@
                                 <div class="service-box">
                                     <i class="fa fa-2x fa-industry text-primary"></i>
                                     <h3>Applications</h3>
-                                    <p class="text-left" style="font-size:15px;">
+                                    <p class="text-left">
                                       - File storage & sharing<br />
                                       - Video surveillance<br />
                                       - Data archival<br />
@@ -472,9 +502,9 @@
      <!-- FULLSCREEN MODAL CODE (.fullscreen) -->
     <div class="modal fade fullscreen" id="aboutGridcell"  tabindex="-1" role="dialog" aria-labelledby="gridcellinfo" aria-hidden="true">
         <div class="modal-dialog">
-            <div class="modal-content" style="color:#fff;">
+            <div class="modal-content">
                 <div class="row">
-                  <div class="modal-header" style="border:0;">
+                  <div class="modal-header border-0">
                     <div class="col-lg-3 col-md-3 col-sm-6 col-xs-6">
                         <img src="img/lined.jpg" class="img-responsive">
                      </div>
@@ -488,12 +518,12 @@
                        <img src="img/lined.jpg" class="img-responsive">
                   </div>
                   <div class="col-lg-1 col-md-1 col-lg-offset-11 col-md-offset-11">
-                    <button type="button" class="close btn btn-link" data-dismiss="modal" aria-hidden="true"><i class="fa fa-close fa-4x" style="color:#999;"></i></button>
+                    <button type="button" class="close btn btn-link" data-dismiss="modal" aria-hidden="true"><i class="fa fa-close fa-4x"></i></button>
                     <h4 class="modal-title text-center"><span class="sr-only">main navigation</span></h4>
                   </div>
                  </div>
                 </div>
-                <div class="modal-body text-center black container margin-top-minus-10" style="text-align:justify; font-size:18px;">
+                <div class="modal-body text-center black container margin-top-minus-10 text-justify">
                    IntegralStor GridCell is a scale-out grid-storage framework for the delivery of data storage and information management functions as a layered set of scalable,
                    fault-resilient and highly-available services spanning in-premise infrastructure to the cloud.<br /><br />
                    The IntegralStor architecture, based on the latest generation energy-efficient hardware and open-source distributed filesystems, delivers high performance file
@@ -505,7 +535,7 @@
                                 <div class="service-box">
                                     <i class="fa fa-2x fa-arrows-alt text-primary"></i>
                                     <h3>Features</h3>
-                                    <p class="text-left" style="font-size:15px;">
+                                    <p class="text-left">
                                       - Global namespace<br />
                                       - Snapshots<br />
                                       - Replication<br />
@@ -518,7 +548,7 @@
                                 <div class="service-box">
                                     <i class="fa fa-2x fa-th text-primary"></i>
                                     <h3>GRIDCells</h3>
-                                    <p class="text-left" style="font-size:15px;">
+                                    <p class="text-left">
                                       Are the autonomous, control & data storage elements that form the hardware building-blocks of IntegralStor.<br /><br />
                                         Each GRIDCell consists of a storage controller and as few disks as are necessary, to ensure a well balanced controller:spindle:network
                                         bandwidth, packaged into a compact, energy-efficient rack enclosure.<br /><br />
@@ -530,7 +560,7 @@
                                 <div class="service-box">
                                     <i class="fa fa-2x fa-industry text-primary"></i>
                                     <h3>Applications</h3>
-                                    <p class="text-left" style="font-size:15px;">
+                                    <p class="text-left">
                                       - Media & entertainment<br />
                                       - Video surveillance<br />
                                       - HPC storage<br />
