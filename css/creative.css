@@ -671,6 +671,12 @@ left:750px;
 .text-left {
 text-align:left;
 }
+.text-center {
+text-align:center;
+}
+.text-justify {
+text-align:justify;
+}
 
 #new-storage h2 {
   margin-top: -3%;
@@ -702,9 +708,22 @@ text-align:left;
 .margin-left-minus-2 {
   margin-left: -2%;
 }
+.margin-botton-minus-50 {
+	margin-bottom:-50px;
+}
+.padding-30{
+		padding: 30px 0;
+}
+.border-0{
+		border:0;
+}
 
-/*Input Form Focus Custom css */
+/*Bootstrap form customization */
+.form-control {
+	border-radius: 0px;
+}
 .form-control:focus {
     border-color: #F05F40;
     outline: 0px none;
     box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.075) inset, 0px 0px 8px rgba(240, 95, 64, 0.6);
+}
