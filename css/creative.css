@@ -57,7 +57,7 @@ p {
 
 .bg-dark {
     color: #fff;
-    background-color: #222;
+    background-color: #000;
 }
 
 .text-faded {
@@ -99,8 +99,7 @@ aside {
 
 .navbar-default .nav > li>a,
 .navbar-default .nav>li>a:focus {
-    text-transform: uppercase;
-    font-size: 13px;
+    font-size: 15px;
     font-weight: 700;
     color: #222;
 }
@@ -123,7 +122,7 @@ aside {
 
 @media(min-width:768px) {
     .navbar-default {
-        border-color: rgba(255,255,255,.3);
+       /* border-color: rgba(255,255,255,.3);*/
         background-color: transparent;
     }
 
@@ -178,7 +177,6 @@ header {
     min-height: auto;
     text-align: center;
     color: #fff;
-    background: #494949;
     background-position: center;
     -webkit-background-size: cover;
     -moz-background-size: cover;
@@ -579,7 +577,7 @@ body {
 
 }
 .modal-header .close{
-    margin-top:-40px
+    margin-top:-40px;
 
 }
 @media (max-width: 480px){
@@ -677,12 +675,17 @@ text-align:center;
 .text-justify {
 text-align:justify;
 }
-
 #new-storage h2 {
   margin-top: -3%;
 }
 #new-storage-features {
   margin-top: -4%;
+}
+.margin-top-1 {
+	margin-top: 1%;
+}
+.margin-top-2 {
+	margin-top: 2%;
 }
 .margin-top-6 {
   margin-top: 6%;
@@ -716,6 +719,9 @@ text-align:justify;
 }
 .border-0{
 		border:0;
+}
+.text-underline{
+		text-decoration: underline red;
 }
 
 /*Bootstrap form customization */
