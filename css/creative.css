@@ -721,7 +721,7 @@ text-align:justify;
 		border:0;
 }
 .text-underline{
-		text-decoration: underline red;
+	border-bottom: 2px solid #F05F40;
 }
 
 /*Bootstrap form customization */
