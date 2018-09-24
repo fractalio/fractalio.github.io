@@ -19,58 +19,134 @@
     <title>IntegralSTOR - One solution for Unified Data Storage, Data Baskup, Disaster Recovery</title>
 
     <!-- Bootstrap Core CSS -->
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <link rel="shortcut icon" href="../img/favicon.ico">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
 
-<!-- Optional theme -->
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+    <!-- Optional theme -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="../css/creative.css" type="text/css">
 
-<style>
-table {
-    border-collapse: collapse;
-}
+    <style>
+        table {
+            border-collapse: collapse;
+        }
 
-table, th, td {
-    border: 1px solid white;
-}
-th, td {
-    padding:5px;
-}
-</style>
+        table, th, td {
+            border: 1px solid white;
+        }
+        th, td {
+            padding:5px;
+        }
+        .carousel-control.left, .carousel-control.right {
+            background-image: none
+        }
+    </style>
 </head>
 
 <body data-spy="scroll" data-target="#navid" id="page-top">
 
-<nav class="navbar navbar-default navbar-fixed-top" id="navid" style="min-height:100px">
-  <div style="" class="container-fluid">
-    <!-- Brand and toggle get grouped for better mobile display -->
-    <div class="navbar-header">
-      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
-        <span class="sr-only">Toggle navigation</span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-        <span class="icon-bar"></span>
-      </button>
-      <a class="navbar-brand" href="#"><img src="../img/site-logo.png" style="height:80px; " /></a>
-    </div>
+    <nav class="navbar navbar-default navbar-fixed-top" id="navid" style="min-height:100px">
+      <div style="" class="container-fluid">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="#"><img src="../img/site-logo.png" style="height:80px; " /></a>
+        </div>
 
-    <!-- Collect the nav links, forms, and other content for toggling -->
-    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-      <ul class="nav nav-tabs navbar-right" style="padding-top:25px">
-        <li class="active"><a href="#intro">Introduction</a></li>
-        <li><a href="#usecases">Use cases</a></li>
-        <li role="presentation" class="dropdown">
-        <a class="dropdown-toggle" data-toggle="dropdown" href="#softwarespecs" role="button" aria-haspopup="true" aria-expanded="false">
-            Features & Specs <span class="caret"></span>
-        </a>
-        <ul class="dropdown-menu">
-            <li><a href="#swspecs">Software</a></li>
-            <li><a href="#hwspecs">Hardware</a></li>
-        </ul>
-      </ul>
-    </div><!-- /.navbar-collapse -->
-  </div><!-- /.container-fluid -->
-</nav>
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+          <ul class="nav nav-tabs navbar-right" style="padding-top:25px">
+            <li class="active"><a href="#intro">Introduction</a></li>
+            <li><a href="#usecases">Use cases</a></li>
+            <li role="presentation" class="dropdown">
+                <a class="dropdown-toggle" data-toggle="dropdown" href="#softwarespecs" role="button" aria-haspopup="true" aria-expanded="false">
+                    Features & Specs <span class="caret"></span>
+                </a>
+                <ul class="dropdown-menu">
+                    <li><a href="#swspecs">Software</a></li>
+                    <li><a href="#hwspecs">Hardware</a></li>
+                </ul>
+            </li>
+            <li>
+                <a class="page-scroll" href="/index.html#about">About us</a>
+            </li>
+            <li>
+                <a class="page-scroll" href="/index.html#contact">Contact</a>
+            </li>
+            <li class="active"><a href="/index.html"><span class="glyphicon glyphicon-home" aria-hidden="true"/></a></li>
+          </ul>
+        </div><!-- /.navbar-collapse -->
+      </div><!-- /.container-fluid -->
+    </nav>
 
+    <section  class="tab-contents" style="padding:110px;background-color:#c31d15f7;color:#ffffff"  id="intro">
+        <div id="carousel-example-generic"  style="position:relative;margin-top:5%;margin-bottom:5%" class="carousel slide" data-ride="carousel" data-interval="7000">
+          <!-- Indicators -->
+          <ol class="carousel-indicators">
+            <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
+            <li data-target="#carousel-example-generic" data-slide-to="1"> </li>
+            <li data-target="#carousel-example-generic" data-slide-to="2"> </li>
+          </ol>
+
+          <!-- Wrapper for slides -->
+          <div class="carousel-inner" >
+            <div class="item active">
+              <div class="carousel-caption" style="position:relative;left:0%;padding-left:15%;padding-right:15%">
+                <img src="../img/istor.png" style="width:300px" />
+                <h3 >Data Storage | Data Backup | Disaster Recovery </h3>
+                        <p style="font-size:18px" class="text-left">
+                            <br/>
+                            IntegralStor is a unified data storage platform, supporting both block and file storage protocols, and
+                            a comprehensive set of data protection features integrating a wide range of business-critical storage
+                            and management functions into a single versatile appliance.<br/><br/>
+                            Whether as central storage for file sharing, data backup, off-site data replication for business
+                            continuity, backup repository for mission-critical VMs, shared storage for video editing or storage for
+                            video surveillance, IntegralStor is a fast, reliable, easy-to-manage and affordable storage system for
+                            a wide range of common business storage applications.
+                        </p>
+              </div>
+            </div>
+            <div class="item">
+              <div class="carousel-caption" style="position:relative;left:0%;padding-left:15%;padding-right:15%">
+                <img src="../img/DLO.jpeg" style="margin-top:1%;height:300px" />
+                <h3>Office data backup</h3>
+                        <p style="font-size:18px" class="text-left">
+                            <br/>
+                            Integrated tools for centralised backup of laptops & desktops; support for automated scheduled backup; backup of file/folders, partitions or entire disk image
+                        </p>
+              </div>
+            </div>
+            <div class="item">
+              <div class="carousel-caption" style="position:relative;left:0%;padding-left:15%;padding-right:15%">
+                <img src="../img/Replication.jpeg" style="margin-top:1%;height:300px" />
+                <h3>Disaster recovery & replication</h3>
+                        <p style="font-size:18px" class="text-left">
+                            <br/>
+                                In-built support for data replication; one-one or one-many; file system or file/folder level – ideal for branch to HO replication
+                        </p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Controls -->
+          <a class="left carousel-control" href="#carousel-example-generic" role="button" data-slide="prev">
+            <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+            <span class="sr-only">Previous</span>
+          </a>
+          <a class="right carousel-control" href="#carousel-example-generic" role="button" data-slide="next">
+            <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+            <span class="sr-only">Next</span>
+          </a>
+        </div>
+    </section>
+
+    <!--
     <section  class="tab-contents" style="padding:110px;background-color:#c31d15f7;color:#ffffff"  id="intro">
         <div class="container">
             <div class="row">
@@ -98,6 +174,7 @@ th, td {
             </div>
         </div>
     </section>
+    -->
 
     <section  class="tab-contents" style="padding:110px;;background-color:#f05f40;color:#ffffff"  id="usecases">
         <div class="container">
