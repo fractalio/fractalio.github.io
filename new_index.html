@@ -40,6 +40,9 @@
         .carousel-control.left, .carousel-control.right {
             background-image: none
         }
+        .dropdown:hover .dropdown-menu {
+            display: block;
+        }
     </style>
 </head>
 
@@ -60,25 +63,52 @@
         <!-- Collect the nav links, forms, and other content for toggling -->
         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
           <ul class="nav nav-tabs navbar-right" style="padding-top:25px">
-            <li class="active"><a href="#intro">Introduction</a></li>
+            <li class="active"><a href="#home">Home</a></li>
             <li role="presentation" class="dropdown">
                 <a class="dropdown-toggle" data-toggle="dropdown" href="" role="button" aria-haspopup="true" aria-expanded="false">
-                    Products<span class="caret"></span>
+                    IntegralStor<span class="caret"></span>
                 </a>
                 <ul class="dropdown-menu">
-                    <li><a href="integralstor/index.html">Unified Storage Systems</a></li>
+                    <li class="disabled"><a href="#" data-toggle="tooltip" title="Info coming soon!">Unified Storage System</a></li>
+                    <li class="disabled"><a  href="#" data-toggle="tooltip" title="Info coming soon!">Central data storage</a></li>
+                    <li class="disabled"><a  href="#" data-toggle="tooltip" title="Info coming soon!">Desktop & Laptop backup</a></li>
+                    <li class="disabled"><a  href="#" data-toggle="tooltip" title="Info coming soon!">Data Replication & DR</a></li>
+                    <li class="disabled"><a  href="#" data-toggle="tooltip" title="Info coming soon!">Software features</a></li>
+                    <li class="disabled"><a  href="#" data-toggle="tooltip" title="Info coming soon!">Appliance specifications</a></li>
+                </ul>
+            </li>
+            <li role="presentation" class="dropdown">
+                <a class="dropdown-toggle" data-toggle="dropdown" href="" role="button" aria-haspopup="true" aria-expanded="false">
+                    Datalifecycle Products<span class="caret"></span>
+                </a>
+                <ul class="dropdown-menu">
                     <li><a href="secure_data_destruction/index.html">Data Elimination Systems</a></li>
                 </ul>
             </li>
             <li role="presentation" class="dropdown">
                 <a class="dropdown-toggle" data-toggle="dropdown" href="" role="button" aria-haspopup="true" aria-expanded="false">
-                    Services<span class="caret"></span>
+                    Datalifecycle Services<span class="caret"></span>
                 </a>
                 <ul class="dropdown-menu">
-                    <li><a href=""><strong>Managed Services</strong></a></li>
+                    <li class="disabled"><a class="disabled" href="#" data-toggle="tooltip" title="Info coming soon!">Secure data erasure & disposal</a></li>
                     <li role="separator" class="divider"></li>
-                    <li><a href="managed_storage/ca/index.html">For Chartered accountants</a></li>
-                    <li><a href="managed_storage/architects/index.html">For Architects</a></li>
+                    <li class="disabled"><a href="#"> Managed storage & protection</a></li>
+                    <li><a href="#">For CA & financial advisory practices</a></li>
+                    <li><a href="#">For Architect & design practices</a></li>
+                    <li class="disabled"><a href="#" data-toggle="tooltip" title="Info coming soon!"> For Law practices </a></li>
+                </ul>
+            </li>
+            <li role="presentation" class="dropdown">
+                <a class="dropdown-toggle" data-toggle="dropdown" href="" role="button" aria-haspopup="true" aria-expanded="false">
+                    Partners<span class="caret"></span>
+                </a>
+                <ul class="dropdown-menu">
+                    <li class="disabled" data-toggle="tooltip" title="Info coming soon!"><a href="#">Technology</a></li>
+                    <li class="disabled"><a  href="#" data-toggle="tooltip" title="Info coming soon!">Open ZFS</a></li>
+                    <li class="disabled"><a  href="#" data-toggle="tooltip" title="Info coming soon!">Dell</a></li>
+                    <li role="separator" class="divider"></li>
+                    <li class="disabled"><a href="#" data-toggle="tooltip" title="Info coming soon!"> Business</a></li>
+                    <li class="disabled"><a  href="#" data-toggle="tooltip" title="Info coming soon!">Systems Builders & Integrators </a></li>
                 </ul>
             </li>
             <li><a href="#about">About us</a></li>
@@ -88,7 +118,7 @@
       </div><!-- /.container-fluid -->
     </nav>
 
-    <section  class="tab-contents" style="padding:110px;background-color:#c31d15f7;color:#ffffff"  id="intro">
+    <section  class="tab-contents" style="padding:110px;background-color:#062f4f;color:#ffffff"  id="home">
         <div id="carousel-example-generic"  style="position:relative;margin-top:5%;margin-bottom:5%" class="carousel slide" data-ride="carousel" data-interval="9000">
           <!-- Indicators -->
           <ol class="carousel-indicators">
@@ -177,102 +207,27 @@
 
 
 
-    <section class="bg-primary padding-30" style="padding:110px;" id="about">
-            <div class="container">
-                <div class="text-center">
-                    <li class="fa fa-2x fa-history"></li>
-                    <h2>Hi(story)</h2><hr class="light"/><br />
-                </div>
-                <ul class="timeline">
-                        <li><div class="tldate">2000</div></li> 
-                        <li>
-                            <div class="tl-circ"></div>
-                            <div class="timeline-panel">
-                                <div class="tl-heading">
-                                    <h4>Genesis</h4><br />
-                                </div>
-                                <div class="tl-body">
-                                    <p> Our engagement with data storage, goes back over a decade, to the year 2000, when The Datalifecycle Company was incorporated as an independent system builder of data storage solutions.<br><br>
-                                    Using hardware and software building blocks from a number of vendors across the world, we have been building independent data storage solutions spanning the lifecycle of data; from storage, to protection, archival and disposal.
-                                    </p>
-                                </div>
-                            </div>
-                        </li>
-        
-                        <li class="timeline-inverted">
-                            <div class="tl-circ"></div>
-                            <div class="timeline-panel">
-                                <div class="tl-heading">
-                                    <h4>Commitment & Focus</h4><br />
-                                </div>
-                                <div class="tl-body">
-                                    <p>Over several years, Datalifecycle's storage solutions have found acceptance with a wide range of customers across different verticals including manufacturing, financial services, media & entertainment, government, IT services, etc.<br><br>
-                                    However, by the end of the decade, it was aparent, that in order to deliver durable customer value we needed to be truly independent, and build our own storage platform.</p>
-                                </div>
-                            </div>
-                        </li>
+    <section class="padding-30" style="padding-top:150px;border-bottom:1px solid #e7e7e7" id="about">
+        <div class="row" style="padding-left:10%;padding-right:10%">
+            <div class="class="col-lg-12 text-center""></div>
+                <p style="font-size:18px" >
+                    Fractalio Data was conceived in response to the challenge of containing and reliably managing the explosion of electronic data that IT enabled organizations of all sizes are experiencing.
+                </p>
 
-                        <li><div class="tldate">2012</div></li>
-                        <li>
-                            <div class="tl-circ"></div>
-                            <div class="timeline-panel">
-                                <div class="tl-heading">
-                                    <h4>Incubation</h4><br />
-                                </div>
-                                <div class="tl-body">
-                                    <p> Sometime in 2012, we began evaluating a number of candidate open source projects and commodity hardware designs, that could serve as the base for our data storage platform.</p>
-                                </div>
-                            </div>
-                        </li>
+                <p style="font-size:18px" >
+                    Fractalio Data is led by a group of individuals with experience spanning technology, engineering and business, who started off over a decade ago as vendor-independent system integrators of data storage solutions, and were among the few Indian companies to design and deliver solutions addressing the full spectrum of “Datalifecycle” requirements, from data storage, through archival, retrieval and elimination; from in-premise to the cloud.
+                </p>
 
-                        <li><div class="tldate">2014</div></li>
-                        <li class="timeline-inverted">
-                            <div class="tl-circ"></div>
-                            <div class="timeline-panel">
-                                <div class="tl-heading">
-                                    <h4>Fractalio Data is born</h4><br />
-                                </div>
-                                <div class="tl-body">
-                                    <p>In 2014, this initiative was forked into a new company - Fractalio Data.</p>
-                                </div>
-                            </div>
-                        </li>
-        
-                        <li>
-                            <div class="tl-circ"></div>
-                            <div class="timeline-panel" >
-                                <div class="tl-heading">
-                                    <h4>Integralstor</h4><br />
-                                </div>
-                            <div class="tl-body">
-                                <p><strong>Hooray!</strong> The first version of IntegralStor for unified and scale out storage is ready....and, we have our first customers!</p>
-                            </div>
-                        </li>
-                        <li class="timeline-inverted">
-                            <div class="tl-circ"></div>
-                            <div class="timeline-panel" >
-                                <div class="tl-heading">
-                                    <h4>Dell OEM Partnership</h4><br />
-                                </div>
-                            <div class="tl-body">
-                                <p>Fractalio becomes a Dell OEM storage partner and brings the rock solid hardware quality and instant geographically widerspread support reach to all our customers. We expand our customer reach and use cases significantly.</p>
-                            </div>
-                        </li>
-                        <li><div class="tldate">Now</div></li>
-                </ul>
-            </div><br />
+                <p style="font-size:18px" >
+                    In addition to, and of equal importance as our data storage initiative, as individuals and as a group, we're interested in a wider spectrum of technology - its role, influence and impact on sustenance, convenience and leisure, and consequently then, on livelihoods and the nature and role of work in society. In more concrete terms, we're interested in harnessing technology to address local needs towards sustainable living in the areas of food, water, energy security & shelter, and strive to provide an environment that supports explorations in these areas. So, our data storage business is but one dimension, in a much broader set of motivations, and serves as an enabler to facilitate these explorations.
+                </p>
 
-            <div class="row">
-                <div class="col-md-2 col-lg-2 col-sm-2 col-xs-2"></div>
-                <div class="col-md-8 col-lg-8 col-sm-12 col-xs-12 text-center">
-                    <p> Call us now to discuss your data storage requirements, or stay tuned for more information, as we move towards our design objective of a single framework for data storage and information management.</p>
-                    <a class="btn btn-default btn-xl page-scroll" data-toggle="modal" data-target="#aboutFractalio">What makes us tick?</a><br /><br />
-                </div>
-                <div class="col-md-2 col-lg-2 col-sm-2 col-xs-2"></div>
             </div>
+        </div>
+
     </section>
 
-    <section id="contact" style="padding:110px;">
+    <section id="contact" style="padding:160px;">
         <div class="container">
             <div class="row">
                 <div class="col-lg-8 col-lg-offset-2 text-center">
@@ -286,39 +241,30 @@
                 </div>
             </div>
             <br />
-            <div class="row">
-                         <div class="col-lg-8 col-lg-offset-2 text-center">
-                              <i class="fa fa-phone fa-3x wow bounceIn"></i>
-                              <br />
-                              <p>+91-98861-20215</p>
-                              <p>+91-98862-70195</p>
-                              <p>+91-98450-69650</p><br>
-                          </div>
-             <div class="row">
-                 <div class="col-lg-8 col-lg-offset-2 text-center">
-                          <i class="fa fa-envelope-o fa-3x wow bounceIn" data-wow-delay=".1s"></i>
-                                  <br />
-                                  <p><a href="mailto:info@fractalio.com">info@fractalio.com</a> </p><br />
-                          </div>
-             <div class="row">
-                 <div class="col-lg-8 col-lg-offset-2 text-center">
-                          <i class="fa fa-home fa-3x wow bounceIn"></i>
-                              <br />
-                                 <p>
-                                     Fractalio Data Pvt Ltd <br />
-                                     #55, 17th Cross, Malleswaram<br />
-                                     Bangalore - 560 055<br />
-                                     India
-                     </p>
-                          </div>
-                          </div>
-                      </div>
-                  </div>
-                </div>
-                <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12 text-center">
-                    
-                </div>
-            </div>
+            <div class="row" style="border:1px solid #e7e7e7">
+                 <div class="col-lg-4 text-center" style="padding-top:20px;border-right:1px solid #e7e7e7;min-height:220px">
+                      <i class="fa fa-phone fa-3x wow bounceIn"></i>
+                      <br />
+                      <p>+91-98861-20215</p>
+                      <p>+91-98862-70195</p>
+                      <p>+91-98450-69650</p><br>
+                 </div>
+                 <div class="col-lg-4 text-center" style="padding-top:20px;border-right:1px solid #e7e7e7;min-height:220px">
+                     <i class="fa fa-envelope-o fa-3x wow bounceIn" data-wow-delay=".1s"></i>
+                     <br />
+                     <p><a href="mailto:info@fractalio.com">info@fractalio.com</a> </p><br />
+                 </div>
+                 <div class="col-lg-4 text-center" style="padding-top:20px;min-height:220px">
+                    <i class="fa fa-home fa-3x wow bounceIn"></i>
+                    <br />
+                    <p>
+                        Fractalio Data Pvt Ltd <br />
+                        #55, 17th Cross, Malleswaram<br />
+                        Bangalore - 560 055<br />
+                       India
+                    </p>
+                 </div>
+             </div>
         </div><!--container -->
     </section>
     <!-- Modals for the page -->
