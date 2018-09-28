@@ -1,631 +1,680 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <!-- Global Site Tag (gtag.js) - Google Analytics -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-53888616-1"></script>
-    <script>
-        window.dataLayer = window.dataLayer || [];
-        function gtag(){dataLayer.push(arguments)};
-        gtag('js', new Date());
+    <head>
+        <!-- Global Site Tag (gtag.js) - Google Analytics -->
+        <script async src="https://www.googletagmanager.com/gtag/js?id=UA-53888616-1"></script>
+        <script>
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments)};
+            gtag('js', new Date());
 
-        gtag('config', 'UA-53888616-1');
-    </script>
+            gtag('config', 'UA-53888616-1');
+        </script>
 
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <meta name="description" content="">
-    <meta name="author" content="">
-    <title>IntegralSTOR - One solution for Unified Data Storage, Data Baskup, Disaster Recovery</title>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="description" content="">
+        <meta name="author" content="">
+        <title>IntegralSTOR - One solution for Unified Data Storage, Data Baskup, Disaster Recovery</title>
 
-    <!-- Fontawesome-->
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
-    <!-- Bootstrap Core CSS -->
-    <link rel="shortcut icon" href="../img/favicon.ico">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+        <link rel="shortcut icon" href="../../img/favicon.ico">
+        <!-- Fontawesome-->
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU" crossorigin="anonymous">
+        <!-- Bootstrap Core CSS -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+        <!-- Custom Fonts -->
+        <link href='https://fonts.googleapis.com/css?family=Raleway' rel='stylesheet' type='text/css'>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+        <!-- Custom CSS -->
+        <link rel="stylesheet" href="../css/creative.css" type="text/css">
+        <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+        <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+        <!--[if lt IE 9]>
+            <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+            <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+        <![endif]-->
+        <style>
+            .carousel-control.left, .carousel-control.right {
+                background-image: none
+            }
+            .dropdown:hover .dropdown-menu {
+                display: block;
+            }
+            table {
+                border-collapse: collapse;
+            }
 
-    <!-- Optional theme -->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
-    <!-- Custom CSS -->
-    <link rel="stylesheet" href="../css/creative.css" type="text/css">
+            table, th, td {
+                border: 1px solid #e7e7e7;
+            }
+            th, td {
+                padding:5px;
+            }
+        </style>
+    </head>
 
-    <style>
-        table {
-            border-collapse: collapse;
-        }
+    <body data-spy="scroll" data-target="#navid" id="page-top">
+        <nav class="navbar navbar-default navbar-fixed-top" id="navid" style="min-height:100px">
+          <div style="" class="container-fluid">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header">
+              <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </button>
+              <a class="navbar-brand" href="#"><img  src="../img/site-logo.png" style="padding-left:20px;height:60px; " /></a>
+            </div>
 
-        table, th, td {
-            border: 1px solid white;
-        }
-        th, td {
-            padding:5px;
-        }
-        .carousel-control.left, .carousel-control.right {
-            background-image: none
-        }
-    </style>
-</head>
-
-<body data-spy="scroll" data-target="#navid" id="page-top">
-
-    <nav class="navbar navbar-default navbar-fixed-top" id="navid" style="min-height:100px">
-      <div style="" class="container-fluid">
-        <!-- Brand and toggle get grouped for better mobile display -->
-        <div class="navbar-header">
-          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
-            <span class="sr-only">Toggle navigation</span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-          </button>
-          <a class="navbar-brand" href="#"><img src="../img/site-logo.png" style="height:80px; " /></a>
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+              <ul class="nav nav-tabs navbar-right" style="padding-top:25px">
+                <li ><a href="#home">Home</a></li>
+                <li role="presentation" class="active dropdown">
+                    <a class="dropdown-toggle" data-toggle="dropdown" href="" role="button" aria-haspopup="true" aria-expanded="false">
+                        IntegralStor<span class="caret"></span>
+                    </a>
+                    <ul class="dropdown-menu">
+                        <li ><a href="/integralstor/index.html"><i class="fas fa-angle-right fa-fw"></i>&nbsp;Unified Storage System</a></li>
+                        <li ><a  href="/integralstor/index.html"><i class="fas fa-angle-right fa-fw"></i>&nbsp;Central data storage</a></li>
+                        <li ><a  href="/integralstor/index.html"><i class="fas fa-angle-right fa-fw"></i>&nbsp;Desktop & Laptop backup</a></li>
+                        <li ><a  href="/integralstor/index.html"><i class="fas fa-angle-right fa-fw"></i>&nbsp;Data Replication & DR</a></li>
+                        <li ><a  href="/integralstor/index.html#swspecs"><i class="fas fa-angle-right fa-fw"></i>&nbsp;Software features</a></li>
+                        <li ><a  href="/integralstor/index.html#hwspecs"><i class="fas fa-angle-right fa-fw"></i>&nbsp;Appliance specifications</a></li>
+                    </ul>
+                </li>
+                <li role="presentation" class="dropdown">
+                    <a class="dropdown-toggle" data-toggle="dropdown" href="" role="button" aria-haspopup="true" aria-expanded="false">
+                        Datalifecycle Products<span class="caret"></span>
+                    </a>
+                    <ul class="dropdown-menu">
+                        <li><a href="secure_data_destruction/index.html"><i class="fas fa-angle-right fa-fw"></i>&nbsp;Data Elimination Systems</a></li>
+                    </ul>
+                </li>
+                <li role="presentation" class="dropdown">
+                    <a class="dropdown-toggle" data-toggle="dropdown" href="" role="button" aria-haspopup="true" aria-expanded="false">
+                        Datalifecycle Services<span class="caret"></span>
+                    </a>
+                    <ul class="dropdown-menu">
+                        <li class="disabled"><a class="disabled" href="#" data-toggle="tooltip" title="Info coming soon!">Secure data erasure & disposal</a></li>
+                        <li role="separator" class="divider"></li>
+                        <li class="disabled" ><a  href="#">Managed storage & protection</a></li>
+                        <li><a href="managed_storage/ca/index.html"><i class="fas fa-angle-right fa-fw"></i>&nbsp;For CA & financial advisory practices</a></li>
+                        <li><a href="managed_storage/architects/index.html"><i class="fas fa-angle-right fa-fw"></i>&nbsp;For Architect & design practices</a></li>
+                        <li><a href="managed_storage/lawyers/index.html" ><i class="fas fa-angle-right fa-fw"></i>&nbsp; For Law practices </a></li>
+                    </ul>
+                </li>
+                <li role="presentation" class="dropdown">
+                    <a class="dropdown-toggle" data-toggle="dropdown" href="" role="button" aria-haspopup="true" aria-expanded="false">
+                        Partners<span class="caret"></span>
+                    </a>
+                    <ul class="dropdown-menu">
+                        <li class="disabled" data-toggle="tooltip" title="Info coming soon!"><a href="#">Technology</a></li>
+                        <li  class="disabled"><a  href="#" data-toggle="tooltip" title="Info coming soon!"><i class="fas fa-angle-right fa-fw"></i>&nbsp;Open ZFS</a></li>
+                        <li class="disabled"><a  href="#" data-toggle="tooltip" title="Info coming soon!"><i class="fas fa-angle-right fa-fw"></i>&nbsp;Dell</a></li>
+                        <li role="separator" class="divider"></li>
+                        <li class="disabled"><a href="#" data-toggle="tooltip" title="Info coming soon!"> <strong>Business</strong></a></li>
+                        <li class="disabled"><a  href="#" data-toggle="tooltip" title="Info coming soon!"><i class="fas fa-angle-right fa-fw"></i>&nbsp;Systems Builders & Integrators </a></li>
+                    </ul>
+                </li>
+                <li><a class="page-scroll" href="/index.html#about">About us</a></li>
+                <li><a class="page-scroll" href="/index.html#contact">Contact</a></li>
+              </ul>
+            </div><!-- /.navbar-collapse -->
+          </div><!-- /.container-fluid -->
+        </nav>
+        <div style="z-index:1020;padding-right:10px;padding-left:10px;position:fixed;top:100px;padding-top:0px;width:100%;margin-bottom:5px;border-bottom:1px solid #e7e7e7;min-height:59px;background-color:#f8f8f8">
+            <p style="float:right;margin:0px;line-height:59px">
+                <a class="btn btn-info page-scroll" href="#intro">Introduction</a>
+                <a class="btn btn-info page-scroll" href="#usecases">Use cases</a>
+                <a class="btn btn-info page-scroll" href="#swspecs">Software features</a>
+                <a class="btn btn-info page-scroll" href="#hwspecs">Appliance specifications</a>
+            </p>
         </div>
 
-        <!-- Collect the nav links, forms, and other content for toggling -->
-        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-          <ul class="nav nav-tabs navbar-right" style="padding-top:25px">
-            <li class="active"><a href="#intro">Introduction</a></li>
-            <li><a href="#usecases">Use cases</a></li>
-            <li role="presentation" class="dropdown">
-                <a class="dropdown-toggle" data-toggle="dropdown" href="#softwarespecs" role="button" aria-haspopup="true" aria-expanded="false">
-                    Features & Specs <span class="caret"></span>
-                </a>
-                <ul class="dropdown-menu">
-                    <li><a href="#swspecs">Software</a></li>
-                    <li><a href="#hwspecs">Hardware</a></li>
-                </ul>
-            </li>
-            <li>
-                <a class="page-scroll" href="/index.html#about">About us</a>
-            </li>
-            <li>
-                <a class="page-scroll" href="/index.html#contact">Contact</a>
-            </li>
-            <li class="active"><a href="/index.html"><span class="glyphicon glyphicon-home" aria-hidden="true"/></a></li>
-          </ul>
-        </div><!-- /.navbar-collapse -->
-      </div><!-- /.container-fluid -->
-    </nav>
+        <div style="top:160px;overflow: auto">
+            <section  class="tab-contents" style="background-color:#062f4f;color:#ffffff;padding-top:180px;padding-left:15%;padding-right:15%;border-bottom:1px solid #e7e7e7;text-align:center"  id="intro">
+                <div id="carousel-example-generic"  style="position:relative;margin-top:5%;margin-bottom:5%" class="carousel slide" data-ride="carousel" data-interval="7000">
+                  <!-- Indicators -->
+                  <ol class="carousel-indicators">
+                    <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
+                    <li data-target="#carousel-example-generic" data-slide-to="1"> </li>
+                    <li data-target="#carousel-example-generic" data-slide-to="2"> </li>
+                  </ol>
 
-    <section  class="tab-contents" style="padding:110px;background-color:#c31d15f7;color:#ffffff"  id="intro">
-        <div id="carousel-example-generic"  style="position:relative;margin-top:5%;margin-bottom:5%" class="carousel slide" data-ride="carousel" data-interval="7000">
-          <!-- Indicators -->
-          <ol class="carousel-indicators">
-            <li data-target="#carousel-example-generic" data-slide-to="0" class="active"></li>
-            <li data-target="#carousel-example-generic" data-slide-to="1"> </li>
-            <li data-target="#carousel-example-generic" data-slide-to="2"> </li>
-          </ol>
+                  <!-- Wrapper for slides -->
+                  <div class="carousel-inner" >
+                    <div class="item active" style="height:500px">
+                      <div class="carousel-caption" style="position:relative;left:0%;padding-left:15%;padding-right:15%">
+                        <img src="../img/istor.png" style="margin-top:1%;height:250px" />
+                        <h3 >Data Storage | Data Backup | Disaster Recovery </h3>
+                                <p style="font-size:18px" class="text-left">
+                                    <br/>
+                                    IntegralStor is a unified data storage platform, supporting both block and file storage protocols, and
+                                    a comprehensive set of data protection features integrating a wide range of business-critical storage
+                                    and management functions into a single versatile appliance.<br/><br/>
+                                </p>
+                      </div>
+                    </div>
+                    <div class="item" style="height:500px">
+                      <div class="carousel-caption" style="position:relative;left:0%;padding-left:15%;padding-right:15%">
+                        <img src="../img/DLO.jpeg" style="margin-top:1%;height:250px" />
+                        <h3>Office data backup</h3>
+                                <p style="font-size:18px" class="text-left">
+                                    <br/>
+                                    Integrated tools for centralised backup of laptops & desktops; support for automated scheduled backup; backup of file/folders, partitions or entire disk image
+                                </p>
+                      </div>
+                    </div>
+                    <div class="item" style="height:500px">
+                      <div class="carousel-caption" style="position:relative;left:0%;padding-left:15%;padding-right:15%">
+                        <img src="../img/Replication.jpeg" style="margin-top:1%;height:250px" />
+                        <h3>Disaster recovery & replication</h3>
+                                <p style="font-size:18px" class="text-left">
+                                    <br/>
+                                        In-built support for data replication; one-one or one-many; file system or file/folder level – ideal for branch to HO replication
+                                </p>
+                      </div>
+                    </div>
+                  </div>
 
-          <!-- Wrapper for slides -->
-          <div class="carousel-inner" >
-            <div class="item active" style="height:500px">
-              <div class="carousel-caption" style="position:relative;left:0%;padding-left:15%;padding-right:15%">
-                <img src="../img/istor.png" style="margin-top:1%;height:300px" />
-                <h3 >Data Storage | Data Backup | Disaster Recovery </h3>
-                        <p style="font-size:18px" class="text-left">
+                  <!-- Controls -->
+                  <a class="left carousel-control" href="#carousel-example-generic" role="button" data-slide="prev">
+                    <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+                    <span class="sr-only">Previous</span>
+                  </a>
+                  <a class="right carousel-control" href="#carousel-example-generic" role="button" data-slide="next">
+                    <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+                    <span class="sr-only">Next</span>
+                  </a>
+                </div>
+            </section>
+
+            <!--
+            <section  class="tab-contents" style="padding:110px;background-color:#c31d15f7;color:#ffffff"  id="intro">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-lg-12 text-center">
+                                <img src="../img/istor.png" style="height:150px; " />
+                                <br/>
+                            <h1 class="section-heading">Data Storage | Data Backup | Disaster Recovery </h1>
+                        </div>
+                    </div>
+                </div>
+                <div class="container">
+                    <div class="row">
+                        <div class="col-lg-12 ">
+                                <p style="font-size:20px" class="text-left">
+                                    <br/>
+                                    IntegralStor is a unified data storage platform, supporting both block and file storage protocols, and
+                                    a comprehensive set of data protection features integrating a wide range of business-critical storage
+                                    and management functions into a single versatile appliance.<br/><br/>
+                                    Whether as central storage for file sharing, data backup, off-site data replication for business
+                                    continuity, backup repository for mission-critical VMs, shared storage for video editing or storage for
+                                    video surveillance, IntegralStor is a fast, reliable, easy-to-manage and affordable storage system for
+                                    a wide range of common business storage applications.
+                                </p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            -->
+
+            <section  class="tab-contents" style="padding-top:180px;padding-left:15%;padding-right:15%;border-bottom:1px solid #e7e7e7;text-align:left"  id="usecases">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-lg-12 text-center">
+                            <h1 class="section-heading">Typical use cases</h1>
+                        </div>
+                    </div>
+                </div>
+                <div class="container">
+                    <div class="row">
+                        <div class="col-lg-6 ">
+                                    <br/>
+                                <p style="font-size:18px" class="text-left">
+                                    <h3><i class="fas fa-server fa-fw"></i>&nbsp;Workgroup & deptartmental fileserver</h3>
+                                        Reliable, easy-to-manage, feature-rich UNIFIED storage system for file or block storage (NFS, SMB/CIFS, iSCSI, FTP)
+                                    <h3><i class="fas fa-save fa-fw">&nbsp;</i>Office data backup</h3>
+                                        Integrated tools for centralised backup of laptops & desktops; support for automated scheduled backup; backup of file/folders, partitions or entire disk image
+                                    <h3><i class="fas fa-file-video fa-fw"></i>&nbsp;Video & audio editing</h3>
+                                        High performance, reliable storage for Non-Linear-Editing applications at affordable prices that don’t break the bank
+                                    <h3><i class="fas fa-video fa-fw"></i>&nbsp;NVR & CCTV storage</h3>
+                                        Cost-effective, scalable & high-performance storage for CCTV, NVR & video analytics, supporting file (CIFS/SMB & NFS) & block (iSCSI) protocols
+                                    <h3><i class="fas fa-clone fa-fw"></i>&nbsp;Disaster recovery & replication</h3>
+                                        In-built support for data replication; one-one or one-many; file system or file/folder level – ideal for branch to HO replication
+                                </p>
+                        </div>
+                        <div class="col-lg-6 ">
+                                <p style="font-size:18px" class="text-left">
+                                    <br/>
+                                    <h3><i class="fas fa-clone fa-fw"></i>&nbsp;Multi-level data protection</h3>
+                                        RAID, atomic writes, data and metadata checksumming, snapshots, self-healing & bit-rot protection
+                                    <h3><i class="fas fa-fast-forward fa-fw"></i>&nbsp;High performance</h3>
+                                        Support for SSD & RAM based read & write caching, as well as all-flash storage pools, provides flexibile workload appropriate sizing and deployment
+                                    <h3><i class="fas fa-lock fa-fw"></i>&nbsp;Virus & ransomware recovery</h3>
+                                        Automated SNAPSHOTS to recover from ransomware attack via roll-back to last good version
+                                    <h3><i class="fas fa-compress fa-fw"></i>&nbsp;Data optimization</h3>
+                                        In-built data FOOTPRINT savings with inline compression and deduplication
+                                    <h3><i class="fas fa-list-ul fa-fw"></i>&nbsp;Data analytics</h3>
+                                        Insight into data USAGE patterns: duplicate files, most frequently accessed files, sort by file extensions & size
+                                </p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+
+
+            <section  class="tab-contents" style="padding-top:180px;padding-left:15%;padding-right:15%;border-bottom:1px solid #e7e7e7;"  id="swspecs">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-lg-12 text-center">
+                            <h1 class="section-heading">Software features</h1>
+                        </div>
+                    </div>
+                </div>
+                <div class="container">
+                    <div class="row">
+                        <div class="col-lg-4 ">
+                                <p style="font-size:18px" class="text-left">
+                                    <br/>
+                                    <h3><i class="fab fa-linux fa-fw"></i>&nbsp;OS and Filesystem</h3>
+                                        <ul>
+                                            <li>Linux with OpenZFS</li>
+                                            <li>Mirrored boot drive support
+                                            <li>Restore to installation defaults
+                                        </ul>
+
+                                    <h3><i class="fas fa-link fa-fw"></i>&nbsp;Data Access Protocols</h3>
+                                        <ul>
+                                            <li>CIFS/SMB</li>
+                                            <li>NFS</li>
+                                            <li>iSCSI</li>
+                                            <li>FTP</li>
+                                        </ul>
+
+                                    <h3><i class="fas fa-lock fa-fw"></i>&nbsp;Data Integrity & Protection</h3>
+                                        <ul>
+                                            <li>RAID (upto triple-parity) & Mirror</li>
+                                            <li>Atomic writes</li>
+                                            <li>Data & metadata checksumming</li>
+                                            <li>Instant snapshots</li>
+                                            <li>Integrated backup</li>
+                                        </ul>
+
+                                    <h3><i class="fas fa-users fa-fw"></i>&nbsp;Authentication & control</h3>
+                                        <ul>
+                                            <li>Active Directory (AD)</li>
+                                            <li>LDAP</li>
+                                            <li>Local users</li>
+                                            <li>User, file & folder quotas</li>
+                                        </ul>
+
+                                    <h3><i class="fas fa-compress fa-fw"></i>&nbsp;Data Optimization</h3>
+                                        <ul>
+                                            <li>Inline Compression (LZ4)</li>
+                                            <li>Inline Deduplication <i>(optional: requires enhanced RAM matched to storage capacity)</i></li>
+                                        </ul>
+
+                                </p>
+                        </div>
+                        <div class="col-lg-4 ">
+                                <p style="font-size:18px" class="text-left">
+                                    <br/>
+                                    <h3><i class="fas fa-hdd fa-fw"></i>&nbsp;Disk Management</h3>
+                                    <ul>
+                                        <li>SMART disk monitoring</li>
+                                        <li>Bad block scan</li>
+                                        <li>Hot spares drives</li>
+                                        <li>Guided disk replacement through UI</li>
+                                    </ul>
+
+                                    <h3><i class="fas fa-bezier-curve fa-fw"></i>&nbsp;Networking</h3>
+                                    <ul>
+                                        <li>VLAN support</li>
+                                        <li>Jumbo Frames</li>
+                                        <li>NIC Teaming/Bonding</li>
+                                        <li>DHCP</li>
+                                    </ul>
+
+                                    <h3><i class="fas fa-desktop fa-fw"></i>&nbsp;Administration & Monitoring</h3>
+                                    <ul>
+                                        <li>Web GUI (HTTP/HTTPS)</li>
+                                        <li>Console & CLI access (option)</li>
+                                        <li>Email alerts</li>
+                                        <li>Log & Event collection</li>
+                                        <li>IPMI Monitoring</li>
+                                        <li>Single console monitoring of multiple systems</li>
+                                    </ul>
+
+                                    <h3><i class="fab fa-windows fa-fw"></i>&nbsp;Supported Clients</h3>
+                                    <ul>
+                                        <li>Microsoft Windows</li>
+                                        <li>Linux</li>
+                                        <li>Unix</li>
+                                        <li>AFP</li>
+                                    </ul>
+                                </p>
+                        </div>
+                        <div class="col-lg-4 ">
+                                <p style="font-size:18px" class="text-left">
+                                    <br/>
+                                    <h3><i class="fas fa-clone fa-fw"></i>&nbsp;Disaster Recovery & Replication</h3>
+                                    <ul>
+                                        <li>Filesystem Replication (via snapshots)</li>
+                                        <li>Files replication (via Rsync)</li>
+                                        <li>SSH secure replication</li>
+                                        <li>Scheduled replication</li>
+                                    </ul>
+
+                                    <h3><i class="fas fa-fast-forward fa-fw"></i>&nbsp;Performance Acceleration</h3>
+                                    <ul>
+                                        <li>In-built read & write caching</li>
+                                        <li>NVDIMM / SSD write cache (optional)</li>
+                                        <li>SSD read cache (optional)</li>
+                                        <li>All Flash system (optional)</li>
+                                    </ul>
+
+                                    <h3><i class="fas fa-chart-pie fa-fw"></i>&nbsp;Data Analytics</h3>
+                                    <ul>
+                                        <li>Tracking usage history for prediction</li>
+                                        <li>Duplicate files listing</li>
+                                        <li>Last acccess by date range</li>
+                                        <li>Flie size sort</li>
+                                        <li>File extension listing</li>
+                                        <li>Housekeeping directly from browser</li>
+                                    </ul>
+                                </p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+
+            <section  class="tab-contents" style="padding-top:180px;padding-left:15%;padding-right:15%;border-bottom:1px solid #e7e7e7;text-align:center"  id="hwspecs">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-lg-12 text-center">
+                            <h1 class="section-heading">Hardware Specifications</h1>
+                        </div>
+                    </div>
+                </div>
+                <div class="container">
+                    <div class="row">
+                        <div class="col-lg-12 ">
+                            <table style="width:100%;border:1px solid white;border-collapse:collapse;font-size:16px">
+                                <tr style="background-color:#5bc0de">
+                                    <th>
+                                        <h3>Specification</h3>
+                                    </th>
+                                    <th>
+                                        <h3>IS-0802</h3>
+                                    </th>
+                                    <th>
+                                        <h3>IS-1202</h3>
+                                    </th>
+                                    <th>
+                                        <h3>IS-1802</h3>
+                                    </th>
+                                </tr>
+                                <tr>
+                                    <th>
+                                        Processor
+                                    </th>
+                                    <td>
+                                        Intel Xeon Scalable Processor Bronze 3104 or higher
+                                    </td>
+                                    <td>
+                                        Intel Xeon Scalable Processor Bronze 3104 or higher
+                                    </td>
+                                    <td>
+                                        Intel Xeon Scalable Processor Silver 4108 or higher
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th>
+                                        RAM
+                                    </th>
+                                    <td>
+                                        16GB – 256GB ECC Memory
+                                    </td>
+                                    <td>
+                                        32GB – 256GB ECC Memory
+                                    </td>
+                                    <td>
+                                        32GB – 256GB ECC Memory
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th>
+                                        OS redundancy
+                                    </th>
+                                    <td>
+                                        Single/Mirrored SSD boot devices
+                                    </td>
+                                    <td>
+                                        Mirrored SSD boot devices
+                                    </td>
+                                    <td>
+                                        Mirrored SSD boot devices
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th>
+                                        Drive Support
+                                    </th>
+                                    <td>
+                                        NL-SAS 3.5” x8 / 2.5” x16 drives
+                                    </td>
+                                    <td>
+                                        NL-SAS 3.5” x12 / 2.5” x24 drives
+                                    </td>
+                                    <td>
+                                        NL-SAS 3.5” x16 / 2.5” x32 drives
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th>
+                                        Raw Capacity
+                                    </th>
+                                    <td>
+                                        32TB to 96TB
+                                    </td>
+                                    <td>
+                                        48TB to 144TB
+                                    </td>
+                                    <td>
+                                        64TB to 192TB
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th>
+                                        RAID protection
+                                    </th>
+                                    <td>
+                                        RAID z1/z2/z3/Mirror
+                                    </td>
+                                    <td>
+                                        RAID z1/z2/z3/Mirror
+                                    </td>
+                                    <td>
+                                        RAID z1/z2/z3/Mirror
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th>
+                                        Throughput
+                                    </th>
+                                    <td>
+                                        300MBps to 600MBps (with 10GbE NIC)
+                                    </td>
+                                    <td>
+                                        500MBps to 1GBps (with 10GbE NIC)
+                                    </td>
+                                    <td>
+                                        500MBps to 1.5GBps (with 10GbE NIC)
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th>
+                                        Performance Acceleration (Optional)
+                                    </th>
+                                    <td>
+                                        All-Flash support or Read/Write acceleration via SSD / NVDIMM
+                                    </td>
+                                    <td>
+                                        All-Flash support or Read/Write acceleration via SSD / NVDIMM
+                                    </td>
+                                    <td>
+                                        All-Flash support or Read/Write acceleration via SSD / NVDIMM
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th>
+                                        Data Ports (Ethernet)
+                                    </th>
+                                    <td>
+                                        1GbE x4 Ports Optional 10GbE or additional 1GbE
+                                    </td>
+                                    <td>
+                                        1GbE x2 Ports Optional 10GbE or additional 1GbE
+                                    </td>
+                                    <td>
+                                        1GbE x4 Ports Optional 10GbE or additional 1GbE
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th>
+                                        Management
+                                    </th>
+                                    <td>
+                                        10/100 Ethernet Management Port
+                                    </td>
+                                    <td>
+                                        10/100 Ethernet Management Port
+                                    </td>
+                                    <td>
+                                        10/100 Ethernet Management Port
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th>
+                                        Power Supply
+                                    </th>
+                                    <td>
+                                        (1+1) Redundant PSU
+                                    </td>
+                                    <td>
+                                        (1+1) Redundant PSU
+                                    </td>
+                                    <td>
+                                        (1+1) Redundant PSU
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th>
+                                        Chassis
+                                    </th>
+                                    <td>
+                                        Tower / 5RU
+                                    </td>
+                                    <td>
+                                        2RU
+                                    </td>
+                                    <td>
+                                        2RU
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th>
+                                        Warranty
+                                    </th>
+                                    <td>
+                                        3 Years
+                                    </td>
+                                    <td>
+                                        3 Years
+                                    </td>
+                                    <td>
+                                        3 Years
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th>
+                                        Dimensions
+                                    </th>
+                                    <td>
+                                        Width: 307.9mm, Depth: 573.mm, Height: 430.3
+                                    </td>
+                                    <td>
+                                        Width: 482mm, Depth: 707.74mm
+                                    </td>
+                                    <td>
+                                        Width: 482mm, Depth: 751.34mm
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th>
+                                        Weight
+                                    </th>
+                                    <td>
+                                        29.5Kg (fully populated)
+                                    </td>
+                                    <td>
+                                        29.65Kg (fully populated)
+                                    </td>
+                                    <td>
+                                        33.1Kg (fully populated)
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <th>
+                                        Operating Temperature
+                                    </th>
+                                    <td>
+                                        10°C to 35°C
+                                    </td>
+                                    <td>
+                                        10°C to 35°C
+                                    </td>
+                                    <td>
+                                        10°C to 35°C
+                                    </td>
+                                </tr>
+                                <tr style="background-color:#5bc0de">
+                                    <th colspan=4>
+                                        Workload Selection
+                                    </th>
+                                </tr>
+                                <tr>
+                                    <th>
+                                        File Storage & Backup
+                                    </th>
+                                    <td>
+                                        Economical storage for small to medium fileserver & backup. Consolidate file storage and backups with this affordable storage system
+                                    </td>
+                                    <td>
+                                        Medium to large capacity storage system designed for high performance or for large central backup and archival.
+                                    </td>
+                                    <td>
+                                        High capacity storage system designed for high performance or for large central backup and archival.
+                                    </td>
+                                </tr>
+                            </table>
                             <br/>
-                            IntegralStor is a unified data storage platform, supporting both block and file storage protocols, and
-                            a comprehensive set of data protection features integrating a wide range of business-critical storage
-                            and management functions into a single versatile appliance.<br/><br/>
-                        </p>
-              </div>
-            </div>
-            <div class="item" style="height:500px">
-              <div class="carousel-caption" style="position:relative;left:0%;padding-left:15%;padding-right:15%">
-                <img src="../img/DLO.jpeg" style="margin-top:1%;height:300px" />
-                <h3>Office data backup</h3>
-                        <p style="font-size:18px" class="text-left">
-                            <br/>
-                            Integrated tools for centralised backup of laptops & desktops; support for automated scheduled backup; backup of file/folders, partitions or entire disk image
-                        </p>
-              </div>
-            </div>
-            <div class="item" style="height:500px">
-              <div class="carousel-caption" style="position:relative;left:0%;padding-left:15%;padding-right:15%">
-                <img src="../img/Replication.jpeg" style="margin-top:1%;height:300px" />
-                <h3>Disaster recovery & replication</h3>
-                        <p style="font-size:18px" class="text-left">
-                            <br/>
-                                In-built support for data replication; one-one or one-many; file system or file/folder level – ideal for branch to HO replication
-                        </p>
-              </div>
-            </div>
-          </div>
-
-          <!-- Controls -->
-          <a class="left carousel-control" href="#carousel-example-generic" role="button" data-slide="prev">
-            <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
-            <span class="sr-only">Previous</span>
-          </a>
-          <a class="right carousel-control" href="#carousel-example-generic" role="button" data-slide="next">
-            <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
-            <span class="sr-only">Next</span>
-          </a>
+                            <sup>**</sup><i>Technical specifications are subject to change without notice</i>
+                        </div>
+                    </div>
+                </div>
+            </section>
         </div>
-    </section>
 
-    <!--
-    <section  class="tab-contents" style="padding:110px;background-color:#c31d15f7;color:#ffffff"  id="intro">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-12 text-center">
-                        <img src="../img/istor.png" style="height:150px; " />
-                        <br/>
-                    <h1 class="section-heading">Data Storage | Data Backup | Disaster Recovery </h1>
-                </div>
-            </div>
-        </div>
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-12 ">
-                        <p style="font-size:20px" class="text-left">
-                            <br/>
-                            IntegralStor is a unified data storage platform, supporting both block and file storage protocols, and
-                            a comprehensive set of data protection features integrating a wide range of business-critical storage
-                            and management functions into a single versatile appliance.<br/><br/>
-                            Whether as central storage for file sharing, data backup, off-site data replication for business
-                            continuity, backup repository for mission-critical VMs, shared storage for video editing or storage for
-                            video surveillance, IntegralStor is a fast, reliable, easy-to-manage and affordable storage system for
-                            a wide range of common business storage applications.
-                        </p>
-                </div>
-            </div>
-        </div>
-    </section>
-    -->
-
-    <section  class="tab-contents" style="padding:110px;;background-color:#f05f40;color:#ffffff"  id="usecases">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-12 text-center">
-                    <h1 class="section-heading">Typical use cases</h1>
-                </div>
-            </div>
-        </div>
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-6 ">
-                            <br/>
-                        <p style="font-size:18px" class="text-left">
-                            <h3><i class="fas fa-server fa-fw"></i>&nbsp;Workgroup & deptartmental fileserver</h3>
-                                Reliable, easy-to-manage, feature-rich UNIFIED storage system for file or block storage (NFS, SMB/CIFS, iSCSI, FTP)
-                            <h3><i class="fas fa-save fa-fw">&nbsp;</i>Office data backup</h3>
-                                Integrated tools for centralised backup of laptops & desktops; support for automated scheduled backup; backup of file/folders, partitions or entire disk image
-                            <h3><i class="fas fa-file-video fa-fw"></i>&nbsp;Video & audio editing</h3>
-                                High performance, reliable storage for Non-Linear-Editing applications at affordable prices that don’t break the bank
-                            <h3><i class="fas fa-video fa-fw"></i>&nbsp;NVR & CCTV storage</h3>
-                                Cost-effective, scalable & high-performance storage for CCTV, NVR & video analytics, supporting file (CIFS/SMB & NFS) & block (iSCSI) protocols
-                            <h3><i class="fas fa-clone fa-fw"></i>&nbsp;Disaster recovery & replication</h3>
-                                In-built support for data replication; one-one or one-many; file system or file/folder level – ideal for branch to HO replication
-                        </p>
-                </div>
-                <div class="col-lg-6 ">
-                        <p style="font-size:18px" class="text-left">
-                            <br/>
-                            <h3><i class="fas fa-clone fa-fw"></i>&nbsp;Multi-level data protection</h3>
-                                RAID, atomic writes, data and metadata checksumming, snapshots, self-healing & bit-rot protection
-                            <h3><i class="fas fa-fast-forward fa-fw"></i>&nbsp;High performance</h3>
-                                Support for SSD & RAM based read & write caching, as well as all-flash storage pools, provides flexibile workload appropriate sizing and deployment
-                            <h3><i class="fas fa-lock fa-fw"></i>&nbsp;Virus & ransomware recovery</h3>
-                                Automated SNAPSHOTS to recover from ransomware attack via roll-back to last good version
-                            <h3><i class="fas fa-compress fa-fw"></i>&nbsp;Data optimization</h3>
-                                In-built data FOOTPRINT savings with inline compression and deduplication
-                            <h3><i class="fas fa-list-ul fa-fw"></i>&nbsp;Data analytics</h3>
-                                Insight into data USAGE patterns: duplicate files, most frequently accessed files, sort by file extensions & size
-                        </p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-
-
-    <section  class="tab-contents" style="padding:110px;background-color:#c31d15f7;color:#ffffff"  id="swspecs">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-12 text-center">
-                    <h1 class="section-heading">Software features</h1>
-                </div>
-            </div>
-        </div>
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-4 ">
-                        <p style="font-size:18px" class="text-left">
-                            <br/>
-                            <h3><i class="fab fa-linux fa-fw"></i>&nbsp;OS and Filesystem</h3>
-                                <ul>
-                                    <li>Linux with OpenZFS</li>
-                                    <li>Mirrored boot drive support
-                                    <li>Restore to installation defaults
-                                </ul>
-
-                            <h3><i class="fas fa-link fa-fw"></i>&nbsp;Data Access Protocols</h3>
-                                <ul>
-                                    <li>CIFS/SMB</li>
-                                    <li>NFS</li>
-                                    <li>iSCSI</li>
-                                    <li>FTP</li>
-                                </ul>
-
-                            <h3><i class="fas fa-lock fa-fw"></i>&nbsp;Data Integrity & Protection</h3>
-                                <ul>
-                                    <li>RAID (upto triple-parity) & Mirror</li>
-                                    <li>Atomic writes</li>
-                                    <li>Data & metadata checksumming</li>
-                                    <li>Instant snapshots</li>
-                                    <li>Integrated backup</li>
-                                </ul>
-
-                            <h3><i class="fas fa-users fa-fw"></i>&nbsp;Authentication & control</h3>
-                                <ul>
-                                    <li>Active Directory (AD)</li>
-                                    <li>LDAP</li>
-                                    <li>Local users</li>
-                                    <li>User, file & folder quotas</li>
-                                </ul>
-
-                            <h3><i class="fas fa-compress fa-fw"></i>&nbsp;Data Optimization</h3>
-                                <ul>
-                                    <li>Inline Compression (LZ4)</li>
-                                    <li>Inline Deduplication <i>(optional: requires enhanced RAM matched to storage capacity)</i></li>
-                                </ul>
-
-                        </p>
-                </div>
-                <div class="col-lg-4 ">
-                        <p style="font-size:18px" class="text-left">
-                            <br/>
-                            <h3><i class="fas fa-hdd fa-fw"></i>&nbsp;Disk Management</h3>
-                            <ul>
-                                <li>SMART disk monitoring</li>
-                                <li>Bad block scan</li>
-                                <li>Hot spares drives</li>
-                                <li>Guided disk replacement through UI</li>
-                            </ul>
-
-                            <h3><i class="fas fa-bezier-curve fa-fw"></i>&nbsp;Networking</h3>
-                            <ul>
-                                <li>VLAN support</li>
-                                <li>Jumbo Frames</li>
-                                <li>NIC Teaming/Bonding</li>
-                                <li>DHCP</li>
-                            </ul>
-
-                            <h3><i class="fas fa-desktop fa-fw"></i>&nbsp;Administration & Monitoring</h3>
-                            <ul>
-                                <li>Web GUI (HTTP/HTTPS)</li>
-                                <li>Console & CLI access (option)</li>
-                                <li>Email alerts</li>
-                                <li>Log & Event collection</li>
-                                <li>IPMI Monitoring</li>
-                                <li>Single console monitoring of multiple systems</li>
-                            </ul>
-
-                            <h3><i class="fab fa-windows fa-fw"></i>&nbsp;Supported Clients</h3>
-                            <ul>
-                                <li>Microsoft Windows</li>
-                                <li>Linux</li>
-                                <li>Unix</li>
-                                <li>AFP</li>
-                            </ul>
-                        </p>
-                </div>
-                <div class="col-lg-4 ">
-                        <p style="font-size:18px" class="text-left">
-                            <br/>
-                            <h3><i class="fas fa-clone fa-fw"></i>&nbsp;Disaster Recovery & Replication</h3>
-                            <ul>
-                                <li>Filesystem Replication (via snapshots)</li>
-                                <li>Files replication (via Rsync)</li>
-                                <li>SSH secure replication</li>
-                                <li>Scheduled replication</li>
-                            </ul>
-
-                            <h3><i class="fas fa-fast-forward fa-fw"></i>&nbsp;Performance Acceleration</h3>
-                            <ul>
-                                <li>In-built read & write caching</li>
-                                <li>NVDIMM / SSD write cache (optional)</li>
-                                <li>SSD read cache (optional)</li>
-                                <li>All Flash system (optional)</li>
-                            </ul>
-
-                            <h3><i class="fas fa-chart-pie fa-fw"></i>&nbsp;Data Analytics</h3>
-                            <ul>
-                                <li>Tracking usage history for prediction</li>
-                                <li>Duplicate files listing</li>
-                                <li>Last acccess by date range</li>
-                                <li>Flie size sort</li>
-                                <li>File extension listing</li>
-                                <li>Housekeeping directly from browser</li>
-                            </ul>
-                        </p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-
-    <section  class="tab-contents" style="padding:110px;;background-color:#f05f40;color:#ffffff"  id="hwspecs">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-12 text-center">
-                    <h1 class="section-heading">Hardware Specifications</h1>
-                </div>
-            </div>
-        </div>
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-12 ">
-                    <table style="width:100%;border:1px solid white;border-collapse:collapse;font-size:16px">
-                        <tr style="background-color:#c31d15f7">
-                            <th>
-                                <h3>Specification</h3>
-                            </th>
-                            <th>
-                                <h3>IS-0802</h3>
-                            </th>
-                            <th>
-                                <h3>IS-1202</h3>
-                            </th>
-                            <th>
-                                <h3>IS-1802</h3>
-                            </th>
-                        </tr>
-                        <tr>
-                            <th>
-                                Processor
-                            </th>
-                            <td>
-                                Intel Xeon Scalable Processor Bronze 3104 or higher
-                            </td>
-                            <td>
-                                Intel Xeon Scalable Processor Bronze 3104 or higher
-                            </td>
-                            <td>
-                                Intel Xeon Scalable Processor Silver 4108 or higher
-                            </td>
-                        </tr>
-                        <tr>
-                            <th>
-                                RAM
-                            </th>
-                            <td>
-                                16GB – 256GB ECC Memory
-                            </td>
-                            <td>
-                                32GB – 256GB ECC Memory
-                            </td>
-                            <td>
-                                32GB – 256GB ECC Memory
-                            </td>
-                        </tr>
-                        <tr>
-                            <th>
-                                OS redundancy
-                            </th>
-                            <td>
-                                Single/Mirrored SSD boot devices
-                            </td>
-                            <td>
-                                Mirrored SSD boot devices
-                            </td>
-                            <td>
-                                Mirrored SSD boot devices
-                            </td>
-                        </tr>
-                        <tr>
-                            <th>
-                                Drive Support
-                            </th>
-                            <td>
-                                NL-SAS 3.5” x8 / 2.5” x16 drives
-                            </td>
-                            <td>
-                                NL-SAS 3.5” x12 / 2.5” x24 drives
-                            </td>
-                            <td>
-                                NL-SAS 3.5” x16 / 2.5” x32 drives
-                            </td>
-                        </tr>
-                        <tr>
-                            <th>
-                                Raw Capacity
-                            </th>
-                            <td>
-                                32TB to 96TB
-                            </td>
-                            <td>
-                                48TB to 144TB
-                            </td>
-                            <td>
-                                64TB to 192TB
-                            </td>
-                        </tr>
-                        <tr>
-                            <th>
-                                RAID protection
-                            </th>
-                            <td>
-                                RAID z1/z2/z3/Mirror
-                            </td>
-                            <td>
-                                RAID z1/z2/z3/Mirror
-                            </td>
-                            <td>
-                                RAID z1/z2/z3/Mirror
-                            </td>
-                        </tr>
-                        <tr>
-                            <th>
-                                Throughput
-                            </th>
-                            <td>
-                                300MBps to 600MBps (with 10GbE NIC)
-                            </td>
-                            <td>
-                                500MBps to 1GBps (with 10GbE NIC)
-                            </td>
-                            <td>
-                                500MBps to 1.5GBps (with 10GbE NIC)
-                            </td>
-                        </tr>
-                        <tr>
-                            <th>
-                                Performance Acceleration (Optional)
-                            </th>
-                            <td>
-                                All-Flash support or Read/Write acceleration via SSD / NVDIMM
-                            </td>
-                            <td>
-                                All-Flash support or Read/Write acceleration via SSD / NVDIMM
-                            </td>
-                            <td>
-                                All-Flash support or Read/Write acceleration via SSD / NVDIMM
-                            </td>
-                        </tr>
-                        <tr>
-                            <th>
-                                Data Ports (Ethernet)
-                            </th>
-                            <td>
-                                1GbE x4 Ports Optional 10GbE or additional 1GbE
-                            </td>
-                            <td>
-                                1GbE x2 Ports Optional 10GbE or additional 1GbE
-                            </td>
-                            <td>
-                                1GbE x4 Ports Optional 10GbE or additional 1GbE
-                            </td>
-                        </tr>
-                        <tr>
-                            <th>
-                                Management
-                            </th>
-                            <td>
-                                10/100 Ethernet Management Port
-                            </td>
-                            <td>
-                                10/100 Ethernet Management Port
-                            </td>
-                            <td>
-                                10/100 Ethernet Management Port
-                            </td>
-                        </tr>
-                        <tr>
-                            <th>
-                                Power Supply
-                            </th>
-                            <td>
-                                (1+1) Redundant PSU
-                            </td>
-                            <td>
-                                (1+1) Redundant PSU
-                            </td>
-                            <td>
-                                (1+1) Redundant PSU
-                            </td>
-                        </tr>
-                        <tr>
-                            <th>
-                                Chassis
-                            </th>
-                            <td>
-                                Tower / 5RU
-                            </td>
-                            <td>
-                                2RU
-                            </td>
-                            <td>
-                                2RU
-                            </td>
-                        </tr>
-                        <tr>
-                            <th>
-                                Warranty
-                            </th>
-                            <td>
-                                3 Years
-                            </td>
-                            <td>
-                                3 Years
-                            </td>
-                            <td>
-                                3 Years
-                            </td>
-                        </tr>
-                        <tr>
-                            <th>
-                                Dimensions
-                            </th>
-                            <td>
-                                Width: 307.9mm, Depth: 573.mm, Height: 430.3
-                            </td>
-                            <td>
-                                Width: 482mm, Depth: 707.74mm
-                            </td>
-                            <td>
-                                Width: 482mm, Depth: 751.34mm
-                            </td>
-                        </tr>
-                        <tr>
-                            <th>
-                                Weight
-                            </th>
-                            <td>
-                                29.5Kg (fully populated)
-                            </td>
-                            <td>
-                                29.65Kg (fully populated)
-                            </td>
-                            <td>
-                                33.1Kg (fully populated)
-                            </td>
-                        </tr>
-                        <tr>
-                            <th>
-                                Operating Temperature
-                            </th>
-                            <td>
-                                10°C to 35°C
-                            </td>
-                            <td>
-                                10°C to 35°C
-                            </td>
-                            <td>
-                                10°C to 35°C
-                            </td>
-                        </tr>
-                        <tr style="background-color:#c31d15f7">
-                            <th colspan=4>
-                                Workload Selection
-                            </th>
-                        </tr>
-                        <tr>
-                            <th>
-                                File Storage & Backup
-                            </th>
-                            <td>
-                                Economical storage for small to medium fileserver & backup. Consolidate file storage and backups with this affordable storage system
-                            </td>
-                            <td>
-                                Medium to large capacity storage system designed for high performance or for large central backup and archival.
-                            </td>
-                            <td>
-                                High capacity storage system designed for high performance or for large central backup and archival.
-                            </td>
-                        </tr>
-                    </table>
-                    <br/>
-                    <sup>**</sup><i>Technical specifications are subject to change without notice</i>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-    <!-- Include all compiled plugins (below), or include individual files as needed -->
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
-</body>
+        <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+        <!-- Include all compiled plugins (below), or include individual files as needed -->
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+    </body>
 </html>
