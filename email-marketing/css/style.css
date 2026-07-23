@@ -1,0 +1,164 @@
+@font-face {
+    font-family: "Gilroy";
+    src: url("../fonts/Gilroy-Regular.ttf") format("truetype");
+    font-weight: 400;
+}
+
+@font-face {
+    font-family: "Gilroy";
+    src: url("../fonts/Gilroy-Medium.ttf") format("truetype");
+    font-weight: 500;
+}
+
+@font-face {
+    font-family: "Gilroy";
+    src: url("../fonts/Gilroy-SemiBold.ttf") format("truetype");
+    font-weight: 600;
+}
+
+@font-face {
+    font-family: "Gilroy";
+    src: url("../fonts/Gilroy-Bold.ttf") format("truetype");
+    font-weight: 700;
+}
+
+@font-face {
+    font-family: "Gilroy";
+    src: url("../fonts/Gilroy-Light.ttf") format("truetype");
+    font-weight: 400;
+}
+
+/* Apply to whole website */
+body {
+    font-family: "Gilroy", sans-serif;
+    margin: 0;
+}
+
+/* Optional utility class */
+.font-gilroy {
+    font-family: "Gilroy", sans-serif;
+}
+
+/* Headings */
+.heading-2 {
+  font-size: 40px;
+  line-height: 40px;
+  font-weight: 700;
+}
+
+/* Tablet */
+@media (max-width: 768px) {
+  .heading-2 {
+    font-size: 26px;
+    line-height: 32px;
+  }
+}
+
+/* Mobile */
+@media (max-width: 480px) {
+  .heading-2 {
+    font-size: 22px;
+    line-height: 28px;
+  }
+}
+
+.footer-bg {
+    background: url("../images/bg-process.png") center center / cover no-repeat;
+    clip-path: path("M-13.512 166.131C73.8105 44.8784 223.002 -15.4551 370.062 11.0115L1269.87 172.952C1518.76 217.744 1658.34 485.49 1552.54 715.182C1488.31 854.626 1347.66 942.853 1194.16 939.98L-30.4491 917.058C-122.482 915.336 -207.343 867.001 -255.77 788.721C-313.421 695.532 -309.256 576.79 -245.218 487.869L-13.512 166.131Z");
+
+    transform: scaleX(1.15);
+    transform-origin: center;
+}
+
+@media (max-width: 1023px) {
+    .footer-bg {
+        clip-path: none;
+        -webkit-clip-path: none;
+    }
+}
+
+.scrollbar-hide::-webkit-scrollbar {
+  display: none;
+}
+
+.scrollbar-hide {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+
+.faq-accordion-btn {
+    background: #F9FAFB;
+    color: #111827;
+    transition: all 0.3s ease;
+    border: 1px solid #00000000;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 0px 5px 0px, rgba(0, 0, 0, 0.1) 0px 0px 1px 0px;
+}
+
+.faq-accordion-btn svg {
+    transform: rotate(180deg);
+    transition: transform 0.3s ease;
+}
+
+.faq-accordion-btn-active {
+    background: #FF7D00;
+    color: #fff;
+}
+
+.faq-accordion-btn-active h3,
+.faq-accordion-btn-active svg {
+    color: #fff;
+    font-weight: 600;
+}
+
+
+.hex {
+    /* border colour sits on the element, fill sits on ::before */
+    --hex-border: #e3e3e0;
+    --hex-fill: #FFFFFF;
+    clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
+    background: var(--hex-border);
+    color: #000;
+}
+
+/* inset fill layer — leaves the border colour visible on all 6 sides */
+.hex::before {
+    content: "";
+    position: absolute;
+    inset: 1.5px;                 /* border thickness */
+    clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
+    background: var(--hex-fill);
+    z-index: 0;
+}
+
+/* keep icon + label above the fill layer */
+.hex > * {
+    position: relative;
+    z-index: 1;
+}
+
+.hex:hover {
+    --hex-fill: linear-gradient(180deg, #E57000 0%, #EB9440 100%);
+    color: #fff;
+}
+
+/* permanently highlighted hex (e.g. Healthcare) */
+.hex-active {
+    --hex-fill: linear-gradient(180deg, #E57000 0%, #EB9440 100%);
+    color: #fff;
+}
+
+.hex svg {
+    display: none;
+    transition: opacity 0.3s ease;
+}
+
+.hex:hover svg,
+.hex-active svg {
+    display: block;
+}
+
+.hex-shadow {
+    filter: drop-shadow(0 4px 10px rgba(0, 0, 0, 0.06));
+}
+

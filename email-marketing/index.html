@@ -1,0 +1,2799 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <link rel="stylesheet" href="./css/style.css" />
+
+    <style>
+      .hex-card {
+        transition: all 0.45s ease;
+      }
+
+      .hex-card:hover {
+        transform: translateY(-10px);
+      }
+
+      .hex-card svg {
+        transition: 0.45s ease;
+      }
+
+      .hex-card:hover svg {
+        filter: drop-shadow(0 18px 25px rgba(0, 0, 0, 0.12));
+      }
+
+      .servicesSlider .swiper-wrapper {
+        transition-timing-function: linear !important;
+      }
+      
+      .slide-out {
+        animation: slideOut 0.5s ease forwards;
+      }
+
+      .slide-in {
+        animation: slideIn 0.6s ease forwards;
+      }
+
+      @keyframes slideOut {
+        from {
+          opacity: 1;
+          transform: translateY(0);
+        }
+        to {
+          opacity: 0;
+          transform: translateY(-60px);
+        }
+      }
+
+      @keyframes slideIn {
+        from {
+          opacity: 0;
+          transform: translateY(60px);
+        }
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+    </style>
+
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+  </head>
+
+  <body>
+    <header class="relative z-50 px-6 lg:px-10 py-0">
+      <div class="container mx-auto pt-8">
+        <nav class="relative flex items-center justify-between">
+          <!-- Logo -->
+          <div>
+            <img src="./images/logo.svg" alt="Logo" class="h-16 lg:h-auto" />
+          </div>
+
+          <!-- Desktop Menu -->
+          <ul
+            class="hidden lg:flex items-center gap-10 ml-[-15%] font-medium text-[#4B4B4B] lg:text-[15px] xl:text-[20px]"
+          >
+            <li><a href="#">About Us</a></li>
+            <li><a href="#">Technology</a></li>
+            <li><a href="#">Quality & Compliance</a></li>
+            
+          </ul>
+
+          <!-- Desktop CTA -->
+          <div class="hidden lg:flex items-center gap-0 consultation-btn">
+            <button
+              class="py-2 px-8 bg-white rounded-full text-[#171C35] font-semibold shadow-md cursor-pointer"
+            >
+              Let's Connect
+            </button>
+
+            <button
+              class="w-10 h-10 rounded-full bg-white flex items-center justify-center shadow-md cursor-pointer"
+            >
+              ↗
+            </button>
+          </div>
+
+          <!-- Mobile Button -->
+          <button
+            id="menuBtn"
+            class="lg:hidden w-10 h-10 flex items-center justify-center text-3xl"
+          >
+            ☰
+          </button>
+
+          <!-- Mobile Menu -->
+          <div
+            id="mobileMenu"
+            class="absolute left-0 top-full mt-4 w-full lg:hidden origin-top scale-y-0 opacity-0 pointer-events-none transition-all duration-300 ease-in-out z-50"
+          >
+            <div
+              class="rounded-3xl bg-white border border-gray-100 shadow-2xl p-6 space-y-5"
+            >
+              <a
+                href="#"
+                class="block text-lg font-medium text-gray-700 hover:text-[#F08A00]"
+              >
+                About Us
+              </a>
+
+              <a
+                href="#"
+                class="block text-lg font-medium text-gray-700 hover:text-[#F08A00]"
+              >
+                Technology
+              </a>
+
+              <a
+                href="#"
+                class="block text-lg font-medium text-gray-700 hover:text-[#F08A00]"
+              >
+                Quality & Compliance
+              </a>
+
+              
+
+              <div class="pt-3 flex items-center gap-2 consultation-btn">
+                <button
+                  class="flex-1 py-3 bg-[#F08A00] text-white rounded-full font-semibold cursor-pointer"
+                >
+                  Let's Connect
+                </button>
+
+                <button
+                  class="w-12 h-12 rounded-full bg-[#F08A00] text-white flex items-center justify-center cursor-pointer"
+                >
+                  ↗
+                </button>
+              </div>
+            </div>
+          </div>
+        </nav>
+      </div>
+    </header>
+
+    <section
+      class="relative overflow-hidden pb-10 lg:pb-20 px-6 lg:px-10 mt-[-10rem]"
+    >
+      <!-- Decorative Circle -->
+      <div class="hidden lg:block absolute right-0 top-0 h-auto z-10">
+        <img
+          src="./images/banner-bg-1.png"
+          alt="Banner Background"
+          class="w-full h-auto"
+        />
+      </div>
+
+      <div class="absolute right-0 w-full h-full z-0">
+        <img
+          src="./images/banner-white-bg.png"
+          alt="Banner Background"
+          class="w-full h-full lg:w-5/6 lg:h-full"
+        />
+      </div>
+
+      <div class="container max-w-7xl mx-auto relative pt-[10rem] lg:pt-[8rem]">
+        <div class="grid lg:grid-cols-2 gap-16 items-center py-10 lg:py-24">
+          <!-- Left -->
+          <div>
+            <div
+              class="inline-block border bg-[#FFE5CB4F] border-[#FF9229] rounded-full px-6 py-2 text-[#E57000] font-medium text-[15px] mb-8"
+            >
+              Secure End-of-Life Data Elimination
+            </div>
+
+            <h1
+              class="text-4xl md:text-[40px] xl:text-[50px] !leading-[1] text-[#4B4B4B] font-bold max-w-md lg:max-w-xl"
+            >
+              The data you no longer need is still
+
+              <span class="text-[#E57000]"> a breach waiting to happen. </span>
+            </h1>
+
+            <p class="mt-8 text-[#4B4B4B] !leading-[1.4] text-[15px] max-w-md">
+              Fractalio the end-of-life data sitting quietly at risk in your organisation — NAID-aligned, verified and audit-ready.
+            </p>
+
+            <div class="flex mt-10 items-center text-white gap-0 consultation-btn">
+              <button
+                class="py-3 px-8 bg-[#EB9440] rounded-full font-semibold shadow-md cursor-pointer"
+              >
+                Free Consultation
+              </button>
+
+              <button
+                class="w-12 h-12 rounded-full bg-[#EB9440] flex items-center justify-center shadow-md cursor-pointer"
+              >
+                <span class="text-xl">↗</span>
+              </button>
+            </div>
+          </div>
+
+          <!-- Right -->
+          <div
+            class="relative flex justify-center lg:bottom-[-2rem] xl:bottom-[-3rem] lg:right-[20%]"
+          >
+            <div
+              class="absolute -top-4 left-[6%] xl:left-[8%] w-full h-full lg:w-[440px] lg:h-[460px] rounded-[35px] bg-[#171C35] z-0"
+            ></div>
+
+            <!-- Orange Shape -->
+            <div
+              class="hidden lg:block absolute bottom-[-20%] right-0 lg:right-4 w-48 h-72 lg:w-80 lg:h-[30rem] bg-[#E57000] rounded-bl-2xl rounded-tr-2xl rounded-br-[120px] z-10"
+            ></div>
+
+            <!-- Video -->
+            <div
+              class="relative w-full max-w-md rounded-[35px] overflow-hidden z-20"
+            >
+              <img
+                src="./images/banner-img-thumbnail.png"
+                class="w-full h-full lg:w-[435px] lg:h-[431px] object-cover"
+              />
+
+              <div
+                class="absolute inset-0 flex items-center justify-center z-10"
+              >
+                <a
+                href="https://www.youtube.com/watch?v=9ZCFQu-Zgvk"
+                target="_blank"
+                  class="w-[101px] h-[66px] bg-[#FF0000] rounded-xl flex items-center justify-center shadow-xl transition duration-300 hover:scale-110"
+                >
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="white"
+                    viewBox="0 0 24 24"
+                    class="w-10 h-10 ml-1"
+                  >
+                    <path d="M8 5v14l11-7z" />
+                  </svg>
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="py-20 lg:pt-[5rem] lg:pb-[6rem] overflow-hidden">
+      <div class="container mx-auto px-6 lg:px-10">
+        <div class="grid lg:grid-cols-2 gap-16 lg:gap-24 items-center">
+          <!-- ================= Left Side ================= -->
+
+          <!-- Mobile & Tablet -->
+          <div
+            class="lg:hidden order-2 grid grid-cols-1 md:grid-cols-2 place-items-center text-center gap-8"
+          >
+            <!-- Empty Polygon -->
+            <div class="relative w-[300px] h-[318px]">
+              <svg
+                class="absolute inset-0 w-full h-full"
+                viewBox="0 0 281 344"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M279.716 59.1719V284.229L140.107 342.858L0.5 284.229V59.1719L140.107 0.541992L279.716 59.1719Z"
+                  fill="white"
+                  stroke="#4B4B4B"
+                  stroke-opacity="0.23"
+                  stroke-width="1.5"
+                />
+              </svg>
+            </div>
+
+            <!-- 80% Polygon -->
+            <div class="relative w-[300px] h-[318px]">
+              <svg class="absolute inset-0 w-full h-full" viewBox="0 0 281 344">
+                <path
+                  d="M0 58.8393L140.108 0L280.216 58.8393V284.562L140.108 343.402L0 284.562V58.8393Z"
+                  fill="#D9D9D952"
+                />
+              </svg>
+
+              <div class="statCard absolute inset-0 px-8 self-center">
+                <h2
+                  class="statNumber text-[58px] font-bold text-[#4B4B4B] leading-none"
+                >
+                  80%
+                </h2>
+
+                <p class="statText mt-4 text-[#4B4B4B] text-[15px] leading-6">
+                  of discarded drives contain recoverable data
+                </p>
+
+                <div
+                  class="mt-6 w-[170px] h-[4px] mx-auto rounded-full bg-[#D9D9D9]"
+                >
+                  <div
+                    class="progressBar w-[30%] h-full rounded-full bg-[#E57000] transition-all duration-700"
+                  ></div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Recoverable -->
+            <div class="relative w-[300px] h-[318px]">
+              <svg class="absolute inset-0 w-full h-full" viewBox="0 0 281 344">
+                <path
+                  d="M0 58.8393L140.108 0L280.216 58.8393V284.562L140.108 343.402L0 284.562V58.8393Z"
+                  fill="#FFE5CC"
+                />
+              </svg>
+
+              <div class="absolute inset-0 px-8 pt-16">
+                <span
+                  class="inline-flex px-5 py-2 rounded-full bg-[#E57000] text-white text-[14px]"
+                >
+                  Deleted File
+                </span>
+
+                <h3 class="mt-4 text-[22px] font-semibold text-[#4B4B4B]">
+                  Recoverable
+                </h3>
+
+                <p class="mt-3 text-[#4B4B4B] text-[15px] leading-6">
+                  Data remains on the platter or flash cells — only the file
+                  pointer is removed.
+                </p>
+              </div>
+            </div>
+
+            <!-- Irreversible -->
+            <div class="relative w-[300px] h-[318px]">
+              <svg class="absolute inset-0 w-full h-full" viewBox="0 0 281 344">
+                <path
+                  d="M0 58.8393L140.108 0L280.216 58.8393V284.562L140.108 343.402L0 284.562V58.8393Z"
+                  fill="#FFCD9D4F"
+                />
+              </svg>
+
+              <div class="absolute inset-0 px-8 pt-16">
+                <span
+                  class="inline-flex px-5 py-2 rounded-full border border-[#FF9229] text-[#E57000] text-[14px]"
+                >
+                  Securely Eliminated
+                </span>
+
+                <h3 class="mt-4 text-[22px] font-semibold text-[#4B4B4B]">
+                  Irreversible
+                </h3>
+
+                <p class="mt-3 text-[#4B4B4B] text-[15px] leading-6">
+                  Data is deleted or destroyed through shredding, degaussing or
+                  disassembly — making it impossible to recover.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Paste PART 1 here -->
+          <div class="hidden lg:block flex justify-center lg:justify-start">
+            <div
+              class="relative w-[320px] h-[390px] sm:w-[430px] sm:h-[470px] lg:w-[560px] lg:h-[620px]"
+            >
+              <!-- ================= Empty Hex ================= -->
+              <div
+                class="absolute left-0 top-0 w-[160px] h-[196px] sm:w-[210px] sm:h-[258px] lg:w-[281px] lg:h-[344px]"
+              >
+                <svg
+                  class="absolute inset-0 w-full h-full"
+                  viewBox="0 0 281 344"
+                  fill="none"
+                >
+                  <path
+                    d="M279.716 59.1719V284.229L140.107 342.858L0.5 284.229V59.1719L140.107 0.541992L279.716 59.1719Z"
+                    stroke="black"
+                    stroke-opacity="0.23"
+                  />
+                </svg>
+              </div>
+
+              <!-- ================= 80% Hex ================= -->
+              <div
+                class="absolute left-[102px] sm:left-[135px] lg:left-[18rem] top-0 w-[160px] h-[196px] sm:w-[210px] sm:h-[258px] lg:w-[281px] lg:h-[344px]"
+              >
+                <svg
+                  class="absolute inset-0 w-full h-full"
+                  viewBox="0 0 281 344"
+                  fill="none"
+                >
+                  <path
+                    d="M0 58.8393L140.108 0L280.216 58.8393V284.562L140.108 343.402L0 284.562V58.8393Z"
+                    fill="#D9D9D952"
+                  />
+                </svg>
+
+                <div
+                  class="statCard absolute inset-0 px-5 pt-10 sm:px-7 sm:pt-14 lg:px-9 lg:pt-24 transition-all duration-700"
+                >
+                  <h2
+                    class="statNumber text-[36px] sm:text-[50px] lg:text-[70px] font-bold text-[#4B4B4B] leading-none"
+                  >
+                    80%
+                  </h2>
+
+                  <p
+                    class="statText mt-4 text-[#4B4B4B] text-[10px] sm:text-[13px] lg:text-[15px] leading-6"
+                  >
+                    of discarded drives contain recoverable data
+                  </p>
+
+                  <div
+                    class="mt-7 w-[100px] lg:w-[170px] h-[4px] rounded-full bg-[#D9D9D9] overflow-hidden"
+                  >
+                    <div
+                      class="progressBar h-full rounded-full bg-[#E57000] transition-all duration-700"
+                      style="width: 30%"
+                    ></div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- ================= Recoverable ================= -->
+              <div
+                class="absolute left-[52px] top-[105px] sm:left-[72px] sm:top-[145px] lg:left-[9rem] lg:top-[18.5rem] w-[160px] h-[196px] sm:w-[210px] sm:h-[258px] lg:w-[281px] lg:h-[344px]"
+              >
+                <svg
+                  class="absolute inset-0 w-full h-full"
+                  viewBox="0 0 281 344"
+                >
+                  <path
+                    d="M0 58.8393L140.108 0L280.216 58.8393V284.562L140.108 343.402L0 284.562V58.8393Z"
+                    fill="#FFE5CC"
+                  />
+                </svg>
+
+                <div
+                  class="absolute inset-0 px-4 pt-9 sm:px-6 sm:pt-12 lg:px-8 lg:pt-20"
+                >
+                  <span
+                    class="inline-flex px-5 py-2 rounded-full bg-[#E57000] text-white text-[11px] px-3 py-1 sm:text-[13px] lg:text-[15px]"
+                  >
+                    Deleted File
+                  </span>
+
+                  <h3
+                    class="mt-3 text-[16px] sm:text-[18px] lg:text-[20px] font-semibold text-[#4B4B4B]"
+                  >
+                    Recoverable
+                  </h3>
+
+                  <p
+                    class="mt-1 text-[#4B4B4B] text-[10px] leading-4 sm:text-[12px] lg:text-[15px] leading-6"
+                  >
+                    Data remains on the platter or flash cells — only the file
+                    pointer is removed.
+                  </p>
+                </div>
+              </div>
+
+              <!-- ================= Irreversible ================= -->
+              <div
+                class="absolute left-[154px] sm:left-[206px] lg:left-[27rem] top-[105px] sm:top-[145px] lg:top-[18.5rem] w-[160px] h-[196px] sm:w-[210px] sm:h-[258px] lg:w-[281px] lg:h-[344px]"
+              >
+                <svg
+                  class="absolute inset-0 w-full h-full"
+                  viewBox="0 0 281 344"
+                >
+                  <path
+                    d="M0 58.8393L140.108 0L280.216 58.8393V284.562L140.108 343.402L0 284.562V58.8393Z"
+                    fill="#FFCD9D4F"
+                    fill-opacity=""
+                  />
+                </svg>
+
+                <div
+                  class="absolute inset-0 px-4 pt-9 sm:px-6 sm:pt-12 lg:px-8 lg:pt-20"
+                >
+                  <span
+                    class="inline-flex font-medium px-5 py-2 rounded-full border border-[#FF9229] text-[#E57000] text-[11px] px-3 py-1 sm:text-[13px] lg:text-[15px]"
+                  >
+                    Securely Eliminated
+                  </span>
+
+                  <h3
+                    class="mt-3 text-[16px] sm:text-[18px] lg:text-[20px] font-semibold text-[#4B4B4B]"
+                  >
+                    Irreversible
+                  </h3>
+
+                  <p
+                    class="mt-1 text-[#4B4B4B] text-[10px] leading-4 sm:text-[12px] lg:text-[15px] leading-6"
+                  >
+                    Data is deleted or destroyed through shredding, degaussing
+                    or disassembly — making it impossible to recover.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- ================= Right Side ================= -->
+
+          <div class="relative lg:right-[-20%] order-1">
+            <h2
+              class="text-3xl lg:text-[40px] font-bold leading-[1] text-[#4B4B4B]"
+            >
+              Deleted doesn't
+
+              <br />
+
+              mean
+
+              <span class="text-[#E57000]"> destroyed. </span>
+            </h2>
+
+            <p class="mt-5 text-[#4B4B4B] leading-6 text-[15px] max-w-sm">
+              A deleted file, a formatted drive, even a "wiped" SSD can still be
+              forensically recovered with commercially available tools.
+            </p>
+
+            <div class="flex mt-5 items-center text-white gap-0 consultation-btn">
+              <button
+                class="py-3 px-8 bg-[#EB9440] rounded-full font-semibold shadow-md cursor-pointer"
+              >
+                How Does It Work
+              </button>
+
+              <button
+                class="w-12 h-12 rounded-full bg-[#EB9440] flex items-center justify-center shadow-md cursor-pointer"
+              >
+                <span class="text-xl">↗</span>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="relative overflow-hidden py-16 lg:py-24">
+      <!-- Background Image -->
+      <img
+        src="./images/third-section-bg.png"
+        alt=""
+        class="absolute inset-0 w-full h-full object-cover -z-10"
+      />
+
+      <div class="container max-w-7xl mx-auto px-6 lg:px-10">
+        <div
+          class="grid grid-cols-1 lg:grid-cols-[420px_1fr] gap-16 items-center"
+        >
+          <!-- Left Content -->
+          <div class="text-center lg:text-left">
+            <h2
+              class="text-[38px] lg:text-[40px] !leading-[1] font-bold text-[#4B4B4B]"
+            >
+              Every device you
+              <br />
+              dispose can become
+              <br />
+              your next data breach.
+            </h2>
+
+            <p
+              class="mt-5 text-[#4B4B4B] text-[15px] leading-6 max-w-[340px] mx-auto lg:mx-0"
+            >
+              Retired laptops, decommissioned servers and untracked backup tapes
+              sitting in storage are liabilities waiting to be discovered.
+            </p>
+
+            <div
+              class="flex mt-10 justify-center lg:justify-start items-center text-white gap-0 consultation-btn"
+            >
+              <button
+                class="py-3 px-8 bg-[#EB9440] rounded-full font-semibold shadow-md cursor-pointer"
+              >
+                Talk to an Expert
+              </button>
+
+              <button
+                class="w-12 h-12 rounded-full bg-[#EB9440] flex items-center justify-center shadow-md cursor-pointer"
+              >
+                <span class="text-xl">↗</span>
+              </button>
+            </div>
+          </div>
+
+          <!-- Right Items -->
+          <div
+            class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-8 justify-items-center"
+          >
+            <!-- Item -->
+            <div class="text-center">
+              <div
+                class="w-24 h-24 rotate-45 rounded-2xl border-[5px] bg-[#FFF0E1] border-[#FFAC5C] flex items-center justify-center"
+              >
+                <img
+                  src="./images/retired-laptops.svg"
+                  class="w-9 h-9 -rotate-45"
+                  alt=""
+                />
+              </div>
+
+              <p class="mt-10 text-[15px] leading-5 text-[#4B4B4B]">
+                Retired Laptops
+              </p>
+            </div>
+
+            <!-- Item -->
+            <div class="text-center">
+              <div
+                class="w-24 h-24 rotate-45 rounded-2xl border-[5px] bg-[#FFF0E1] border-[#FFAC5C] flex items-center justify-center"
+              >
+                <img
+                  src="./images/decomissioned-services.svg"
+                  class="w-9 h-9 -rotate-45"
+                  alt=""
+                />
+              </div>
+
+              <p class="mt-10 text-[15px] leading-5 text-[#4B4B4B]">
+                Decommissioned
+                <br />
+                Servers
+              </p>
+            </div>
+
+            <!-- Item -->
+            <div class="text-center">
+              <div
+                class="w-24 h-24 rotate-45 rounded-2xl border-[5px] bg-[#FFF0E1] border-[#FFAC5C] flex items-center justify-center"
+              >
+                <img
+                  src="./images/untracked-backups.svg"
+                  class="w-9 h-9 -rotate-45"
+                  alt=""
+                />
+              </div>
+
+              <p class="mt-10 text-[15px] leading-5 text-[#4B4B4B]">
+                Untracked
+                <br />
+                Backup Tapes
+              </p>
+            </div>
+
+            <!-- Item -->
+            <div class="text-center">
+              <div
+                class="w-24 h-24 rotate-45 rounded-2xl border-[5px] bg-[#FFF0E1] border-[#FFAC5C] flex items-center justify-center"
+              >
+                <img
+                  src="./images/defective-devices.svg"
+                  class="w-9 h-9 -rotate-45"
+                  alt=""
+                />
+              </div>
+
+              <p class="mt-10 text-[15px] leading-5 text-[#4B4B4B]">
+                Defective
+                <br />
+                Devices
+              </p>
+            </div>
+
+            <!-- Last Item -->
+            <div class="text-center">
+              <div
+                class="w-24 h-24 rotate-45 rounded-2xl bg-[#FFAC5C] flex items-center justify-center"
+              >
+                <img
+                  src="./images/data-breach.svg"
+                  class="w-8 h-8 -rotate-45"
+                  alt=""
+                />
+              </div>
+
+              <p class="mt-10 text-[15px] leading-5 text-[#4B4B4B]">
+                Data Breach &
+                <br />
+                Compliance Risk
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="relative overflow-hidden py-20 lg:py-28">
+      <!-- Background Image -->
+      <img
+        src="./images/fourth-section-bg.png"
+        alt=""
+        class="absolute inset-0 w-full h-full object-cover -z-10"
+      />
+
+      <div class="container mx-auto px-6 lg:px-10">
+        <!-- Heading -->
+        <div class="mx-auto text-center">
+          <h2
+            class="text-white text-[34px] md:text-[40px] font-bold !leading-[1.1]"
+          >
+            Technology-appropriate data elimination
+            <br />
+            for every media type.
+          </h2>
+
+          <p
+            class="mt-6 text-white font-normal text-[15px] md:text-[17px] leading-7 max-w-2xl mx-auto"
+          >
+            The right method for the media in front of you — available as
+            equipment you own or as a managed service.
+          </p>
+
+          <!-- CTA -->
+          <div class="flex mt-6 justify-center items-center text-white gap-0 consultation-btn">
+            <button
+              class="py-3 px-8 bg-[#EB9440] rounded-full font-semibold shadow-md cursor-pointer"
+            >
+              Explore all Services
+            </button>
+
+            <button
+              class="w-12 h-12 rounded-full bg-[#EB9440] flex items-center justify-center shadow-md cursor-pointer"
+            >
+              <span class="text-xl">↗</span>
+            </button>
+          </div>
+        </div>
+
+        <!-- Cards -->
+        <div class="swiper servicesSlider mt-16 overflow-visible">
+          <div class="swiper-wrapper text-center">
+            <!-- Card 1 -->
+            <div class="swiper-slide">
+              <div
+                class="group relative overflow-hidden rounded-[12px] h-[315px] cursor-pointer"
+              >
+                <img
+                  src="./images/4s-slider-1.webp"
+                  alt=""
+                  class="w-full h-full object-cover transition-all duration-700 group-hover:scale-110"
+                />
+
+                <div
+                  class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-all duration-500"
+                ></div>
+
+                <div
+                  class="absolute inset-x-0 bottom-0 flex justify-center translate-y-full group-hover:translate-y-0 transition-all duration-700 ease-out"
+                >
+                  <div class="relative w-[220px] h-[120px]">
+                    <div
+                      class="absolute inset-x-0 bottom-0 mx-auto w-[220px] h-[110px] rounded-t-full bg-[#FFAC5C3D] backdrop-blur-[2px]"
+                    ></div>
+
+                    <div
+                      class="absolute left-1/2 bottom-0 -translate-x-1/2 w-[180px] h-[90px] rounded-t-full bg-[#E57000] flex items-center justify-center"
+                    >
+                      <h3 class="pt-4 text-white font-semibold text-[15px]">
+                        Degaussing
+                      </h3>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Card 2 -->
+            <!--<div class="swiper-slide">-->
+            <!--  <div-->
+            <!--    class="group relative overflow-hidden rounded-[12px] h-[315px] cursor-pointer"-->
+            <!--  >-->
+            <!--    <img-->
+            <!--      src="./images/4s-slider-2.webp"-->
+            <!--      alt=""-->
+            <!--      class="w-full h-full object-cover transition-all duration-700 group-hover:scale-110"-->
+            <!--    />-->
+
+            <!--    <div-->
+            <!--      class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-all duration-500"-->
+            <!--    ></div>-->
+
+            <!--    <div-->
+            <!--      class="absolute inset-x-0 bottom-0 flex justify-center translate-y-full group-hover:translate-y-0 transition-all duration-700 ease-out"-->
+            <!--    >-->
+            <!--      <div class="relative w-[220px] h-[120px]">-->
+            <!--        <div-->
+            <!--          class="absolute inset-x-0 bottom-0 mx-auto w-[220px] h-[110px] rounded-t-full bg-[#FFAC5C3D] backdrop-blur-[2px]"-->
+            <!--        ></div>-->
+
+            <!--        <div-->
+            <!--          class="absolute left-1/2 bottom-0 -translate-x-1/2 w-[180px] h-[90px] rounded-t-full bg-[#E57000] flex items-center justify-center"-->
+            <!--        >-->
+            <!--          <h3 class="pt-4 text-white font-semibold text-[15px]">-->
+            <!--            Shredding-->
+            <!--          </h3>-->
+            <!--        </div>-->
+            <!--      </div>-->
+            <!--    </div>-->
+            <!--  </div>-->
+            <!--</div>-->
+
+            <!-- Card 3 -->
+            <div class="swiper-slide">
+              <div
+                class="group relative overflow-hidden rounded-[12px] h-[315px] cursor-pointer"
+              >
+                <img
+                  src="./images/4s-slider-3.webp"
+                  alt=""
+                  class="w-full h-full object-cover transition-all duration-700 group-hover:scale-110"
+                />
+
+                <div
+                  class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-all duration-500"
+                ></div>
+
+                <div
+                  class="absolute inset-x-0 bottom-0 flex justify-center translate-y-full group-hover:translate-y-0 transition-all duration-700 ease-out"
+                >
+                  <div class="relative w-[220px] h-[120px]">
+                    <div
+                      class="absolute inset-x-0 bottom-0 mx-auto w-[220px] h-[110px] rounded-t-full bg-[#FFAC5C3D] backdrop-blur-[2px]"
+                    ></div>
+
+                    <div
+                      class="absolute left-1/2 bottom-0 -translate-x-1/2 w-[180px] h-[90px] rounded-t-full bg-[#E57000] flex items-center justify-center"
+                    >
+                      <h3 class="pt-4 text-white font-semibold text-[15px]">
+                        Physical Destruction
+                      </h3>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Card 4 -->
+            <div class="swiper-slide">
+              <div
+                class="group relative overflow-hidden rounded-[12px] h-[315px] cursor-pointer"
+              >
+                <img
+                  src="./images/4s-slider-4.webp"
+                  alt=""
+                  class="w-full h-full object-cover transition-all duration-700 group-hover:scale-110"
+                />
+
+                <div
+                  class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-all duration-500"
+                ></div>
+
+                <div
+                  class="absolute inset-x-0 bottom-0 flex justify-center translate-y-full group-hover:translate-y-0 transition-all duration-700 ease-out"
+                >
+                  <div class="relative w-[220px] h-[120px]">
+                    <div
+                      class="absolute inset-x-0 bottom-0 mx-auto w-[220px] h-[110px] rounded-t-full bg-[#FFAC5C3D] backdrop-blur-[2px]"
+                    ></div>
+
+                    <div
+                      class="absolute left-1/2 bottom-0 -translate-x-1/2 w-[180px] h-[90px] rounded-t-full bg-[#E57000] flex items-center justify-center"
+                    >
+                      <h3 class="pt-4 text-white font-semibold text-[15px]">
+                        Auditable Compliance
+                      </h3>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- card 5 -->
+
+            <div class="swiper-slide">
+              <div
+                class="group relative overflow-hidden rounded-[12px] h-[315px] cursor-pointer"
+              >
+                <img
+                  src="./images/4s-slider-5.webp"
+                  alt=""
+                  class="w-full h-full object-cover transition-all duration-700 group-hover:scale-110"
+                />
+
+                <div
+                  class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-all duration-500"
+                ></div>
+
+                <div
+                  class="absolute inset-x-0 bottom-0 flex justify-center translate-y-full group-hover:translate-y-0 transition-all duration-700 ease-out"
+                >
+                  <div class="relative w-[220px] h-[120px]">
+                    <div
+                      class="absolute inset-x-0 bottom-0 mx-auto w-[220px] h-[110px] rounded-t-full bg-[#FFAC5C3D] backdrop-blur-[2px]"
+                    ></div>
+
+                    <div
+                      class="absolute left-1/2 bottom-0 -translate-x-1/2 w-[180px] h-[90px] rounded-t-full bg-[#E57000] flex items-center justify-center"
+                    >
+                      <h3 class="pt-4 text-white font-semibold text-[15px]">
+                        On-Site Destruction
+                      </h3>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- card 6 -->
+
+            <div class="swiper-slide">
+              <div
+                class="group relative overflow-hidden rounded-[12px] h-[315px] cursor-pointer"
+              >
+                <img
+                  src="./images/4s-slider-6.webp"
+                  alt=""
+                  class="w-full h-full object-cover transition-all duration-700 group-hover:scale-110"
+                />
+
+                <div
+                  class="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-all duration-500"
+                ></div>
+
+                <div
+                  class="absolute inset-x-0 bottom-0 flex justify-center translate-y-full group-hover:translate-y-0 transition-all duration-700 ease-out"
+                >
+                  <div class="relative w-[220px] h-[120px]">
+                    <div
+                      class="absolute inset-x-0 bottom-0 mx-auto w-[220px] h-[110px] rounded-t-full bg-[#FFAC5C3D] backdrop-blur-[2px]"
+                    ></div>
+
+                    <div
+                      class="absolute left-1/2 bottom-0 -translate-x-1/2 w-[180px] h-[90px] rounded-t-full bg-[#E57000] flex items-center justify-center"
+                    >
+                      <h3 class="pt-4 text-white font-semibold text-[15px]">
+                        Automated HDD Disassembly
+                      </h3>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="relative py-20 lg:py-28 bg-white min-h-[180vh]">
+      <!-- Left Background Circles -->
+      <div
+        class="absolute left-0 top-1/2 -translate-y-1/3 pointer-events-none overflow-hidden"
+      >
+        <!-- Outer Circle -->
+        <div
+          class="w-[200px] h-[400px] rounded-full rounded-l-none bg-[#FFE5CB4F]"
+        ></div>
+
+        <!-- Middle Circle -->
+        <div
+          class="absolute left-0 top-1/2 -translate-y-1/2 rounded-l-none w-[150px] h-[300px] rounded-full bg-[#FFE5CB94]"
+        ></div>
+      </div>
+
+      <div class="container mx-auto px-6 lg:px-10">
+        <div
+          class="grid grid-cols-1 lg:grid-cols-2 gap-10 lg:gap-24 items-start"
+        >
+          <div class="sticky lg:top-24 h-fit">
+            <h2
+              class="text-[#4B4B4B] font-bold text-[34px] md:text-[40px] leading-[1.05]"
+            >
+              One auditable
+              <br />
+              process. Owned or
+              <br />
+              managed.
+            </h2>
+
+            <p class="mt-6 text-[#4B4B4B] text-[15px] !leading-[1.4] max-w-sm">
+              Run it on your own equipment or hand it to us as a service —
+              either way, the same five-stage, audit-ready process applies.
+            </p>
+
+            <div class="flex mt-10 items-center text-white gap-0 consultation-btn">
+              <button
+                class="py-3 px-8 bg-[#EB9440] rounded-full font-semibold shadow-md cursor-pointer"
+              >
+                Learn More
+              </button>
+
+              <button
+                class="w-12 h-12 rounded-full bg-[#EB9440] flex items-center justify-center shadow-md cursor-pointer"
+              >
+                <span class="text-xl">↗</span>
+              </button>
+            </div>
+          </div>
+
+          <div class="relative pt-[4rem] lg:pt-0">
+            <div class="px-10">
+              <!-- Step 1 -->
+              <div
+                class="relative flex items-center justify-start lg:items-start gap-8 md:gap-14"
+              >
+                <!-- Left -->
+                <div
+                  class="relative shrink-0 w-[60px] flex flex-col items-center"
+                >
+                  <div
+                    class="relative z-10 w-[80px] h-[80px] sm:w-[100px] sm:h-[100px] rotate-45 rounded-[19px] border-[7px] border-[#FFAC5C] bg-[#FFF0E1] flex items-center justify-center"
+                  >
+                    <span
+                      class="-rotate-45 text-[#EB9440] text-[40px] font-bold"
+                      >1</span
+                    >
+                  </div>
+
+                  <!-- Connector -->
+                  <div class="w-[1.5px] h-24 bg-[#F39A35]"></div>
+                </div>
+
+                <!-- Content -->
+                <div class="pt-2">
+                  <h3 class="font-semibold text-[#4B4B4B] text-lg">Assess</h3>
+                  <p class="mt-2 text-[#4B4B4B] text-[15px] leading-5">
+                    Media audit &
+                    <br />
+                    method match.
+                  </p>
+                </div>
+              </div>
+
+              <!-- Step 2 -->
+              <div
+                class="relative flex items-center justify-start lg:items-start gap-8 md:gap-14"
+              >
+                <div
+                  class="relative shrink-0 w-[60px] flex flex-col items-center"
+                >
+                  <div
+                    class="relative z-10 w-[80px] h-[80px] sm:w-[100px] sm:h-[100px] rotate-45 rounded-[19px] border-[7px] border-[#FFAC5C] bg-[#FFF0E1] flex items-center justify-center"
+                  >
+                    <span
+                      class="-rotate-45 text-[#EB9440] text-[40px] font-bold"
+                      >2</span
+                    >
+                  </div>
+
+                  <div class="w-[1.5px] h-24 bg-[#F39A35]"></div>
+                </div>
+
+                <div class="pt-2">
+                  <h3 class="font-semibold text-[#4B4B4B] text-lg">Intake</h3>
+
+                  <p class="mt-2 text-[#4B4B4B] text-[15px] leading-5">
+                    Secure, logged
+                    <br />
+                    custody begins.
+                  </p>
+                </div>
+              </div>
+
+              <!-- Step 3 -->
+              <div
+                class="relative flex items-center justify-start lg:items-start gap-8 md:gap-14"
+              >
+                <div
+                  class="relative shrink-0 w-[60px] flex flex-col items-center"
+                >
+                  <div
+                    class="relative z-10 w-[80px] h-[80px] sm:w-[100px] sm:h-[100px] rotate-45 rounded-[19px] border-[7px] border-[#FFAC5C] bg-[#FFF0E1] flex items-center justify-center"
+                  >
+                    <span
+                      class="-rotate-45 text-[#EB9440] text-[40px] font-bold"
+                      >3</span
+                    >
+                  </div>
+
+                  <div class="w-[1.5px] h-24 bg-[#F39A35]"></div>
+                </div>
+
+                <div class="pt-2">
+                  <h3 class="font-semibold text-[#4B4B4B] text-lg">
+                    Eliminate
+                  </h3>
+
+                  <p class="mt-2 text-[#4B4B4B] text-[15px] leading-5">
+                    Degauss, shred or destroy
+                    <br />
+                    on-site or in-facility.
+                  </p>
+                </div>
+              </div>
+
+              <!-- Step 4 -->
+              <div
+                class="relative flex items-center justify-start lg:items-start gap-8 md:gap-14"
+              >
+                <div
+                  class="relative shrink-0 w-[60px] flex flex-col items-center"
+                >
+                  <div
+                    class="relative z-10 w-[80px] h-[80px] sm:w-[100px] sm:h-[100px] rotate-45 rounded-[19px] border-[7px] border-[#FFAC5C] bg-[#FFF0E1] flex items-center justify-center"
+                  >
+                    <span
+                      class="-rotate-45 text-[#EB9440] text-[40px] font-bold"
+                      >4</span
+                    >
+                  </div>
+
+                  <div class="w-[1.5px] h-24 bg-[#F39A35]"></div>
+                </div>
+
+                <div class="pt-2">
+                  <h3 class="font-semibold text-[#4B4B4B] text-lg">
+                    Verify &amp; Certify
+                  </h3>
+
+                  <p class="mt-2 text-[#4B4B4B] text-[15px] leading-5">
+                    Serial matched, photo-
+                    <br />
+                    documented, certificate issued.
+                  </p>
+                </div>
+              </div>
+
+              <!-- Step 5 -->
+              <div
+                class="relative flex items-center justify-start lg:items-start gap-8 md:gap-14"
+              >
+                <div
+                  class="relative shrink-0 w-[60px] flex flex-col items-center"
+                >
+                  <div
+                    class="relative z-10 w-[80px] h-[80px] sm:w-[100px] sm:h-[100px] rotate-45 rounded-[19px] border-[7px] border-[#FFAC5C] bg-[#FFF0E1] flex items-center justify-center"
+                  >
+                    <span
+                      class="-rotate-45 text-[#EB9440] text-[40px] font-bold"
+                      >5</span
+                    >
+                  </div>
+                </div>
+
+                <div class="pt-2">
+                  <h3 class="font-semibold text-[#4B4B4B] text-lg">Recycle</h3>
+
+                  <p class="mt-2 text-[#4B4B4B] text-[15px] leading-5">
+                    Responsible e-waste
+                    <br />
+                    closeout.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="bg-[#FFF0E1] pt-[10rem] pb-[5rem] overflow-hidden">
+      <div class="container mx-auto px-6 lg:px-10">
+        <div
+          class="grid grid-cols-1 lg:grid-cols-2 gap-14 lg:gap-24 items-center"
+        >
+          <!-- ================= Left ================= -->
+          <div class="relative flex justify-center lg:justify-start">
+            <!-- Orange Shape -->
+            <div
+              class="absolute left-0 top-[-20%] w-[160px] h-[250px] lg:w-[290px] lg:h-[410px] bg-[#E57000] rounded-2xl rounded-tr-[100px] rounded-br-[120px]"
+            ></div>
+
+            <!-- Video Card -->
+            <div
+              class="relative lg:left-[10%] z-10 rounded-[36px] overflow-hidden border-[8px] border-[#171C35] bg-white shadow-xl max-w-[500px]"
+            >
+              <img
+                src="./images/6th-section-img.png"
+                alt="Video Thumbnail"
+                class="w-full h-full object-cover"
+              />
+
+              <!-- Play Button -->
+              <a
+              href="https://www.youtube.com/watch?v=OTkuFCRUK0U&feature=youtu.be"
+              target="_blank"
+                class="absolute inset-0 flex items-center justify-center group"
+              >
+                <div
+                  class="w-[80px] lg:w-[101px] h-[50px] lg:h-[66px] rounded-[12px] bg-[#FF0000] flex items-center justify-center shadow-xl transition duration-300 hover:scale-110"
+                >
+                  <svg
+                    class="w-7 h-7 lg:w-10 lg:h-10 text-white ml-1"
+                    fill="currentColor"
+                    viewBox="0 0 24 24"
+                  >
+                    <path d="M8 5v14l11-7z" />
+                  </svg>
+                </div>
+              </a>
+            </div>
+          </div>
+
+          <!-- ================= Right ================= -->
+          <div>
+            <h2
+              class="text-[#4B4B4B] text-[34px] md:text-[40px] font-bold leading-tight"
+            >
+              Proof, not promises.
+            </h2>
+
+            <p class="mt-4 text-[#4B4B4B] text-[15px] leading-6 max-w-md">
+              Every job ships with the evidence a compliance auditor will
+              actually ask for.
+            </p>
+
+            <div class="mt-10 space-y-8">
+              <!-- Item -->
+              <div>
+                <h3 class="text-[#FF7D00] font-semibold text-[20px]">
+                  Photo proof of destruction
+                </h3>
+
+                <p class="mt-1 text-[#4B4B4B] text-[15px] leading-6">
+                  Every device photographed and tagged to its Device ID / serial
+                  number.
+                </p>
+              </div>
+
+              <!-- Item -->
+              <div>
+                <h3 class="text-[#FF7D00] font-semibold text-[20px]">
+                  Serial-level device log
+                </h3>
+
+                <p class="mt-1 text-[#4B4B4B] text-[15px] leading-6">
+                  Matched against your asset register.
+                </p>
+              </div>
+
+              <!-- Item -->
+              <div>
+                <h3 class="text-[#FF7D00] font-semibold text-[20px]">
+                  Tamper-evident custody trail
+                </h3>
+
+                <p class="mt-1 text-[#4B4B4B] text-[15px] leading-6">
+                  From collection through to destruction.
+                </p>
+              </div>
+
+              <!-- Item -->
+              <div>
+                <h3 class="text-[#FF7D00] font-semibold text-[20px]">
+                  Digitally signed certificate
+                </h3>
+
+                <p class="mt-1 text-[#4B4B4B] text-[15px] leading-6">
+                  Issued per device or per lot.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section
+      class="w-full relative bg-[#F7F7F7] px-4 lg:px-12 py-10 lg:pt-20 lg:pb-0"
+    >
+      <div class="max-w-[1440px] mx-auto">
+        <div class="relative z-10 text-center">
+          <h2 class="heading-2 text-[#4B4B4B]">
+            Built for the sectors regulators
+            <br />
+            <span class="text-[#E57000]">watch most closely.</span>
+          </h2>
+        </div>
+
+        <div
+          class="relative z-10 mx-auto mt-12 lg:mt-24 flex flex-wrap justify-center gap-4 lg:block lg:gap-0 lg:w-[900px] lg:h-[450px]"
+        >
+          <!-- ===== TOP ROW ===== -->
+
+          <!-- Banking & BFSI -->
+          <div
+            class="group hex hex-shadow flex flex-col items-center justify-center text-center w-[150px] h-[174px] sm:w-[170px] sm:h-[196px] lg:absolute lg:w-[180px] lg:h-[208px] lg:left-[90px] lg:top-0"
+          >
+            <svg
+              width="42"
+              height="33"
+              viewBox="0 0 62 53"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M0 13.063V5.11984C0 3.66398 0.489342 2.44671 1.46802 1.46802C2.44671 0.489342 3.66662 0 5.12777 0H52.0062C53.4673 0 54.6872 0.489342 55.6659 1.46802C56.6446 2.44671 57.1339 3.66662 57.1339 5.12777V22.2188H53.9598V5.12777C53.9598 4.63896 53.7564 4.19115 53.3496 3.78433C52.9428 3.37752 52.495 3.17411 52.0062 3.17411H5.12777C4.63896 3.17411 4.19115 3.37752 3.78433 3.78433C3.37752 4.19115 3.17411 4.63896 3.17411 5.12777V13.063H0ZM5.12777 44.4375C3.66662 44.4375 2.44671 43.9482 1.46802 42.9695C0.489342 41.9908 0 40.7735 0 39.3177V31.3745H3.17411V39.3097C3.17411 39.7986 3.37752 40.2464 3.78433 40.6532C4.19115 41.06 4.63896 41.2634 5.12777 41.2634H25.3318V44.4375H5.12777ZM47.6116 52.8608L44.1138 49.8946C39.7028 46.0899 36.8839 43.4437 35.6571 41.9561C34.4298 40.4691 33.8162 38.9788 33.8162 37.4854C33.8162 35.619 34.4616 34.0119 35.7524 32.664C37.0426 31.316 38.6151 30.642 40.4699 30.642C41.4248 30.642 42.3339 30.8579 43.1972 31.2896C44.0606 31.7207 44.9216 32.3616 45.7802 33.2123L47.6116 34.8604L49.3209 33.2734C50.1673 32.4227 51.0391 31.7715 51.9363 31.3197C52.8336 30.8679 53.7726 30.642 54.7534 30.642C56.5679 30.642 58.1303 31.316 59.4407 32.664C60.7516 34.0119 61.4071 35.619 61.4071 37.4854C61.4071 38.9788 60.7802 40.4691 59.5264 41.9561C58.2732 43.4437 55.4411 46.0899 51.0301 49.8946L47.6116 52.8608ZM47.6116 48.6004L50.0779 46.5308C53.488 43.6255 55.6995 41.6163 56.7126 40.5032C57.7262 39.3901 58.233 38.3821 58.233 37.4791C58.233 36.5025 57.8849 35.6479 57.1887 34.9152C56.493 34.1825 55.6813 33.8162 54.7534 33.8162C54.1751 33.8162 53.6512 33.9291 53.1814 34.155C52.7116 34.3809 52.1979 34.7665 51.6404 35.312L47.6116 39.1637L43.5035 35.312C42.9459 34.7665 42.4291 34.3809 41.953 34.155C41.4769 33.9291 40.9825 33.8162 40.4699 33.8162C39.4975 33.8162 38.6744 34.1825 38.0004 34.9152C37.327 35.6479 36.9903 36.5025 36.9903 37.4791C36.9903 38.3594 37.5449 39.4126 38.6543 40.6389C39.7631 41.8652 41.9614 43.8699 45.2493 46.653L47.6116 48.6004ZM12.6964 36.5022C12.3462 36.5022 12.0521 36.4382 11.814 36.3102C11.576 36.1817 11.3858 35.969 11.2435 35.6722L5.34123 23.8058H0V20.6317H6.34822C6.636 20.6317 6.90421 20.7126 7.15285 20.8745C7.40149 21.0369 7.59114 21.253 7.72181 21.5228L12.6964 31.3935L23.9399 8.8264C24.0748 8.58252 24.2769 8.39948 24.5462 8.27728C24.8154 8.15508 25.0982 8.09398 25.3945 8.09398C25.6907 8.09398 25.9647 8.15508 26.2165 8.27728C26.4689 8.39948 26.6583 8.58252 26.7847 8.8264L32.6687 20.6317H42.8505V23.8058H31.7411C31.3909 23.8058 31.0967 23.7418 30.8587 23.6138C30.6206 23.4852 30.4304 23.2726 30.2881 22.9758L25.3318 13.1233L14.07 35.6722C13.9277 35.969 13.7341 36.1817 13.4892 36.3102C13.2442 36.4382 12.98 36.5022 12.6964 36.5022Z"
+                fill="white"
+              />
+            </svg>
+
+            <span class="text-[18px] px-6 group-hover:font-bold"
+              >Banking &amp; BFSI</span
+            >
+          </div>
+
+          <!-- Healthcare (orange, active) -->
+          <div
+            class="group hex hex-shadow flex flex-col items-center justify-center text-center w-[150px] h-[174px] sm:w-[170px] sm:h-[196px] lg:absolute lg:w-[180px] lg:h-[208px] lg:left-[270px] lg:top-0"
+          >
+            <svg
+              width="42"
+              height="33"
+              viewBox="0 0 62 53"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M0 13.063V5.11984C0 3.66398 0.489342 2.44671 1.46802 1.46802C2.44671 0.489342 3.66662 0 5.12777 0H52.0062C53.4673 0 54.6872 0.489342 55.6659 1.46802C56.6446 2.44671 57.1339 3.66662 57.1339 5.12777V22.2188H53.9598V5.12777C53.9598 4.63896 53.7564 4.19115 53.3496 3.78433C52.9428 3.37752 52.495 3.17411 52.0062 3.17411H5.12777C4.63896 3.17411 4.19115 3.37752 3.78433 3.78433C3.37752 4.19115 3.17411 4.63896 3.17411 5.12777V13.063H0ZM5.12777 44.4375C3.66662 44.4375 2.44671 43.9482 1.46802 42.9695C0.489342 41.9908 0 40.7735 0 39.3177V31.3745H3.17411V39.3097C3.17411 39.7986 3.37752 40.2464 3.78433 40.6532C4.19115 41.06 4.63896 41.2634 5.12777 41.2634H25.3318V44.4375H5.12777ZM47.6116 52.8608L44.1138 49.8946C39.7028 46.0899 36.8839 43.4437 35.6571 41.9561C34.4298 40.4691 33.8162 38.9788 33.8162 37.4854C33.8162 35.619 34.4616 34.0119 35.7524 32.664C37.0426 31.316 38.6151 30.642 40.4699 30.642C41.4248 30.642 42.3339 30.8579 43.1972 31.2896C44.0606 31.7207 44.9216 32.3616 45.7802 33.2123L47.6116 34.8604L49.3209 33.2734C50.1673 32.4227 51.0391 31.7715 51.9363 31.3197C52.8336 30.8679 53.7726 30.642 54.7534 30.642C56.5679 30.642 58.1303 31.316 59.4407 32.664C60.7516 34.0119 61.4071 35.619 61.4071 37.4854C61.4071 38.9788 60.7802 40.4691 59.5264 41.9561C58.2732 43.4437 55.4411 46.0899 51.0301 49.8946L47.6116 52.8608ZM47.6116 48.6004L50.0779 46.5308C53.488 43.6255 55.6995 41.6163 56.7126 40.5032C57.7262 39.3901 58.233 38.3821 58.233 37.4791C58.233 36.5025 57.8849 35.6479 57.1887 34.9152C56.493 34.1825 55.6813 33.8162 54.7534 33.8162C54.1751 33.8162 53.6512 33.9291 53.1814 34.155C52.7116 34.3809 52.1979 34.7665 51.6404 35.312L47.6116 39.1637L43.5035 35.312C42.9459 34.7665 42.4291 34.3809 41.953 34.155C41.4769 33.9291 40.9825 33.8162 40.4699 33.8162C39.4975 33.8162 38.6744 34.1825 38.0004 34.9152C37.327 35.6479 36.9903 36.5025 36.9903 37.4791C36.9903 38.3594 37.5449 39.4126 38.6543 40.6389C39.7631 41.8652 41.9614 43.8699 45.2493 46.653L47.6116 48.6004ZM12.6964 36.5022C12.3462 36.5022 12.0521 36.4382 11.814 36.3102C11.576 36.1817 11.3858 35.969 11.2435 35.6722L5.34123 23.8058H0V20.6317H6.34822C6.636 20.6317 6.90421 20.7126 7.15285 20.8745C7.40149 21.0369 7.59114 21.253 7.72181 21.5228L12.6964 31.3935L23.9399 8.8264C24.0748 8.58252 24.2769 8.39948 24.5462 8.27728C24.8154 8.15508 25.0982 8.09398 25.3945 8.09398C25.6907 8.09398 25.9647 8.15508 26.2165 8.27728C26.4689 8.39948 26.6583 8.58252 26.7847 8.8264L32.6687 20.6317H42.8505V23.8058H31.7411C31.3909 23.8058 31.0967 23.7418 30.8587 23.6138C30.6206 23.4852 30.4304 23.2726 30.2881 22.9758L25.3318 13.1233L14.07 35.6722C13.9277 35.969 13.7341 36.1817 13.4892 36.3102C13.2442 36.4382 12.98 36.5022 12.6964 36.5022Z"
+                fill="white"
+              />
+            </svg>
+
+            <span class="text-[18px] px-6 group-hover:font-bold"
+              >Healthcare</span
+            >
+          </div>
+
+          <!-- Government -->
+          <div
+            class="group hex hex-shadow flex flex-col items-center justify-center text-center w-[150px] h-[174px] sm:w-[170px] sm:h-[196px] lg:absolute lg:w-[180px] lg:h-[208px] lg:left-[450px] lg:top-0"
+          >
+            <svg
+              width="42"
+              height="33"
+              viewBox="0 0 62 53"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M0 13.063V5.11984C0 3.66398 0.489342 2.44671 1.46802 1.46802C2.44671 0.489342 3.66662 0 5.12777 0H52.0062C53.4673 0 54.6872 0.489342 55.6659 1.46802C56.6446 2.44671 57.1339 3.66662 57.1339 5.12777V22.2188H53.9598V5.12777C53.9598 4.63896 53.7564 4.19115 53.3496 3.78433C52.9428 3.37752 52.495 3.17411 52.0062 3.17411H5.12777C4.63896 3.17411 4.19115 3.37752 3.78433 3.78433C3.37752 4.19115 3.17411 4.63896 3.17411 5.12777V13.063H0ZM5.12777 44.4375C3.66662 44.4375 2.44671 43.9482 1.46802 42.9695C0.489342 41.9908 0 40.7735 0 39.3177V31.3745H3.17411V39.3097C3.17411 39.7986 3.37752 40.2464 3.78433 40.6532C4.19115 41.06 4.63896 41.2634 5.12777 41.2634H25.3318V44.4375H5.12777ZM47.6116 52.8608L44.1138 49.8946C39.7028 46.0899 36.8839 43.4437 35.6571 41.9561C34.4298 40.4691 33.8162 38.9788 33.8162 37.4854C33.8162 35.619 34.4616 34.0119 35.7524 32.664C37.0426 31.316 38.6151 30.642 40.4699 30.642C41.4248 30.642 42.3339 30.8579 43.1972 31.2896C44.0606 31.7207 44.9216 32.3616 45.7802 33.2123L47.6116 34.8604L49.3209 33.2734C50.1673 32.4227 51.0391 31.7715 51.9363 31.3197C52.8336 30.8679 53.7726 30.642 54.7534 30.642C56.5679 30.642 58.1303 31.316 59.4407 32.664C60.7516 34.0119 61.4071 35.619 61.4071 37.4854C61.4071 38.9788 60.7802 40.4691 59.5264 41.9561C58.2732 43.4437 55.4411 46.0899 51.0301 49.8946L47.6116 52.8608ZM47.6116 48.6004L50.0779 46.5308C53.488 43.6255 55.6995 41.6163 56.7126 40.5032C57.7262 39.3901 58.233 38.3821 58.233 37.4791C58.233 36.5025 57.8849 35.6479 57.1887 34.9152C56.493 34.1825 55.6813 33.8162 54.7534 33.8162C54.1751 33.8162 53.6512 33.9291 53.1814 34.155C52.7116 34.3809 52.1979 34.7665 51.6404 35.312L47.6116 39.1637L43.5035 35.312C42.9459 34.7665 42.4291 34.3809 41.953 34.155C41.4769 33.9291 40.9825 33.8162 40.4699 33.8162C39.4975 33.8162 38.6744 34.1825 38.0004 34.9152C37.327 35.6479 36.9903 36.5025 36.9903 37.4791C36.9903 38.3594 37.5449 39.4126 38.6543 40.6389C39.7631 41.8652 41.9614 43.8699 45.2493 46.653L47.6116 48.6004ZM12.6964 36.5022C12.3462 36.5022 12.0521 36.4382 11.814 36.3102C11.576 36.1817 11.3858 35.969 11.2435 35.6722L5.34123 23.8058H0V20.6317H6.34822C6.636 20.6317 6.90421 20.7126 7.15285 20.8745C7.40149 21.0369 7.59114 21.253 7.72181 21.5228L12.6964 31.3935L23.9399 8.8264C24.0748 8.58252 24.2769 8.39948 24.5462 8.27728C24.8154 8.15508 25.0982 8.09398 25.3945 8.09398C25.6907 8.09398 25.9647 8.15508 26.2165 8.27728C26.4689 8.39948 26.6583 8.58252 26.7847 8.8264L32.6687 20.6317H42.8505V23.8058H31.7411C31.3909 23.8058 31.0967 23.7418 30.8587 23.6138C30.6206 23.4852 30.4304 23.2726 30.2881 22.9758L25.3318 13.1233L14.07 35.6722C13.9277 35.969 13.7341 36.1817 13.4892 36.3102C13.2442 36.4382 12.98 36.5022 12.6964 36.5022Z"
+                fill="white"
+              />
+            </svg>
+
+            <span class="text-[18px] px-6 group-hover:font-bold"
+              >Government</span
+            >
+          </div>
+
+          <!-- GCCs -->
+          <div
+            class="group hex hex-shadow flex flex-col items-center justify-center text-center w-[150px] h-[174px] sm:w-[170px] sm:h-[196px] lg:absolute lg:w-[180px] lg:h-[208px] lg:left-[630px] lg:top-0"
+          >
+            <svg
+              width="42"
+              height="33"
+              viewBox="0 0 62 53"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M0 13.063V5.11984C0 3.66398 0.489342 2.44671 1.46802 1.46802C2.44671 0.489342 3.66662 0 5.12777 0H52.0062C53.4673 0 54.6872 0.489342 55.6659 1.46802C56.6446 2.44671 57.1339 3.66662 57.1339 5.12777V22.2188H53.9598V5.12777C53.9598 4.63896 53.7564 4.19115 53.3496 3.78433C52.9428 3.37752 52.495 3.17411 52.0062 3.17411H5.12777C4.63896 3.17411 4.19115 3.37752 3.78433 3.78433C3.37752 4.19115 3.17411 4.63896 3.17411 5.12777V13.063H0ZM5.12777 44.4375C3.66662 44.4375 2.44671 43.9482 1.46802 42.9695C0.489342 41.9908 0 40.7735 0 39.3177V31.3745H3.17411V39.3097C3.17411 39.7986 3.37752 40.2464 3.78433 40.6532C4.19115 41.06 4.63896 41.2634 5.12777 41.2634H25.3318V44.4375H5.12777ZM47.6116 52.8608L44.1138 49.8946C39.7028 46.0899 36.8839 43.4437 35.6571 41.9561C34.4298 40.4691 33.8162 38.9788 33.8162 37.4854C33.8162 35.619 34.4616 34.0119 35.7524 32.664C37.0426 31.316 38.6151 30.642 40.4699 30.642C41.4248 30.642 42.3339 30.8579 43.1972 31.2896C44.0606 31.7207 44.9216 32.3616 45.7802 33.2123L47.6116 34.8604L49.3209 33.2734C50.1673 32.4227 51.0391 31.7715 51.9363 31.3197C52.8336 30.8679 53.7726 30.642 54.7534 30.642C56.5679 30.642 58.1303 31.316 59.4407 32.664C60.7516 34.0119 61.4071 35.619 61.4071 37.4854C61.4071 38.9788 60.7802 40.4691 59.5264 41.9561C58.2732 43.4437 55.4411 46.0899 51.0301 49.8946L47.6116 52.8608ZM47.6116 48.6004L50.0779 46.5308C53.488 43.6255 55.6995 41.6163 56.7126 40.5032C57.7262 39.3901 58.233 38.3821 58.233 37.4791C58.233 36.5025 57.8849 35.6479 57.1887 34.9152C56.493 34.1825 55.6813 33.8162 54.7534 33.8162C54.1751 33.8162 53.6512 33.9291 53.1814 34.155C52.7116 34.3809 52.1979 34.7665 51.6404 35.312L47.6116 39.1637L43.5035 35.312C42.9459 34.7665 42.4291 34.3809 41.953 34.155C41.4769 33.9291 40.9825 33.8162 40.4699 33.8162C39.4975 33.8162 38.6744 34.1825 38.0004 34.9152C37.327 35.6479 36.9903 36.5025 36.9903 37.4791C36.9903 38.3594 37.5449 39.4126 38.6543 40.6389C39.7631 41.8652 41.9614 43.8699 45.2493 46.653L47.6116 48.6004ZM12.6964 36.5022C12.3462 36.5022 12.0521 36.4382 11.814 36.3102C11.576 36.1817 11.3858 35.969 11.2435 35.6722L5.34123 23.8058H0V20.6317H6.34822C6.636 20.6317 6.90421 20.7126 7.15285 20.8745C7.40149 21.0369 7.59114 21.253 7.72181 21.5228L12.6964 31.3935L23.9399 8.8264C24.0748 8.58252 24.2769 8.39948 24.5462 8.27728C24.8154 8.15508 25.0982 8.09398 25.3945 8.09398C25.6907 8.09398 25.9647 8.15508 26.2165 8.27728C26.4689 8.39948 26.6583 8.58252 26.7847 8.8264L32.6687 20.6317H42.8505V23.8058H31.7411C31.3909 23.8058 31.0967 23.7418 30.8587 23.6138C30.6206 23.4852 30.4304 23.2726 30.2881 22.9758L25.3318 13.1233L14.07 35.6722C13.9277 35.969 13.7341 36.1817 13.4892 36.3102C13.2442 36.4382 12.98 36.5022 12.6964 36.5022Z"
+                fill="white"
+              />
+            </svg>
+
+            <span class="text-[18px] px-6 group-hover:font-bold">GCCs</span>
+          </div>
+
+          <!-- ===== BOTTOM ROW (offset) ===== -->
+
+          <!-- IT & ITES -->
+          <div
+            class="group hex hex-shadow flex flex-col items-center justify-center text-center w-[150px] h-[174px] sm:w-[170px] sm:h-[196px] lg:absolute lg:w-[180px] lg:h-[208px] lg:left-[180px] lg:top-[156px]"
+          >
+            <svg
+              width="42"
+              height="33"
+              viewBox="0 0 62 53"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M0 13.063V5.11984C0 3.66398 0.489342 2.44671 1.46802 1.46802C2.44671 0.489342 3.66662 0 5.12777 0H52.0062C53.4673 0 54.6872 0.489342 55.6659 1.46802C56.6446 2.44671 57.1339 3.66662 57.1339 5.12777V22.2188H53.9598V5.12777C53.9598 4.63896 53.7564 4.19115 53.3496 3.78433C52.9428 3.37752 52.495 3.17411 52.0062 3.17411H5.12777C4.63896 3.17411 4.19115 3.37752 3.78433 3.78433C3.37752 4.19115 3.17411 4.63896 3.17411 5.12777V13.063H0ZM5.12777 44.4375C3.66662 44.4375 2.44671 43.9482 1.46802 42.9695C0.489342 41.9908 0 40.7735 0 39.3177V31.3745H3.17411V39.3097C3.17411 39.7986 3.37752 40.2464 3.78433 40.6532C4.19115 41.06 4.63896 41.2634 5.12777 41.2634H25.3318V44.4375H5.12777ZM47.6116 52.8608L44.1138 49.8946C39.7028 46.0899 36.8839 43.4437 35.6571 41.9561C34.4298 40.4691 33.8162 38.9788 33.8162 37.4854C33.8162 35.619 34.4616 34.0119 35.7524 32.664C37.0426 31.316 38.6151 30.642 40.4699 30.642C41.4248 30.642 42.3339 30.8579 43.1972 31.2896C44.0606 31.7207 44.9216 32.3616 45.7802 33.2123L47.6116 34.8604L49.3209 33.2734C50.1673 32.4227 51.0391 31.7715 51.9363 31.3197C52.8336 30.8679 53.7726 30.642 54.7534 30.642C56.5679 30.642 58.1303 31.316 59.4407 32.664C60.7516 34.0119 61.4071 35.619 61.4071 37.4854C61.4071 38.9788 60.7802 40.4691 59.5264 41.9561C58.2732 43.4437 55.4411 46.0899 51.0301 49.8946L47.6116 52.8608ZM47.6116 48.6004L50.0779 46.5308C53.488 43.6255 55.6995 41.6163 56.7126 40.5032C57.7262 39.3901 58.233 38.3821 58.233 37.4791C58.233 36.5025 57.8849 35.6479 57.1887 34.9152C56.493 34.1825 55.6813 33.8162 54.7534 33.8162C54.1751 33.8162 53.6512 33.9291 53.1814 34.155C52.7116 34.3809 52.1979 34.7665 51.6404 35.312L47.6116 39.1637L43.5035 35.312C42.9459 34.7665 42.4291 34.3809 41.953 34.155C41.4769 33.9291 40.9825 33.8162 40.4699 33.8162C39.4975 33.8162 38.6744 34.1825 38.0004 34.9152C37.327 35.6479 36.9903 36.5025 36.9903 37.4791C36.9903 38.3594 37.5449 39.4126 38.6543 40.6389C39.7631 41.8652 41.9614 43.8699 45.2493 46.653L47.6116 48.6004ZM12.6964 36.5022C12.3462 36.5022 12.0521 36.4382 11.814 36.3102C11.576 36.1817 11.3858 35.969 11.2435 35.6722L5.34123 23.8058H0V20.6317H6.34822C6.636 20.6317 6.90421 20.7126 7.15285 20.8745C7.40149 21.0369 7.59114 21.253 7.72181 21.5228L12.6964 31.3935L23.9399 8.8264C24.0748 8.58252 24.2769 8.39948 24.5462 8.27728C24.8154 8.15508 25.0982 8.09398 25.3945 8.09398C25.6907 8.09398 25.9647 8.15508 26.2165 8.27728C26.4689 8.39948 26.6583 8.58252 26.7847 8.8264L32.6687 20.6317H42.8505V23.8058H31.7411C31.3909 23.8058 31.0967 23.7418 30.8587 23.6138C30.6206 23.4852 30.4304 23.2726 30.2881 22.9758L25.3318 13.1233L14.07 35.6722C13.9277 35.969 13.7341 36.1817 13.4892 36.3102C13.2442 36.4382 12.98 36.5022 12.6964 36.5022Z"
+                fill="white"
+              />
+            </svg>
+
+            <span class="text-[18px] px-6 group-hover:font-bold"
+              >IT &amp; ITES</span
+            >
+          </div>
+
+          <!-- Data Centers -->
+          <div
+            class="group hex hex-shadow flex flex-col items-center justify-center text-center w-[150px] h-[174px] sm:w-[170px] sm:h-[196px] lg:absolute lg:w-[180px] lg:h-[208px] lg:left-[360px] lg:top-[156px]"
+          >
+            <svg
+              width="42"
+              height="33"
+              viewBox="0 0 62 53"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M0 13.063V5.11984C0 3.66398 0.489342 2.44671 1.46802 1.46802C2.44671 0.489342 3.66662 0 5.12777 0H52.0062C53.4673 0 54.6872 0.489342 55.6659 1.46802C56.6446 2.44671 57.1339 3.66662 57.1339 5.12777V22.2188H53.9598V5.12777C53.9598 4.63896 53.7564 4.19115 53.3496 3.78433C52.9428 3.37752 52.495 3.17411 52.0062 3.17411H5.12777C4.63896 3.17411 4.19115 3.37752 3.78433 3.78433C3.37752 4.19115 3.17411 4.63896 3.17411 5.12777V13.063H0ZM5.12777 44.4375C3.66662 44.4375 2.44671 43.9482 1.46802 42.9695C0.489342 41.9908 0 40.7735 0 39.3177V31.3745H3.17411V39.3097C3.17411 39.7986 3.37752 40.2464 3.78433 40.6532C4.19115 41.06 4.63896 41.2634 5.12777 41.2634H25.3318V44.4375H5.12777ZM47.6116 52.8608L44.1138 49.8946C39.7028 46.0899 36.8839 43.4437 35.6571 41.9561C34.4298 40.4691 33.8162 38.9788 33.8162 37.4854C33.8162 35.619 34.4616 34.0119 35.7524 32.664C37.0426 31.316 38.6151 30.642 40.4699 30.642C41.4248 30.642 42.3339 30.8579 43.1972 31.2896C44.0606 31.7207 44.9216 32.3616 45.7802 33.2123L47.6116 34.8604L49.3209 33.2734C50.1673 32.4227 51.0391 31.7715 51.9363 31.3197C52.8336 30.8679 53.7726 30.642 54.7534 30.642C56.5679 30.642 58.1303 31.316 59.4407 32.664C60.7516 34.0119 61.4071 35.619 61.4071 37.4854C61.4071 38.9788 60.7802 40.4691 59.5264 41.9561C58.2732 43.4437 55.4411 46.0899 51.0301 49.8946L47.6116 52.8608ZM47.6116 48.6004L50.0779 46.5308C53.488 43.6255 55.6995 41.6163 56.7126 40.5032C57.7262 39.3901 58.233 38.3821 58.233 37.4791C58.233 36.5025 57.8849 35.6479 57.1887 34.9152C56.493 34.1825 55.6813 33.8162 54.7534 33.8162C54.1751 33.8162 53.6512 33.9291 53.1814 34.155C52.7116 34.3809 52.1979 34.7665 51.6404 35.312L47.6116 39.1637L43.5035 35.312C42.9459 34.7665 42.4291 34.3809 41.953 34.155C41.4769 33.9291 40.9825 33.8162 40.4699 33.8162C39.4975 33.8162 38.6744 34.1825 38.0004 34.9152C37.327 35.6479 36.9903 36.5025 36.9903 37.4791C36.9903 38.3594 37.5449 39.4126 38.6543 40.6389C39.7631 41.8652 41.9614 43.8699 45.2493 46.653L47.6116 48.6004ZM12.6964 36.5022C12.3462 36.5022 12.0521 36.4382 11.814 36.3102C11.576 36.1817 11.3858 35.969 11.2435 35.6722L5.34123 23.8058H0V20.6317H6.34822C6.636 20.6317 6.90421 20.7126 7.15285 20.8745C7.40149 21.0369 7.59114 21.253 7.72181 21.5228L12.6964 31.3935L23.9399 8.8264C24.0748 8.58252 24.2769 8.39948 24.5462 8.27728C24.8154 8.15508 25.0982 8.09398 25.3945 8.09398C25.6907 8.09398 25.9647 8.15508 26.2165 8.27728C26.4689 8.39948 26.6583 8.58252 26.7847 8.8264L32.6687 20.6317H42.8505V23.8058H31.7411C31.3909 23.8058 31.0967 23.7418 30.8587 23.6138C30.6206 23.4852 30.4304 23.2726 30.2881 22.9758L25.3318 13.1233L14.07 35.6722C13.9277 35.969 13.7341 36.1817 13.4892 36.3102C13.2442 36.4382 12.98 36.5022 12.6964 36.5022Z"
+                fill="white"
+              />
+            </svg>
+
+            <span class="text-[18px] px-6 group-hover:font-bold"
+              >Data Centers</span
+            >
+          </div>
+
+          <!-- Defence -->
+          <div
+            class="group hex hex-shadow flex flex-col items-center justify-center text-center w-[150px] h-[174px] sm:w-[170px] sm:h-[196px] lg:absolute lg:w-[180px] lg:h-[208px] lg:left-[540px] lg:top-[156px]"
+          >
+            <svg
+              width="42"
+              height="33"
+              viewBox="0 0 62 53"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M0 13.063V5.11984C0 3.66398 0.489342 2.44671 1.46802 1.46802C2.44671 0.489342 3.66662 0 5.12777 0H52.0062C53.4673 0 54.6872 0.489342 55.6659 1.46802C56.6446 2.44671 57.1339 3.66662 57.1339 5.12777V22.2188H53.9598V5.12777C53.9598 4.63896 53.7564 4.19115 53.3496 3.78433C52.9428 3.37752 52.495 3.17411 52.0062 3.17411H5.12777C4.63896 3.17411 4.19115 3.37752 3.78433 3.78433C3.37752 4.19115 3.17411 4.63896 3.17411 5.12777V13.063H0ZM5.12777 44.4375C3.66662 44.4375 2.44671 43.9482 1.46802 42.9695C0.489342 41.9908 0 40.7735 0 39.3177V31.3745H3.17411V39.3097C3.17411 39.7986 3.37752 40.2464 3.78433 40.6532C4.19115 41.06 4.63896 41.2634 5.12777 41.2634H25.3318V44.4375H5.12777ZM47.6116 52.8608L44.1138 49.8946C39.7028 46.0899 36.8839 43.4437 35.6571 41.9561C34.4298 40.4691 33.8162 38.9788 33.8162 37.4854C33.8162 35.619 34.4616 34.0119 35.7524 32.664C37.0426 31.316 38.6151 30.642 40.4699 30.642C41.4248 30.642 42.3339 30.8579 43.1972 31.2896C44.0606 31.7207 44.9216 32.3616 45.7802 33.2123L47.6116 34.8604L49.3209 33.2734C50.1673 32.4227 51.0391 31.7715 51.9363 31.3197C52.8336 30.8679 53.7726 30.642 54.7534 30.642C56.5679 30.642 58.1303 31.316 59.4407 32.664C60.7516 34.0119 61.4071 35.619 61.4071 37.4854C61.4071 38.9788 60.7802 40.4691 59.5264 41.9561C58.2732 43.4437 55.4411 46.0899 51.0301 49.8946L47.6116 52.8608ZM47.6116 48.6004L50.0779 46.5308C53.488 43.6255 55.6995 41.6163 56.7126 40.5032C57.7262 39.3901 58.233 38.3821 58.233 37.4791C58.233 36.5025 57.8849 35.6479 57.1887 34.9152C56.493 34.1825 55.6813 33.8162 54.7534 33.8162C54.1751 33.8162 53.6512 33.9291 53.1814 34.155C52.7116 34.3809 52.1979 34.7665 51.6404 35.312L47.6116 39.1637L43.5035 35.312C42.9459 34.7665 42.4291 34.3809 41.953 34.155C41.4769 33.9291 40.9825 33.8162 40.4699 33.8162C39.4975 33.8162 38.6744 34.1825 38.0004 34.9152C37.327 35.6479 36.9903 36.5025 36.9903 37.4791C36.9903 38.3594 37.5449 39.4126 38.6543 40.6389C39.7631 41.8652 41.9614 43.8699 45.2493 46.653L47.6116 48.6004ZM12.6964 36.5022C12.3462 36.5022 12.0521 36.4382 11.814 36.3102C11.576 36.1817 11.3858 35.969 11.2435 35.6722L5.34123 23.8058H0V20.6317H6.34822C6.636 20.6317 6.90421 20.7126 7.15285 20.8745C7.40149 21.0369 7.59114 21.253 7.72181 21.5228L12.6964 31.3935L23.9399 8.8264C24.0748 8.58252 24.2769 8.39948 24.5462 8.27728C24.8154 8.15508 25.0982 8.09398 25.3945 8.09398C25.6907 8.09398 25.9647 8.15508 26.2165 8.27728C26.4689 8.39948 26.6583 8.58252 26.7847 8.8264L32.6687 20.6317H42.8505V23.8058H31.7411C31.3909 23.8058 31.0967 23.7418 30.8587 23.6138C30.6206 23.4852 30.4304 23.2726 30.2881 22.9758L25.3318 13.1233L14.07 35.6722C13.9277 35.969 13.7341 36.1817 13.4892 36.3102C13.2442 36.4382 12.98 36.5022 12.6964 36.5022Z"
+                fill="white"
+              />
+            </svg>
+
+            <span class="text-[18px] px-6 group-hover:font-bold">Defence</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== What an inexperienced vendor can't guarantee ===== -->
+    <section class="relative w-full overflow-hidden bg-[#1e2a33]">
+      <!-- background image -->
+      <img
+        src="./images/industry-bg.webp"
+        alt=""
+        class="absolute inset-0 h-full w-full object-cover"
+      />
+      <!-- darken the left side for text legibility -->
+      <div class="max-w-[1440px] mx-auto">
+        <div class="absolute inset-0 bg-black/10"></div>
+
+        <div
+          class="relative z-10 flex flex-col gap-12 px-6 py-16 lg:flex-row lg:items-center lg:justify-between lg:px-12 lg:py-20"
+        >
+          <!-- Left copy -->
+          <div class="w-full md:w-1/2 text-white">
+            <h2 class="heading-2 text-white">
+              What an
+              <br />
+              inexperienced vendor
+              <br />
+              can't guarantee.
+            </h2>
+            <p
+              class="mt-5 max-w-[340px] text-[15px] leading-5 font-light text-gray-300"
+            >
+              Run it on your own equipment or hand it to us as a service &mdash;
+              either way, the same five-stage, audit-ready process applies.
+            </p>
+            <div class="flex mt-10 items-center text-white gap-0 consultation-btn">
+              <button class="py-3 px-8 bg-[#EB9440] rounded-full font-semibold shadow-md cursor-pointer">
+                Learn More
+              </button>
+
+              <button class="w-12 h-12 rounded-full bg-[#EB9440] flex items-center justify-center shadow-md cursor-pointer">
+                <span class="text-xl">↗</span>
+              </button>
+            </div>
+          </div>
+
+          <!-- Right comparison card -->
+          <div
+            class="w-full md:w-1/2 rounded-[22px] bg-[#FFF0E1] p-6 shadow-2xl backdrop-blur-md sm:p-7"
+          >
+            <div class="text-[13px] leading-relaxed overflow-x-auto">
+              <table class="w-full border-separate border-spacing-0">
+                <thead>
+                  <tr>
+                    <th
+                      class="py-3 pr-2 text-left font-semibold text-[#1B2440]"
+                    >
+                      Capability
+                    </th>
+
+                    <!-- Top of outlined column -->
+                    <th
+                      class="rounded-t-2xl border-x border-t border-[#E57000] bg-[#FBE6D0] px-4 py-3 text-left font-semibold text-[#1B2440]"
+                    >
+                      Fractalio
+                    </th>
+
+                    <th
+                      class="py-3 pl-3 text-left font-semibold text-[#1B2440]"
+                    >
+                      Other Vendors
+                    </th>
+                  </tr>
+                </thead>
+
+                <tbody>
+                  <tr>
+                    <td class="py-3 pr-2 text-[#4B5563]">
+                      On-site destruction option
+                    </td>
+
+                    <td
+                      class="border-x border-[#E57000] bg-[#FBE6D0] px-4 py-3 font-semibold text-[#E57000]"
+                    >
+                      Yes
+                    </td>
+
+                    <td class="py-3 pl-3 text-[#4B5563]">Rarely</td>
+                  </tr>
+
+                  <tr>
+                    <td class="py-3 pr-2 text-[#4B5563]">
+                      Photo-verified proof
+                      <br />
+                      (Device ID / serial number)
+                    </td>
+
+                    <td
+                      class="border-x border-[#E57000] bg-[#FBE6D0] px-4 py-3 font-semibold text-[#E57000]"
+                    >
+                      Yes
+                    </td>
+
+                    <td class="py-3 pl-3 text-[#4B5563]">No</td>
+                  </tr>
+
+                  <tr>
+                    <td class="py-3 pr-2 text-[#4B5563]">
+                      Serial-level chain of custody
+                    </td>
+
+                    <td
+                      class="border-x border-[#E57000] bg-[#FBE6D0] px-4 py-3 font-semibold text-[#E57000]"
+                    >
+                      Yes
+                    </td>
+
+                    <td class="py-3 pl-3 text-[#4B5563]">Partial</td>
+                  </tr>
+
+                  <tr>
+                    <td class="py-3 pr-2 text-[#4B5563]">
+                      Certificate turnaround
+                    </td>
+
+                    <td
+                      class="border-x border-[#E57000] bg-[#FBE6D0] px-4 py-3 font-semibold text-[#E57000]"
+                    >
+                      24&ndash;48 hrs
+                    </td>
+
+                    <td class="py-3 pl-3 text-[#4B5563]">1&ndash;2 weeks</td>
+                  </tr>
+
+                  <tr>
+                    <td class="py-3 pr-2 text-[#4B5563]">
+                      Compliance alignment
+                      <br />
+                      (DPDP/ISO/GDPR)
+                    </td>
+
+                    <!-- Bottom of outlined column -->
+                    <td
+                      class="rounded-b-2xl border-x border-b border-[#E57000] bg-[#FBE6D0] px-4 py-3 font-semibold text-[#E57000]"
+                    >
+                      Yes
+                    </td>
+
+                    <td class="py-3 pl-3 text-[#4B5563]">Varies</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="relative overflow-hidden bg-white py-16">
+      <!-- Top Left Circle -->
+      <div
+        class="absolute -top-[60%] left-1/2 -translate-x-1/2 md:left-[-32px] md:translate-x-0"
+      >
+        <div class="w-[320px] h-[320px] bg-[#FFF7EF] p-[32px] rounded-full">
+          <div class="w-full h-full bg-[#FFECDA] rounded-full"></div>
+        </div>
+      </div>
+
+      <!-- Right Circle -->
+      <div
+        class="hidden md:block absolute top-6 -right-[9%] w-52 h-52 rounded-full"
+      >
+        <div class="w-[300px] h-[300px] bg-[#FFF7EF] p-[32px] rounded-full">
+          <div class="w-full h-full bg-[#FFECDA] rounded-full"></div>
+        </div>
+      </div>
+
+      <div class="relative max-w-5xl mx-auto flex flex-col items-center">
+        <!-- Heading -->
+        <h2 class="heading-2 text-center text-[#4B4B4B]">
+          Aligned to the frameworks<br />
+          your auditors cite.
+        </h2>
+
+        <!-- First Row -->
+        <div class="mt-12 flex flex-wrap justify-center gap-4">
+          <button
+            class="h-[36px] px-7 rounded-full border border-[#FF9229] bg-[#FFE5CB4F] text-[#E57000] text-[14px] font-medium leading-none hover:bg-[#FF9229] hover:text-white transition"
+          >
+            DPDP Act (India)
+          </button>
+
+          <button
+            class="h-[36px] px-7 rounded-full border border-[#FF9229] bg-[#FFE5CB4F] text-[#E57000] text-[14px] font-medium leading-none hover:bg-[#FF9229] hover:text-white transition"
+          >
+            ISO 27001
+          </button>
+
+          <button
+            class="h-[36px] px-7 rounded-full border border-[#FF9229] bg-[#FFE5CB4F] text-[#E57000] text-[14px] font-medium leading-none hover:bg-[#FF9229] hover:text-white transition"
+          >
+            GDPR
+          </button>
+
+          <button
+            class="h-[36px] px-7 rounded-full border border-[#FF9229] bg-[#FFE5CB4F] text-[#E57000] text-[14px] font-medium leading-none hover:bg-[#FF9229] hover:text-white transition"
+          >
+            HIPAA
+          </button>
+        </div>
+
+        <!-- Second Row -->
+        <div class="mt-6 flex flex-wrap justify-center gap-4">
+          <button
+            class="h-[36px] px-7 rounded-full border border-[#FF9229] bg-[#FFE5CB4F] text-[#E57000] text-[14px] font-medium leading-none hover:bg-[#FF9229] hover:text-white transition"
+          >
+            PCI DSS
+          </button>
+
+          <button
+            class="h-[36px] px-7 rounded-full border border-[#FF9229] bg-[#FFE5CB4F] text-[#E57000] text-[14px] font-medium leading-none hover:bg-[#FF9229] hover:text-white transition"
+          >
+            NCIIPC Guidelines
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== Real deployments, real outcomes ===== -->
+    <section class="w-full bg-[#F7F7F7] px-4 sm:px-8 lg:px-16 py-16">
+      <div class="max-w-7xl mx-auto">
+        <h2
+          class="text-[32px] sm:text-[34px] leading-[1.1] font-extrabold text-[#1B2440] mb-12"
+        >
+          Real deployments,
+          <br />
+          real outcomes.
+        </h2>
+
+        <div
+          class="flex flex-col md:flex-row md:items-center justify-center gap-6 lg:gap-8"
+        >
+          <!-- Card 1 -->
+          <div
+            class="group relative w-full h-[450px] rounded-[28px] border-[8px] border-[#111a3a] bg-white p-7 overflow-hidden transition-all duration-300 hover:shadow-[0_20px_40px_-12px_rgba(11,18,51,0.45)] hover:-translate-y-1 hover:bg-[radial-gradient(circle_at_bottom_left,rgba(229,112,0,0.67)_0%,rgba(229,112,0,0.18)_43%,rgba(229,112,0,0)_60%),linear-gradient(135deg,#010F37_0%,#0b1638_35%,#121935_70%,#171C35_100%)]"
+          >
+            <span
+              class="inline-block rounded-full bg-[#171C35] px-4 py-1.5 text-[14px] font-medium text-white border border-white"
+            >
+              India . Banking
+            </span>
+
+            <h3
+              class="mt-6 text-[23px] font-bold leading-7 text-[#1B2440] group-hover:text-white"
+            >
+              Nationalised Bank &mdash; Branch IT Refresh
+            </h3>
+
+            <p
+              class="mt-5 text-[14px] leading-relaxed text-[#4B4B4B] group-hover:text-gray-200"
+            >
+              <span class="font-bold text-[#4B4B4B] group-hover:text-white"
+                >Challenge:</span
+              >
+              Large-scale branch hardware refresh across multiple states, with
+              sensitive financial data on-board.
+            </p>
+
+            <p
+              class="mt-4 text-[14px] leading-relaxed text-[#4B4B4B] group-hover:text-gray-200"
+            >
+              <span class="font-bold text-[#4B4B4B] group-hover:text-white"
+                >Outcome:</span
+              >
+              Zero data-recovery incidents, DPDP-aligned audit trail delivered
+              within SLA.
+            </p>
+          </div>
+
+          <!-- Card 2 -->
+          <div
+            class="group relative w-full h-[450px] rounded-[28px] border-[8px] border-[#111a3a] bg-white p-7 overflow-hidden transition-all duration-300 hover:shadow-[0_20px_40px_-12px_rgba(11,18,51,0.45)] hover:-translate-y-1 hover:bg-[radial-gradient(circle_at_bottom_left,rgba(229,112,0,0.67)_0%,rgba(229,112,0,0.18)_43%,rgba(229,112,0,0)_60%),linear-gradient(135deg,#010F37_0%,#0b1638_35%,#121935_70%,#171C35_100%)]"
+          >
+            <span
+              class="inline-block rounded-full bg-[#171C35] px-4 py-1.5 text-[14px] font-medium text-white border border-white"
+            >
+              India &middot; GCC
+            </span>
+
+            <h3
+              class="mt-6 text-[23px] font-bold leading-7 text-[#1B2440] group-hover:text-white"
+            >
+              Global Capability Centre &mdash; Asset Decommission
+            </h3>
+            <p
+              class="mt-5 text-[14px] leading-relaxed text-[#4B4B4B] group-hover:text-gray-200"
+            >
+              <span class="font-bold text-[#4B4B4B] group-hover:text-white"
+                >Challenge:</span
+              >
+              Large-scale branch hardware refresh across multiple states, with
+              sensitive financial data on-board.
+            </p>
+            <p
+              class="mt-4 text-[14px] leading-relaxed text-[#4B4B4B] group-hover:text-gray-200"
+            >
+              <span class="font-bold text-[#4B4B4B] group-hover:text-white"
+                >Outcome:</span
+              >
+              Zero data-recovery incidents, DPDP-aligned audit trail delivered
+              within SLA.
+            </p>
+          </div>
+
+          <!-- Card 3 -->
+          <div
+            class="group relative w-full h-[450px] rounded-[28px] border-[8px] border-[#111a3a] bg-white p-7 overflow-hidden transition-all duration-300 hover:shadow-[0_20px_40px_-12px_rgba(11,18,51,0.45)] hover:-translate-y-1 hover:bg-[radial-gradient(circle_at_bottom_left,rgba(229,112,0,0.67)_0%,rgba(229,112,0,0.18)_43%,rgba(229,112,0,0)_60%),linear-gradient(135deg,#010F37_0%,#0b1638_35%,#121935_70%,#171C35_100%)]"
+          >
+            <span
+              class="inline-block rounded-full bg-[#171C35] px-4 py-1.5 text-[14px] font-medium text-white border border-white"
+            >
+              India &middot; Data Center
+            </span>
+
+            <h3
+              class="mt-6 text-[23px] font-bold leading-7 text-[#1B2440] group-hover:text-white"
+            >
+              Recurring Drive Destruction
+            </h3>
+
+            <p
+              class="mt-5 text-[14px] leading-relaxed text-[#4B4B4B] group-hover:text-gray-200"
+            >
+              <span class="font-bold text-[#4B4B4B] group-hover:text-white"
+                >Challenge:</span
+              >
+              Large-scale branch hardware refresh across multiple states, with
+              sensitive financial data on-board.
+            </p>
+
+            <p
+              class="mt-5 text-[14px] leading-relaxed text-[#4B4B4B] group-hover:text-gray-200"
+            >
+              <span class="font-bold text-[#4B4B4B] group-hover:text-white"
+                >Outcome:</span
+              >
+              Zero data-recovery incidents, DPDP-aligned audit trail delivered
+              within SLA.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="w-full bg-[#F7F7F7] py-16">
+      <section class="relative w-full overflow-hidden bg-[#1e2a33]">
+        <!-- background image -->
+        <img
+          src="./images/bg-process.png"
+          alt=""
+          class="absolute inset-0 z-0 h-full w-full object-cover"
+        />
+
+        <div class="relative z-10">
+          <div class="flex flex-col lg:flex-row items-center gap-10 lg:gap-6">
+            <div class="w-full lg:w-[40%] px-5 sm:px-8 lg:px-10 pt-10 md:pt-0">
+              <h2 class="heading-2 text-white">
+                Improper end-of-life data handling has a price tag.
+              </h2>
+              <p
+                class="mt-5 max-w-full lg:max-w-[340px] text-sm sm:text-[15px] leading-6 font-light text-gray-300"
+              >
+                These are real, publicly reported
+                <br />
+                penalties tied to end-of-life data failures
+                <br />
+                — not hypotheticals.
+              </p>
+            </div>
+
+            <div class="w-full lg:w-[60%]">
+              <div class="h-[536px] mb-20">
+                <div class="flex justify-end gap-4 px-5 lg:px-10 mb-8 pt-14">
+                  <button
+                    id="scrollLeft"
+                    class="w-12 h-12 lg:w-14 lg:h-14 bg-white rounded-full flex justify-center items-center shadow-lg"
+                  >
+                    <svg
+                      width="16"
+                      height="12"
+                      viewBox="0 0 16 12"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M6 12L7.4 10.55L3.85 7H16V5H3.85L7.4 1.45L6 0L0 6L6 12Z"
+                        fill="#2D2D2D"
+                      />
+                    </svg>
+                  </button>
+
+                  <button
+                    id="scrollRight"
+                    class="w-12 h-12 lg:w-14 lg:h-14 bg-[#FF7D00] rounded-full flex justify-center items-center shadow-lg"
+                  >
+                    <svg
+                      width="16"
+                      height="12"
+                      viewBox="0 0 16 12"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                    >
+                      <path
+                        d="M10 12L8.6 10.55L12.15 7H0V5H12.15L8.6 1.45L10 0L16 6L10 12Z"
+                        fill="white"
+                      />
+                    </svg>
+                  </button>
+                </div>
+
+                <!-- Roadmap Container -->
+                <div
+                  id="cardsContainer"
+                  class="relative w-full h-full overflow-x-auto scrollbar-hide pt-4"
+                >
+                  <div class="flex gap-[50px] px-4">
+                    <!-- Card 1 -->
+                    <div
+                      class="relative min-w-[450px] min-h-[180px] flex justify-center items-end gap-4 translate-y-[13rem] z-20"
+                    >
+                      <div
+                        class="relative w-[200px] h-[186px] flex-shrink-0 rounded-[24px] overflow-hidden"
+                      >
+                        <img
+                          src="./images/process1.png"
+                          alt=""
+                          class="w-full h-full object-cover"
+                        />
+
+                        <!-- Overlay Amount -->
+                        <div class="absolute top-[20%] left-5 text-white">
+                          <h2 class="text-[50px] leading-none font-extrabold">
+                            $35M
+                          </h2>
+                          <p class="mt-2 text-[15px] font-normal">
+                            Morgan Stanley
+                          </p>
+                        </div>
+                      </div>
+                      <div class="mb-6">
+                        <p
+                          class="text-white text-[13px] leading-[1.35] font-light"
+                        >
+                          SEC penalty after <br />
+                          decommissioned servers and hard
+                          <br />
+                          drives containing customer data <br />
+                          were improperly disposed of, <br />
+                          including some sold at <br />
+                          online auction.
+                        </p>
+                      </div>
+                    </div>
+
+                    <!-- Card 2 (shifted down) -->
+                    <div
+                      class="relative min-w-[450px] min-h-[180px] flex justify-center items-end gap-2 shadow-md z-20 -translate-x-[21%]"
+                    >
+                      <div
+                        class="relative w-[200px] h-[186px] flex-shrink-0 rounded-[24px] overflow-hidden"
+                      >
+                        <img
+                          src="./images/process2.png"
+                          alt=""
+                          class="w-full h-full object-cover"
+                        />
+
+                        <!-- Overlay Amount -->
+                        <div class="absolute top-[20%] left-5 text-white">
+                          <h2 class="text-[50px] leading-none font-extrabold">
+                            $1.2M
+                          </h2>
+                          <p class="mt-2 text-[15px] font-normal">
+                            Affinity Health Plan
+                          </p>
+                        </div>
+                      </div>
+                      <div class="mb-6">
+                        <p
+                          class="text-white text-[13px] leading-[1.35] font-light"
+                        >
+                          HIPAA fine after a leased office
+                          <br />
+                          photocopier's hard drive, <br />containing patient
+                          data, was <br />returned unwiped and later
+                          <br />discovered.
+                        </p>
+                      </div>
+                    </div>
+
+                    <!-- Card 3 -->
+                    <div
+                      class="relative min-w-[450px] min-h-[180px] flex justify-center items-end gap-2 shadow-md translate-y-[10.5rem] -translate-x-[21%] z-20"
+                    >
+                      <div
+                        class="relative w-[200px] h-[186px] flex-shrink-0 rounded-[24px] overflow-hidden"
+                      >
+                        <img
+                          src="./images/process1.png"
+                          alt=""
+                          class="w-full h-full object-cover"
+                        />
+
+                        <!-- Overlay Amount -->
+                        <div class="absolute top-[20%] left-5 text-white">
+                          <h2 class="text-[50px] leading-none font-extrabold">
+                            $1.2M
+                          </h2>
+                          <p class="mt-2 text-[15px] font-normal">
+                            Affinity Health Plan
+                          </p>
+                        </div>
+                      </div>
+                      <div class="mb-6">
+                        <p
+                          class="text-white text-[13px] leading-[1.35] font-light"
+                        >
+                          HIPAA fine after a leased office
+                          <br />
+                          photocopier's hard drive, <br />containing patient
+                          data, was <br />returned unwiped and later
+                          <br />discovered.
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- BOTTOM SECTION -->
+          <div
+            class="grid grid-cols-2 md:grid-cols-4 border-l border-b border-white/47"
+          >
+            <div
+              class="flex flex-col sm:flex-row justify-center items-center gap-2 sm:gap-4 p-5 border-t border-r border-white/47 text-white text-center sm:text-left"
+            >
+              <h3 class="text-3xl sm:text-4xl lg:text-[45px] font-bold">10+</h3>
+              <p class="text-xs sm:text-sm leading-4">
+                Years of <br class="hidden sm:block" />
+                Experience
+              </p>
+            </div>
+
+            <div
+              class="flex flex-col sm:flex-row justify-center items-center gap-2 sm:gap-4 p-5 border-t border-r border-white/47 text-white text-center sm:text-left"
+            >
+              <h3 class="text-3xl sm:text-4xl lg:text-[45px] font-bold">5k+</h3>
+              <p class="text-xs sm:text-sm leading-4">
+                Enterprises <br class="hidden sm:block" />
+                Served
+              </p>
+            </div>
+
+            <div
+              class="flex flex-col sm:flex-row justify-center items-center gap-2 sm:gap-4 p-5 border-t border-r border-white/47 text-white text-center sm:text-left"
+            >
+              <h3 class="text-3xl sm:text-4xl lg:text-[45px] font-bold">2M+</h3>
+              <p class="text-xs sm:text-sm leading-4">
+                Drives <br class="hidden sm:block" />
+                Destroyed
+              </p>
+            </div>
+
+            <div
+              class="flex flex-col sm:flex-row justify-center items-center gap-2 sm:gap-4 p-5 border-t border-r border-white/47 text-white text-center sm:text-left"
+            >
+              <h3 class="text-3xl sm:text-4xl lg:text-[45px] font-bold">
+                100%
+              </h3>
+              <p class="text-xs sm:text-sm leading-4">
+                Verified <br class="hidden sm:block" />
+                Destruction
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+    </section>
+
+    <section
+      class="w-full relative max-w-[1440px] mx-auto px-4 lg:px-12 mt-8 md:mt-20"
+    >
+      <h2
+        data-aos="zoom-in-up"
+        class="text-[#111827] text-4xl font-bold text-center"
+      >
+        Common questions from IT and compliance teams.
+      </h2>
+
+     
+
+      <div
+        class="flex flex-col md:flex-row justify-center items-start gap-4 lg:gap-10 mt-10"
+      >
+        <!-- Left Slide -->
+        <!--<div data-aos="zoom-in" class="w-full md:w-2/5 flex justify-center">-->
+        <!--  <div class="max-w-[420px] aspect-[41/50]">-->
+        <!--    <img-->
+        <!--      src="./images/faq.png"-->
+        <!--      alt="Waiting Lounge"-->
+        <!--      class="w-full h-full object-cover rounded-tr-[48px] rounded-b-[48px]"-->
+        <!--    />-->
+        <!--  </div>-->
+        <!--</div>-->
+
+        <!-- Right Side -->
+        <div class="w-full md:w-4/5 faq-wrapper space-y-4">
+          <!-- Item 1 -->
+          <div class="faq-accordion-item overflow-hidden">
+            <button
+              class="faq-accordion-btn w-full flex justify-between items-center px-6 py-4 text-left rounded-lg transition-all duration-300"
+            >
+              <h3 class="text-[18px] font-medium">
+                What is the difference between degaussing and physical destruction?
+              </h3>
+              <svg
+                class="w-5 h-5 transition-transform duration-300"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="m5 15 7-7 7 7"
+                />
+              </svg>
+            </button>
+
+            <div
+              class="faq-accordion-content max-h-0 overflow-hidden transition-all duration-500 ease-in-out px-6"
+            >
+              <p class="py-4 text-[#4C4C4C] text-[16px]">
+                Degaussing uses a powerful magnetic field to erase the magnetic domains on media like HDDs and tapes, rendering the stored data unreadable while the drive itself stays intact. Physical destruction crushes, shreds, or punctures the media, including its internal controller and memory chips. SSDs and flash media store data electronically rather than magnetically, so they don't respond to degaussing and require physical destruction to guarantee unrecoverable data.
+              </p>
+            </div>
+          </div>
+
+          <!-- Item 1 -->
+          <div class="faq-accordion-item overflow-hidden">
+            <button
+              class="faq-accordion-btn w-full flex justify-between items-center px-6 py-4 text-left rounded-lg transition-all duration-300"
+            >
+              <h3 class="text-[18px] font-medium">
+                Is on-site data destruction available in India?
+              </h3>
+              <svg
+                class="w-5 h-5 transition-transform duration-300"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="m5 15 7-7 7 7"
+                />
+              </svg>
+            </button>
+
+            <div
+              class="faq-accordion-content max-h-0 overflow-hidden transition-all duration-500 ease-in-out px-6"
+            >
+              <p class="py-4 text-[#4C4C4C] text-[16px]">
+                Yes. Fractalio performs data destruction directly at a customer's facility across India, so sensitive media never leaves the premises before it is destroyed. This closes the chain-of-custody gap that comes with shipping drives to an off-site facility.
+              </p>
+            </div>
+          </div>
+
+          <!-- Item 1 -->
+          <div class="faq-accordion-item overflow-hidden">
+            <button
+              class="faq-accordion-btn w-full flex justify-between items-center px-6 py-4 text-left rounded-lg transition-all duration-300"
+            >
+              <h3 class="text-[18px] font-medium">
+                Do you provide a certificate of destruction and audit documentation?
+              </h3>
+              <svg
+                class="w-5 h-5 transition-transform duration-300"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="m5 15 7-7 7 7"
+                />
+              </svg>
+            </button>
+
+            <div
+              class="faq-accordion-content max-h-0 overflow-hidden transition-all duration-500 ease-in-out px-6"
+            >
+              <p class="py-4 text-[#4C4C4C] text-[16px]">
+                Yes. Every destruction event is logged with a full, auditable chain-of-custody record, which customers can use to satisfy internal IT audits and external regulatory reviews.
+              </p>
+            </div>
+          </div>
+          
+          <!-- Item 1 -->
+          <div class="faq-accordion-item overflow-hidden">
+            <button
+              class="faq-accordion-btn w-full flex justify-between items-center px-6 py-4 text-left rounded-lg transition-all duration-300"
+            >
+              <h3 class="text-[18px] font-medium">
+                How does this relate to India's DPDP Act and other compliance frameworks?
+              </h3>
+              <svg
+                class="w-5 h-5 transition-transform duration-300"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="m5 15 7-7 7 7"
+                />
+              </svg>
+            </button>
+
+            <div
+              class="faq-accordion-content max-h-0 overflow-hidden transition-all duration-500 ease-in-out px-6"
+            >
+              <p class="py-4 text-[#4C4C4C] text-[16px]">
+                Fractalio's destruction and documentation practices are designed to support the data sanitization and security-safeguard obligations referenced under India's Digital Personal Data Protection Act, as well as frameworks like ISO 27001, GDPR, HIPAA, and PCI DSS. Customers should confirm specifics with their own compliance and legal teams, since regulatory requirements vary by sector and jurisdiction.
+              </p>
+            </div>
+          </div>
+          
+          <!-- Item 1 -->
+          <div class="faq-accordion-item overflow-hidden">
+            <button
+              class="faq-accordion-btn w-full flex justify-between items-center px-6 py-4 text-left rounded-lg transition-all duration-300"
+            >
+              <h3 class="text-[18px] font-medium">
+                What types of media and devices can be destroyed?
+              </h3>
+              <svg
+                class="w-5 h-5 transition-transform duration-300"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="m5 15 7-7 7 7"
+                />
+              </svg>
+            </button>
+
+            <div
+              class="faq-accordion-content max-h-0 overflow-hidden transition-all duration-500 ease-in-out px-6"
+            >
+              <p class="py-4 text-[#4C4C4C] text-[16px]">
+                Fractalio handles hard disk drives (HDD), solid-state drives (SSD), magnetic tape, flash media, and smartphones, using degaussing for magnetic media and physical shredding or crushing for SSDs and other non-magnetic media.
+              </p>
+            </div>
+          </div>
+          
+          <!-- Item 1 -->
+          <div class="faq-accordion-item overflow-hidden">
+            <button
+              class="faq-accordion-btn w-full flex justify-between items-center px-6 py-4 text-left rounded-lg transition-all duration-300"
+            >
+              <h3 class="text-[18px] font-medium">
+                What happens to the destroyed hardware afterward?
+              </h3>
+              <svg
+                class="w-5 h-5 transition-transform duration-300"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+              >
+                <path
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  stroke-width="2"
+                  d="m5 15 7-7 7 7"
+                />
+              </svg>
+            </button>
+
+            <div
+              class="faq-accordion-content max-h-0 overflow-hidden transition-all duration-500 ease-in-out px-6"
+            >
+              <p class="py-4 text-[#4C4C4C] text-[16px]">
+                Destroyed media is processed through eco-friendly recycling practices as part of the same auditable workflow, so disposal is documented alongside the destruction event itself.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <div class="relative flex flex-col-reverse md:block">
+      <footer
+        class="footer relative mt-16 min-h-[540px] md:min-h-[500px] overflow-hidden"
+      >
+        <div
+          class="footer-bg absolute left-1/2 -translate-x-1/2 top-0 w-screen h-full"
+        ></div>
+
+        <div
+          class="relative z-10 p-10 text-white px-6 sm:px-12 lg:px-24 pt-16 lg:pt-30"
+        >
+          <img class="w-[143px] h-[185px]" src="./images/logo.png" alt="LOGO" />
+
+          <!-- <div class="pt-10 space-y-4">
+                    <a href="/#" class="block text-[20px] font-medium">
+                        Private Policy
+                    </a>
+
+                    <a href="/#" class="block text-[20px] font-medium">
+                        Terms & Condition
+                    </a>
+                </div> -->
+        </div>
+
+        <div class="absolute bottom-0 left-0 z-20 w-full bg-[#E57000] py-2">
+          <div
+            class="mx-8 flex flex-col items-center justify-between gap-2 md:gap-4 md:flex-row"
+          >
+            <p class="text-md text-white font-medium text-center">
+              © 2026 All rights reserved
+            </p>
+            <p class="text-md text-white font-medium text-center">
+              Designed & Developed by
+              <a href="https://adzestudio.com/" target="_blank">Adze Studio</a>
+            </p>
+
+            <div
+              class="flex items-center justify-center gap-2.5 bg-no-repeat bg-top bg-cover pl-8 pr-16 py-3"
+            >
+              <!--<a href="#" target="_blank">-->
+              <!--  <svg-->
+              <!--    width="23"-->
+              <!--    height="23"-->
+              <!--    viewBox="0 0 23 23"-->
+              <!--    fill="none"-->
+              <!--    xmlns="http://www.w3.org/2000/svg"-->
+              <!--  >-->
+              <!--    <path-->
+              <!--      d="M15.6687 4.41602H13.5709C12.6435 4.41602 11.7542 4.78439 11.0985 5.4401C10.4428 6.0958 10.0744 6.98514 10.0744 7.91245V10.0103H7.97656V12.8074H10.0744V18.4017H12.8716V12.8074H14.9694L15.6687 10.0103H12.8716V7.91245C12.8716 7.72698 12.9452 7.54912 13.0764 7.41798C13.2075 7.28683 13.3854 7.21316 13.5709 7.21316H15.6687V4.41602Z"-->
+              <!--      fill="white"-->
+              <!--    />-->
+              <!--    <path-->
+              <!--      d="M22.3178 11.4089C22.3178 17.4337 17.4337 22.3178 11.4089 22.3178C5.38409 22.3178 0.5 17.4337 0.5 11.4089C0.5 5.38409 5.38409 0.5 11.4089 0.5C17.4337 0.5 22.3178 5.38409 22.3178 11.4089Z"-->
+              <!--      stroke="white"-->
+              <!--    />-->
+              <!--  </svg>-->
+              <!--</a>-->
+              <!--<a href="#" target="_blank">-->
+              <!--  <svg-->
+              <!--    width="23"-->
+              <!--    height="23"-->
+              <!--    viewBox="0 0 23 23"-->
+              <!--    fill="none"-->
+              <!--    xmlns="http://www.w3.org/2000/svg"-->
+              <!--  >-->
+              <!--    <g clip-path="url(#clip0_410_917)">-->
+              <!--      <path-->
+              <!--        d="M14.2664 5.81458H8.67214C7.12732 5.81458 5.875 7.0669 5.875 8.61172V14.206C5.875 15.7508 7.12732 17.0032 8.67214 17.0032H14.2664C15.8113 17.0032 17.0636 15.7508 17.0636 14.206V8.61172C17.0636 7.0669 15.8113 5.81458 14.2664 5.81458Z"-->
+              <!--        stroke="white"-->
+              <!--        stroke-linecap="round"-->
+              <!--        stroke-linejoin="round"-->
+              <!--      />-->
+              <!--      <path-->
+              <!--        d="M13.709 11.0565C13.7781 11.522 13.6986 11.9975 13.4818 12.4153C13.265 12.8331 12.922 13.1719 12.5016 13.3835C12.0812 13.5951 11.6047 13.6688 11.14 13.594C10.6753 13.5192 10.246 13.2998 9.91323 12.967C9.58041 12.6342 9.36101 12.2049 9.28623 11.7402C9.21146 11.2755 9.28511 10.7991 9.49672 10.3786C9.70834 9.95821 10.0471 9.61522 10.4649 9.39844C10.8827 9.18166 11.3582 9.10214 11.8238 9.17118C12.2987 9.2416 12.7383 9.4629 13.0778 9.80239C13.4173 10.1419 13.6386 10.5815 13.709 11.0565Z"-->
+              <!--        stroke="white"-->
+              <!--        stroke-linecap="round"-->
+              <!--        stroke-linejoin="round"-->
+              <!--      />-->
+              <!--      <path-->
+              <!--        d="M14.5469 8.33203H14.5525"-->
+              <!--        stroke="white"-->
+              <!--        stroke-linecap="round"-->
+              <!--        stroke-linejoin="round"-->
+              <!--      />-->
+              <!--    </g>-->
+              <!--    <path-->
+              <!--      d="M22.3178 11.4089C22.3178 17.4337 17.4337 22.3178 11.4089 22.3178C5.38409 22.3178 0.5 17.4337 0.5 11.4089C0.5 5.38409 5.38409 0.5 11.4089 0.5C17.4337 0.5 22.3178 5.38409 22.3178 11.4089Z"-->
+              <!--      stroke="white"-->
+              <!--    />-->
+              <!--    <defs>-->
+              <!--      <clipPath id="clip0_410_917">-->
+              <!--        <rect-->
+              <!--          width="13.4263"-->
+              <!--          height="13.4263"-->
+              <!--          fill="white"-->
+              <!--          transform="translate(4.75781 4.69574)"-->
+              <!--        />-->
+              <!--      </clipPath>-->
+              <!--    </defs>-->
+              <!--  </svg>-->
+              <!--</a>-->
+              <!--<a href="#" target="_blank">-->
+              <!--  <svg-->
+              <!--    width="23"-->
+              <!--    height="23"-->
+              <!--    viewBox="0 0 23 23"-->
+              <!--    fill="none"-->
+              <!--    xmlns="http://www.w3.org/2000/svg"-->
+              <!--  >-->
+              <!--    <path-->
+              <!--      d="M22.3178 11.4089C22.3178 17.4337 17.4337 22.3178 11.4089 22.3178C5.38409 22.3178 0.5 17.4337 0.5 11.4089C0.5 5.38409 5.38409 0.5 11.4089 0.5C17.4337 0.5 22.3178 5.38409 22.3178 11.4089Z"-->
+              <!--      stroke="white"-->
+              <!--    />-->
+              <!--    <path-->
+              <!--      d="M13.4292 9.45093C14.2081 9.45093 14.9552 9.76036 15.506 10.3112C16.0568 10.862 16.3662 11.609 16.3662 12.3879V15.8144H14.4082V12.3879C14.4082 12.1283 14.305 11.8793 14.1214 11.6957C13.9378 11.5121 13.6888 11.4089 13.4292 11.4089C13.1695 11.4089 12.9205 11.5121 12.7369 11.6957C12.5533 11.8793 12.4502 12.1283 12.4502 12.3879V15.8144H10.4922V12.3879C10.4922 11.609 10.8016 10.862 11.3524 10.3112C11.9032 9.76036 12.6502 9.45093 13.4292 9.45093Z"-->
+              <!--      fill="white"-->
+              <!--    />-->
+              <!--    <path-->
+              <!--      d="M8.53613 9.94043H6.57812V15.8144H8.53613V9.94043Z"-->
+              <!--      fill="white"-->
+              <!--    />-->
+              <!--    <path-->
+              <!--      d="M7.55713 8.47192C8.09781 8.47192 8.53613 8.0336 8.53613 7.49292C8.53613 6.95223 8.09781 6.51392 7.55713 6.51392C7.01644 6.51392 6.57812 6.95223 6.57812 7.49292C6.57812 8.0336 7.01644 8.47192 7.55713 8.47192Z"-->
+              <!--      fill="white"-->
+              <!--    />-->
+              <!--  </svg>-->
+              <!--</a>-->
+              
+              <!--9886270195-->
+              
+              <a href="tel:+919845069650">
+                <svg
+                  width="30"
+                  height="30"
+                  viewBox="0 0 23 23"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M22.3178 11.4089C22.3178 17.4337 17.4337 22.3178 11.4089 22.3178C5.38409 22.3178 0.5 17.4337 0.5 11.4089C0.5 5.38409 5.38409 0.5 11.4089 0.5C17.4337 0.5 22.3178 5.38409 22.3178 11.4089Z"
+                    stroke="white"
+                  />
+                  <path
+                    d="M14.9132 15.6133L14.1354 17.7121C14.0789 17.8647 13.9811 17.973 13.8422 18.0367C13.7035 18.1003 13.5583 18.1043 13.4059 18.0479C12.328 17.6485 11.3495 17.0186 10.4714 16.1585C9.59336 15.2985 8.88256 14.2773 8.33959 13.095C7.79662 11.9126 7.4853 10.708 7.40515 9.4816C7.32503 8.2551 7.48495 7.10234 7.88438 6.02449C7.94089 5.87215 8.03861 5.76456 8.17722 5.70081C8.31606 5.63705 8.46192 5.63343 8.61449 5.68997L10.7133 6.46776C10.8224 6.50829 10.9074 6.58244 10.9679 6.69126C11.0284 6.80025 11.0537 6.92029 11.0437 7.05157L11.045 7.051L10.7439 8.97341L10.7452 8.97284C10.718 9.09814 10.6613 9.21566 10.5771 9.32507C10.4929 9.43446 10.3983 9.51282 10.294 9.56071L8.61601 10.3313L8.61787 10.3403C8.68633 10.7394 8.78064 11.1285 8.90082 11.5075C8.99098 11.7917 9.09468 12.0731 9.21213 12.3508L9.33458 12.6274C9.50551 13.0152 9.69616 13.3835 9.90635 13.7318C10.1166 14.0802 10.3496 14.4002 10.6056 14.6919L10.6121 14.6995L10.62 14.6951L12.3557 13.9095C12.4484 13.8669 12.546 13.8495 12.6484 13.8586C12.7508 13.8677 12.8672 13.9066 12.9981 13.9746L12.9993 13.9741L14.6866 14.9826C14.7896 15.0399 14.8644 15.13 14.9103 15.253C14.9561 15.3756 14.9568 15.4955 14.9132 15.6133Z"
+                    fill="white"
+                    stroke="white"
+                    stroke-width="0.025"
+                  />
+                </svg>
+              </a>
+              
+              
+              
+              <a href="mailto:info@fractalio.com">
+                <svg
+                  width="30"
+                  height="30"
+                  viewBox="0 0 23 23"
+                  fill="none"
+                  xmlns="http://www.w3.org/2000/svg"
+                >
+                  <path
+                    d="M22.3178 11.4089C22.3178 17.4337 17.4337 22.3178 11.4089 22.3178C5.38409 22.3178 0.5 17.4337 0.5 11.4089C0.5 5.38409 5.38409 0.5 11.4089 0.5C17.4337 0.5 22.3178 5.38409 22.3178 11.4089Z"
+                    stroke="white"
+                  />
+                  <mask
+                    id="mask0_410_908"
+                    style="mask-type: alpha"
+                    maskUnits="userSpaceOnUse"
+                    x="3"
+                    y="4"
+                    width="16"
+                    height="16"
+                  >
+                    <rect
+                      x="3.79688"
+                      y="4.67737"
+                      width="14.3021"
+                      height="14.3021"
+                      fill="#D9D9D9"
+                      stroke="white"
+                    />
+                  </mask>
+                  <g mask="url(#mask0_410_908)">
+                    <path
+                      d="M5.84961 6.74048H16.0508C16.3981 6.74048 16.695 6.86418 16.9424 7.11157C17.1897 7.35895 17.3135 7.65589 17.3135 8.00317V15.6536C17.3135 16.0009 17.1898 16.2987 16.9424 16.5461C16.695 16.7934 16.398 16.9163 16.0508 16.9163H5.84961C5.50245 16.9163 5.20533 16.7933 4.95801 16.5461C4.71061 16.2987 4.58691 16.0009 4.58691 15.6536V8.00317C4.58691 7.65584 4.71061 7.35897 4.95801 7.11157C5.2054 6.86418 5.50228 6.74048 5.84961 6.74048ZM16.0439 7.99243L10.9502 11.175L5.85645 7.99243L5.83691 7.98071V9.27856H5.82617L5.84277 9.28833L10.9434 12.4768L10.9346 12.4905L10.957 12.4768L16.0576 9.28833L16.0635 9.2981V7.98071L16.0439 7.99243Z"
+                      fill="white"
+                      stroke="white"
+                      stroke-width="0.025"
+                    />
+                  </g>
+                </svg>
+              </a>
+              
+              
+            </div>
+          </div>
+        </div>
+      </footer>
+
+      <div
+      id="consultation-form"
+        class="relative md:absolute md:top-[35%] md:right-[20%] z-50 flex justify-center px-4 md:px-0 mt-8 md:mt-0"
+      >
+        <!--<div-->
+        <!--  class="relative w-full max-w-[420px] md:w-[380px] bg-[#FFFFFFF2] p-8 border border-[#F3F4F6] rounded-tl-[32px] rounded-bl-[16px] rounded-br-[55px] shadow-[0px_25px_50px_-12px_rgba(0,0,0,0.25)]"-->
+        <!-- > -->
+        <!--  <h3 class="text-xl font-bold text-[#111827]">Let's Connect</h3>-->
+        <!--  <p class="text-[#6B7280] mt-1 text-xs">-->
+        <!--    Get a quote customized for your team.-->
+        <!--  </p>-->
+
+        <!--  <form class="mt-6 space-y-4 space-form">-->
+        <!--    <input-->
+        <!--      type="text"-->
+        <!--      placeholder="Full Name"-->
+        <!--      class="w-full px-4 py-2 border-[0.8px] bg-[#F9FAFB] border-[#E5E7EB] text-[#111827] placeholder:text-[15px] placeholder:font-normal placeholder:text-[#A9A9A9] rounded-[8px]"-->
+        <!--    />-->
+
+        <!--    <input-->
+        <!--      type="text"-->
+        <!--      placeholder="Work Email"-->
+        <!--      class="w-full px-4 py-2 border-[0.8px] bg-[#F9FAFB] border-[#E5E7EB] text-[#111827] placeholder:text-[15px] placeholder:font-normal placeholder:text-[#A9A9A9] rounded-[8px]"-->
+        <!--    />-->
+
+        <!--    <input-->
+        <!--      type="text"-->
+        <!--      placeholder="Phone Number"-->
+        <!--      class="w-full px-4 py-2 border-[0.8px] bg-[#F9FAFB] border-[#E5E7EB] text-[#111827] placeholder:text-[15px] placeholder:font-normal placeholder:text-[#A9A9A9] rounded-[8px]"-->
+        <!--    />-->
+
+        <!--    <button-->
+        <!--      type="submit"-->
+        <!--      class="w-full bg-[#FF7D00] text-white py-2 text-4 rounded-lg font-normal hover:bg-gray-800 transition"-->
+        <!--    >-->
+        <!--      Send-->
+        <!--    </button>-->
+        <!--  </form>-->
+
+        <!--  <div-->
+        <!--    class="absolute -top-4 -right-4 bg-[#FF7D00] w-11 h-11 rounded-full flex items-center justify-center text-white shadow-lg"-->
+        <!--  >-->
+        <!--    <svg-->
+        <!--      width="20"-->
+        <!--      height="20"-->
+        <!--      viewBox="0 0 20 20"-->
+        <!--      fill="none"-->
+        <!--      xmlns="http://www.w3.org/2000/svg"-->
+        <!--    >-->
+        <!--      <path-->
+        <!--        d="M11.2487 5.41663L14.582 8.74997M3.33203 16.6666H6.66536L15.4154 7.91663C15.6342 7.69776 15.8079 7.43793 15.9263 7.15196C16.0448 6.86599 16.1057 6.5595 16.1057 6.24997C16.1057 5.94044 16.0448 5.63394 15.9263 5.34797C15.8079 5.06201 15.6342 4.80217 15.4154 4.5833C15.1965 4.36443 14.9367 4.19081 14.6507 4.07236C14.3647 3.95391 14.0582 3.89294 13.7487 3.89294C13.4392 3.89294 13.1327 3.95391 12.8467 4.07236C12.5607 4.19081 12.3009 4.36443 12.082 4.5833L3.33203 13.3333V16.6666Z"-->
+        <!--        stroke="white"-->
+        <!--        stroke-width="1.5"-->
+        <!--        stroke-linecap="round"-->
+        <!--        stroke-linejoin="round"-->
+        <!--      />-->
+        <!--    </svg>-->
+        <!--  </div>-->
+        <!--</div>-->
+        
+         <div class="mt-8 flex flex-col md:flex-row item-start md:item-center gap-6 ">
+
+
+<!-- Phone -->
+<a
+  href="tel:+919845069650"
+  class="group flex items-center gap-4 p-4 rounded-xl border border-gray-200 bg-white hover:bg-blue-50 hover:border-[#0A4DA2] md:border-white/15 md:bg-white/10 md:backdrop-blur-sm md:hover:bg-white/20 md:hover:border-white/30 transition-all duration-300"
+>
+  <div
+    class="w-12 h-12 rounded-full bg-[#0A4DA2] text-white md:bg-white md:text-[#0A4DA2] flex items-center justify-center shrink-0 transition-transform duration-300 group-hover:scale-110"
+  >
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      class="w-5 h-5"
+      fill="none"
+      viewBox="0 0 24 24"
+      stroke="currentColor"
+      stroke-width="2"
+    >
+      <path
+        stroke-linecap="round"
+        stroke-linejoin="round"
+        d="M3 5a2 2 0 012-2h2.28a2 2 0 011.94 1.515l.516 2.064a2 2 0 01-.45 1.88l-1.273 1.272a16.001 16.001 0 006.364 6.364l1.272-1.273a2 2 0 011.88-.45l2.064.516A2 2 0 0121 18.72V21a2 2 0 01-2 2h-1C9.716 23 1 14.284 1 4V3a2 2 0 012-2z"
+      />
+    </svg>
+  </div>
+
+  <div>
+    <p class="text-sm text-gray-500 md:text-white/70">Call Us</p>
+    <p
+      class="font-semibold text-[#111827] md:text-white md:group-hover:text-white"
+    >
+      +91 98450 69650
+    </p>
+  </div>
+</a>
+
+<!-- Email -->
+<a
+  href="mailto:info@fractalio.com"
+  class="group mt-4 flex items-center gap-4 p-4 rounded-xl border border-gray-200 bg-white hover:bg-blue-50 hover:border-[#0A4DA2] md:border-white/15 md:bg-white/10 md:backdrop-blur-sm md:hover:bg-white/20 md:hover:border-white/30 transition-all duration-300"
+>
+  <div
+    class="w-12 h-12 rounded-full bg-[#0A4DA2] text-white md:bg-white md:text-[#0A4DA2] flex items-center justify-center shrink-0 transition-transform duration-300 group-hover:scale-110"
+  >
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      class="w-5 h-5"
+      fill="none"
+      viewBox="0 0 24 24"
+      stroke="currentColor"
+      stroke-width="2"
+    >
+      <path
+        stroke-linecap="round"
+        stroke-linejoin="round"
+        d="M3 8l9 6 9-6m0 8H3a2 2 0 01-2-2V8a2 2 0 012-2h18a2 2 0 012 2v6a2 2 0 01-2 2z"
+      />
+    </svg>
+  </div>
+
+  <div>
+    <p class="text-sm text-gray-500 md:text-white/70">Email Us</p>
+    <p
+      class="font-semibold text-[#111827] md:text-white md:group-hover:text-white break-all"
+    >
+      info@fractalio.com
+    </p>
+  </div>
+</a>
+
+    </div>
+        
+      </div>
+    </div>
+    
+    <!-- Floating WhatsApp Button -->
+<a
+  href="https://wa.me/919845069650"
+  target="_blank"
+  rel="noopener noreferrer"
+  aria-label="Chat on WhatsApp"
+  class="fixed bottom-8 right-6 z-[9999] group"
+>
+  <div
+    class="relative flex items-center justify-center w-16 h-16 rounded-full bg-[#25D366] shadow-[0_8px_30px_rgba(37,211,102,0.45)] transition-all duration-300 hover:scale-110 hover:shadow-[0_12px_40px_rgba(37,211,102,0.6)]"
+  >
+    <!-- Pulse Animation -->
+    <span
+      class="absolute inset-0 rounded-full bg-[#25D366] animate-ping opacity-20"
+    ></span>
+
+    <!-- WhatsApp Icon -->
+    <svg
+  xmlns="http://www.w3.org/2000/svg"
+  viewBox="0 0 32 32"
+  class="w-9 h-9 fill-white"
+>
+  <path
+    d="M19.11 17.21c-.27-.14-1.61-.79-1.86-.88-.25-.09-.43-.14-.61.14-.18.27-.7.88-.86 1.06-.16.18-.31.2-.58.07-.27-.14-1.14-.42-2.17-1.34-.8-.71-1.34-1.59-1.49-1.86-.16-.27-.02-.42.12-.56.12-.12.27-.31.41-.46.14-.16.18-.27.27-.45.09-.18.05-.34-.02-.48-.07-.14-.61-1.48-.84-2.03-.22-.53-.45-.46-.61-.47h-.52c-.18 0-.47.07-.72.34-.25.27-.95.93-.95 2.27s.98 2.62 1.12 2.8c.14.18 1.93 2.95 4.68 4.13.66.28 1.17.45 1.57.57.66.21 1.26.18 1.74.11.53-.08 1.61-.66 1.84-1.3.23-.64.23-1.18.16-1.3-.07-.11-.25-.18-.52-.31z"
+  />
+  <path
+    d="M16.01 3C8.84 3 3 8.84 3 16c0 2.44.69 4.82 2 6.88L3 29l6.28-1.95A12.92 12.92 0 0016.01 29C23.18 29 29 23.16 29 16S23.18 3 16.01 3zm0 23.67c-2.03 0-4.01-.54-5.74-1.57l-.41-.24-3.39 1.05 1.07-3.3-.26-.42A10.6 10.6 0 015.34 16c0-5.88 4.79-10.67 10.67-10.67S26.68 10.12 26.68 16 21.89 26.67 16.01 26.67z"
+  />
+</svg>
+  </div>
+</a>
+  </body>
+  <script>
+    const faqWrapper = document.querySelector('.faq-wrapper')
+
+    if (faqWrapper) {
+      faqWrapper.addEventListener('click', e => {
+        const button = e.target.closest('.faq-accordion-btn')
+        if (!button) return
+
+        const content = button.nextElementSibling
+        const icon = button.querySelector('svg')
+        const isOpen = content.style.maxHeight
+
+        faqWrapper.querySelectorAll('.faq-accordion-content').forEach(c => {
+          c.style.maxHeight = null
+        })
+
+        faqWrapper.querySelectorAll('.faq-accordion-btn').forEach(b => {
+          b.classList.remove('faq-accordion-btn-active')
+          b.querySelector('svg').classList.remove('rotate-180')
+        })
+
+        if (!isOpen) {
+          content.style.maxHeight = content.scrollHeight + 'px'
+          button.classList.add('faq-accordion-btn-active')
+          icon.classList.add('rotate-180')
+        }
+      })
+    }
+  </script>
+  <script>
+    const cardsContainer = document.getElementById('cardsContainer')
+    if (cardsContainer) {
+      const container = document.getElementById('cardsContainer')
+      const scrollAmount = 300 // pixels to scroll per click
+
+      document.getElementById('scrollLeft').addEventListener('click', () => {
+        cardsContainer.scrollBy({
+          left: -scrollAmount,
+          behavior: 'smooth'
+        })
+      })
+
+      document.getElementById('scrollRight').addEventListener('click', () => {
+        cardsContainer.scrollBy({
+          left: scrollAmount,
+          behavior: 'smooth'
+        })
+      })
+    }
+  </script>
+
+  <script>
+    const menuBtn = document.getElementById('menuBtn')
+    const mobileMenu = document.getElementById('mobileMenu')
+
+    menuBtn.addEventListener('click', () => {
+      const isOpen = mobileMenu.classList.contains('scale-y-100')
+
+      mobileMenu.classList.toggle('scale-y-0')
+      mobileMenu.classList.toggle('scale-y-100')
+      mobileMenu.classList.toggle('opacity-0')
+      mobileMenu.classList.toggle('opacity-100')
+      mobileMenu.classList.toggle('pointer-events-none')
+
+      menuBtn.textContent = isOpen ? '☰' : '✕'
+    })
+  </script>
+
+  <script>
+    const servicesSlider = new Swiper('.servicesSlider', {
+      loop: true,
+      speed: 5000,
+      allowTouchMove: true,
+
+      autoplay: {
+        delay: 0,
+        disableOnInteraction: false
+      },
+
+      breakpoints: {
+        0: {
+          slidesPerView: 1.2,
+          spaceBetween: 16
+        },
+        640: {
+          slidesPerView: 2,
+          spaceBetween: 20
+        },
+        1024: {
+          slidesPerView: 4,
+          spaceBetween: 28
+        }
+      }
+    })
+
+    const slider = document.querySelector('.servicesSlider')
+
+    slider.addEventListener('mouseenter', () => {
+      servicesSlider.autoplay.stop()
+    })
+
+    slider.addEventListener('mouseleave', () => {
+      servicesSlider.autoplay.start()
+    })
+    
+    const stats = [
+      {
+        number: '80%',
+        text: 'of discarded drives contain recoverable data',
+        progress: '30%'
+      },
+      {
+        number: '₹20Cr+',
+        text: 'average cost of a data breach',
+        progress: '60%'
+      },
+      {
+        number: '100%',
+        text: 'secure elimination of data — fully irreversible',
+        progress: '100%'
+      }
+    ]
+
+    let current = 0
+
+    const cards = document.querySelectorAll('.statCard')
+
+    function changeStat() {
+      cards.forEach(card => card.classList.add('slide-out'))
+
+      setTimeout(() => {
+        current = (current + 1) % stats.length
+
+        cards.forEach(card => {
+          card.querySelector('.statNumber').textContent = stats[current].number
+          card.querySelector('.statText').textContent = stats[current].text
+          card.querySelector('.progressBar').style.width =
+            stats[current].progress
+
+          card.classList.remove('slide-out', 'slide-in')
+
+          // Restart animation
+          void card.offsetWidth
+
+          card.classList.add('slide-in')
+        })
+      }, 500)
+    }
+
+    setInterval(changeStat, 3500)
+  </script>
+  
+  <script>
+  const form = document.getElementById("consultation-form");
+
+  document.querySelectorAll(".consultation-btn").forEach((btn) => {
+    btn.addEventListener("click", () => {
+      form.scrollIntoView({
+        behavior: "smooth",
+        block: "start",
+      });
+    });
+  });
+</script>
+</html>
