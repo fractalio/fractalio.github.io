@@ -80,9 +80,21 @@
           <ul
             class="hidden lg:flex items-center gap-10 ml-[-15%] font-medium text-[#4B4B4B] lg:text-[15px] xl:text-[20px]"
           >
-            <li><a href="#">About Us</a></li>
-            <li><a href="#">Technology</a></li>
-            <li><a href="#">Quality & Compliance</a></li>
+            <li>
+              <a href="#" class="scroll-link" data-target="about-us"
+                >About Us</a
+              >
+            </li>
+            <li>
+              <a href="#" class="scroll-link" data-target="technology"
+                >Technology</a
+              >
+            </li>
+            <li>
+              <a href="#" class="scroll-link" data-target="quality"
+                >Quality & Compliance</a
+              >
+            </li>
           </ul>
 
           <!-- Desktop CTA -->
@@ -118,21 +130,24 @@
             >
               <a
                 href="#"
-                class="block text-lg font-medium text-gray-700 hover:text-[#F08A00]"
+                data-target="about-us"
+                class="scroll-link block text-lg font-medium text-gray-700 hover:text-[#F08A00]"
               >
                 About Us
               </a>
 
               <a
                 href="#"
-                class="block text-lg font-medium text-gray-700 hover:text-[#F08A00]"
+                data-target="technology"
+                class="scroll-link block text-lg font-medium text-gray-700 hover:text-[#F08A00]"
               >
                 Technology
               </a>
 
               <a
                 href="#"
-                class="block text-lg font-medium text-gray-700 hover:text-[#F08A00]"
+                data-target="quality"
+                class="scroll-link block text-lg font-medium text-gray-700 hover:text-[#F08A00]"
               >
                 Quality & Compliance
               </a>
@@ -231,20 +246,21 @@
 
             <!-- Video -->
             <div
+              id="video-container"
               class="relative w-full max-w-md rounded-[35px] overflow-hidden z-20"
             >
               <img
+                id="video-thumb"
                 src="./images/banner-img-thumbnail.png"
                 class="w-full h-full lg:w-[435px] lg:h-[431px] object-cover"
               />
 
-              <div
+              <button
+                id="play-btn"
                 class="absolute inset-0 flex items-center justify-center z-10"
               >
-                <a
-                  href="https://www.youtube.com/watch?v=9ZCFQu-Zgvk"
-                  target="_blank"
-                  class="w-[101px] h-[66px] bg-[#FF0000] rounded-xl flex items-center justify-center shadow-xl transition duration-300 hover:scale-110"
+                <div
+                  class="w-[101px] h-[66px] bg-[#FF0000] rounded-xl flex items-center justify-center shadow-xl hover:scale-110 cursor-pointer transition"
                 >
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
@@ -254,15 +270,18 @@
                   >
                     <path d="M8 5v14l11-7z" />
                   </svg>
-                </a>
-              </div>
+                </div>
+              </button>
             </div>
           </div>
         </div>
       </div>
     </section>
 
-    <section class="py-20 lg:pt-[5rem] lg:pb-[6rem] overflow-hidden">
+    <section
+      id="about-us"
+      class="py-20 lg:pt-[5rem] lg:pb-[6rem] overflow-hidden"
+    >
       <div class="container mx-auto px-6 lg:px-10">
         <div class="grid lg:grid-cols-2 gap-16 lg:gap-24 items-center">
           <!-- ================= Left Side ================= -->
@@ -705,7 +724,7 @@
       </div>
     </section>
 
-    <section class="relative overflow-hidden py-20 lg:py-28">
+    <section id="technology" class="relative overflow-hidden py-20 lg:py-28">
       <!-- Background Image -->
       <img
         src="./images/fourth-section-bg.png"
@@ -1182,7 +1201,10 @@
       </div>
     </section>
 
-    <section class="bg-[#FFF0E1] pt-[10rem] pb-[5rem] overflow-hidden">
+    <section
+      id="quality"
+      class="bg-[#FFF0E1] pt-[10rem] pb-[5rem] overflow-hidden"
+    >
       <div class="container mx-auto px-6 lg:px-10">
         <div
           class="grid grid-cols-1 lg:grid-cols-2 gap-14 lg:gap-24 items-center"
@@ -1196,6 +1218,7 @@
 
             <!-- Video Card -->
             <div
+              id="video-container-2"
               class="relative lg:left-[10%] z-10 rounded-[36px] overflow-hidden border-[8px] border-[#171C35] bg-white shadow-xl max-w-[500px]"
             >
               <img
@@ -1205,10 +1228,9 @@
               />
 
               <!-- Play Button -->
-              <a
-                href="https://www.youtube.com/watch?v=OTkuFCRUK0U&feature=youtu.be"
-                target="_blank"
-                class="absolute inset-0 flex items-center justify-center group"
+              <button
+                id="play-btn-2"
+                class="absolute inset-0 flex items-center justify-center group cursor-pointer"
               >
                 <div
                   class="w-[80px] lg:w-[101px] h-[50px] lg:h-[66px] rounded-[12px] bg-[#FF0000] flex items-center justify-center shadow-xl transition duration-300 hover:scale-110"
@@ -1221,7 +1243,7 @@
                     <path d="M8 5v14l11-7z" />
                   </svg>
                 </div>
-              </a>
+              </button>
             </div>
           </div>
 
@@ -2839,6 +2861,56 @@
           block: 'start'
         })
       })
+    })
+  </script>
+
+  <script>
+    function scrollToSection(targetId) {
+      const section = document.getElementById(targetId)
+
+      if (section) {
+        section.scrollIntoView({
+          behavior: 'smooth',
+          block: 'start'
+        })
+      }
+    }
+
+    document.querySelectorAll('.scroll-link').forEach(link => {
+      link.addEventListener('click', function (e) {
+        e.preventDefault()
+        scrollToSection(this.dataset.target)
+      })
+    })
+  </script>
+
+  <script>
+    document.getElementById('play-btn').addEventListener('click', () => {
+      document.getElementById('video-container').innerHTML = `
+        <div class="relative w-full h-[431px] rounded-[35px] overflow-hidden">
+    <iframe
+        class="absolute inset-0 w-full h-full"
+        src="https://www.youtube-nocookie.com/embed/9ZCFQu-Zgvk?autoplay=1&mute=0&loop=1&playlist=9ZCFQu-Zgvk&controls=0&rel=0&modestbranding=1&disablekb=1&fs=0&playsinline=1"
+        frameborder="0"
+        allow="autoplay; encrypted-media"
+        style="pointer-events:none;"
+    ></iframe>
+</div>
+    `
+    })
+
+    document.getElementById('play-btn-2').addEventListener('click', () => {
+      document.getElementById('video-container-2').innerHTML = `
+    <div class="relative w-full h-[400px] aspect-video">
+      <iframe
+        class="absolute inset-0 w-full h-full"
+        src="https://www.youtube-nocookie.com/embed/OTkuFCRUK0U?autoplay=1&mute=0&loop=1&playlist=OTkuFCRUK0U&controls=0&rel=0&modestbranding=1&disablekb=1&fs=0&playsinline=1"
+        frameborder="0"
+        allow="autoplay; encrypted-media"
+        style="pointer-events:none;"
+      ></iframe>
+    </div>
+  `
     })
   </script>
 </html>
