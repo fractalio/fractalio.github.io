@@ -292,20 +292,11 @@
           >
             <!-- Empty Polygon -->
             <div class="relative w-[300px] h-[318px]">
-              <svg
-                class="absolute inset-0 w-full h-full"
-                viewBox="0 0 281 344"
-                fill="none"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <path
-                  d="M279.716 59.1719V284.229L140.107 342.858L0.5 284.229V59.1719L140.107 0.541992L279.716 59.1719Z"
-                  fill="white"
-                  stroke="#4B4B4B"
-                  stroke-opacity="0.23"
-                  stroke-width="1.5"
-                />
-              </svg>
+              <img
+                src="./images/empty-box-img.webp"
+                alt="Data Security"
+                class="absolute inset-0 w-full h-full object-contain z-10"
+              />
             </div>
 
             <!-- 80% Polygon -->
@@ -402,17 +393,11 @@
               <div
                 class="absolute left-0 top-0 w-[160px] h-[196px] sm:w-[210px] sm:h-[258px] lg:w-[281px] lg:h-[344px]"
               >
-                <svg
-                  class="absolute inset-0 w-full h-full"
-                  viewBox="0 0 281 344"
-                  fill="none"
-                >
-                  <path
-                    d="M279.716 59.1719V284.229L140.107 342.858L0.5 284.229V59.1719L140.107 0.541992L279.716 59.1719Z"
-                    stroke="black"
-                    stroke-opacity="0.23"
-                  />
-                </svg>
+                <img
+                  src="./images/empty-box-img.webp"
+                  alt="Data Security"
+                  class="absolute inset-0 w-full h-full object-contain z-10"
+                />
               </div>
 
               <!-- ================= 80% Hex ================= -->
@@ -2667,6 +2652,50 @@
       </div>
     </div>
 
+    <!-- Modal -->
+    <div
+      id="consultationModal"
+      class="fixed inset-0 bg-black/60 hidden items-center justify-center z-[9999] px-4"
+    >
+      <div class="relative">
+        <button
+          id="closeModal"
+          class="absolute top-3 right-3 w-10 h-10 cursor-pointer rounded-full bg-white border border-[#E5E5E5] flex items-center justify-center shadow-md transition-all duration-300 hover:bg-[#E57000] hover:border-[#E57000] hover:scale-x-110 group z-50"
+          aria-label="Close"
+        >
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            class="w-5 h-5 text-[#4B4B4B] transition-colors duration-300 group-hover:text-white"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2.5"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          >
+            <line x1="18" y1="6" x2="6" y2="18"></line>
+            <line x1="6" y1="6" x2="18" y2="18"></line>
+          </svg>
+        </button>
+
+        <div
+          class="relative w-full sm:w-[30rem] rounded-[2rem] overflow-hidden border border-[#F3F4F6] shadow-[0px_25px_50px_-12px_rgba(0,0,0,0.25)]"
+        >
+          <iframe
+            src="https://forms.zohopublic.in/fractaliodata1/form/contact1/formperma/hnZk0y5gZeBmoqnMiuNWMYtDGEFDUlowe1QWdAzwICc"
+            title="Contact Form"
+            frameborder="0"
+            marginwidth="0"
+            marginheight="0"
+            class="w-full h-[30rem] md:h-[500px]"
+            style="border: none"
+            allowfullscreen
+          >
+          </iframe>
+        </div>
+      </div>
+    </div>
+
     <!-- Floating WhatsApp Button -->
     <a
       href="https://wa.me/919845069650"
@@ -2911,6 +2940,37 @@
       ></iframe>
     </div>
   `
+    })
+  </script>
+
+  <script>
+    const modal = document.getElementById('consultationModal')
+    const closeBtn = document.getElementById('closeModal')
+
+    let reopenTimer
+
+    function showModal() {
+      modal.classList.remove('hidden')
+      modal.classList.add('flex')
+    }
+
+    function hideModal() {
+      modal.classList.remove('flex')
+      modal.classList.add('hidden')
+
+      clearTimeout(reopenTimer)
+
+      reopenTimer = setTimeout(showModal, 10000)
+    }
+
+    setTimeout(showModal, 5000)
+
+    closeBtn.addEventListener('click', hideModal)
+
+    modal.addEventListener('click', function (e) {
+      if (e.target === modal) {
+        hideModal()
+      }
     })
   </script>
 </html>
